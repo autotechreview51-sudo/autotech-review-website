@@ -51,9 +51,12 @@
           <div><strong>505</strong><span>Cars tested</span></div>
         </div>
       </div>
-      <div class="hero-visual" aria-label="Featured vehicle">
+      <div class="hero-visual drive-zone" aria-label="Featured vehicle. Move your pointer across the car to activate the driving effect." tabindex="0">
         <div class="vehicle-glow"></div>
-        <img src="assets/hero-car.svg" alt="Stylized electric performance SUV">
+        <div class="speed-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="road-shadow" aria-hidden="true"></div>
+        <img class="hero-car" src="assets/hero-car.svg" alt="Stylized electric performance SUV">
+        <div class="drive-hint"><span></span> Hover to test drive</div>
         <div class="featured-label">Featured · 2027 BMW iX3</div>
         <strong>8.7 <span>AutoTech score</span></strong>
       </div>
@@ -86,10 +89,12 @@
     <section class="signature" id="reviews">
       <span class="section-number gold">02 / Signature review</span>
       <h2>One car. Every decision you need to make.</h2>
-      <div class="review-shell">
-        <div class="review-visual">
+      <div class="review-shell tilt-card">
+        <div class="review-visual drive-zone drive-zone-secondary" tabindex="0" aria-label="2027 BMW iX3 interactive vehicle view">
           <span class="pill">Canada buyer review</span>
-          <img src="assets/review-car.svg" alt="Stylized BMW iX3 side profile">
+          <div class="speed-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="road-shadow" aria-hidden="true"></div>
+          <img class="review-car" src="assets/review-car.svg" alt="Stylized BMW iX3 side profile">
         </div>
         <div class="chapters">
           <h3>2027 BMW iX3</h3><p>Interactive video timeline</p>
@@ -117,10 +122,11 @@
 
     <section class="latest" id="guides">
       <span class="section-number gold">04 / Latest from the garage</span><h2>Fresh drives. Honest verdicts.</h2>
-      <div class="content-grid">
-        <a class="content-card" href="https://www.youtube.com/watch?v=QqwMlNI5iQQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/QqwMlNI5iQQ/maxresdefault.jpg" alt="Corolla Cross versus RAV4"><span class="pill">New review</span><h3>Corolla Cross vs RAV4</h3><p>Which Toyota SUV gives Canadians more?</p><b>Read + watch →</b></a>
-        <a class="content-card" href="https://www.youtube.com/watch?v=GmdUmrDhZSg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/GmdUmrDhZSg/maxresdefault.jpg" alt="2027 BMW iX3"><span class="pill">New review</span><h3>2027 BMW iX3</h3><p>The cabin changes everything.</p><b>Read + watch →</b></a>
-        <a class="content-card" href="https://www.youtube.com/watch?v=WJhoONm4Ohw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WJhoONm4Ohw/maxresdefault.jpg" alt="Canadian luxury car tax"><span class="pill">Buying guide</span><h3>Luxury tax explained</h3><p>What a $100,000 car really costs.</p><b>Read + watch →</b></a>
+      <div class="live-update"><span></span> Latest uploads refresh automatically every day</div>
+      <div class="content-grid" id="latest-grid">
+        <a class="content-card tilt-card" href="https://www.youtube.com/watch?v=QqwMlNI5iQQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/QqwMlNI5iQQ/maxresdefault.jpg" alt="Corolla Cross versus RAV4"><span class="pill">New review</span><h3>Corolla Cross vs RAV4</h3><p>Which Toyota SUV gives Canadians more?</p><b>Watch on YouTube →</b></a>
+        <a class="content-card tilt-card" href="https://www.youtube.com/watch?v=GmdUmrDhZSg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/GmdUmrDhZSg/maxresdefault.jpg" alt="2027 BMW iX3"><span class="pill">New review</span><h3>2027 BMW iX3</h3><p>The cabin changes everything.</p><b>Watch on YouTube →</b></a>
+        <a class="content-card tilt-card" href="https://www.youtube.com/watch?v=WJhoONm4Ohw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WJhoONm4Ohw/maxresdefault.jpg" alt="Canadian luxury car tax"><span class="pill">Buying guide</span><h3>Luxury tax explained</h3><p>What a $100,000 car really costs.</p><b>Watch on YouTube →</b></a>
       </div>
     </section>
 
