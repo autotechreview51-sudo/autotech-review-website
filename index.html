@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoTech Review — Canada’s New-Car Decision Platform</title>
+  <meta name="description" content="Canadian car reviews, real ownership costs and buyer-first comparisons from AutoTech Review.">
+  <meta name="theme-color" content="#07080a">
+  <link rel="canonical" href="https://autotechreview.ca/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AutoTech Review">
+  <meta property="og:title" content="AutoTech Review — Choose the Right Car">
+  <meta property="og:description" content="Cinematic reviews, Canadian pricing and honest ownership guidance.">
+  <meta property="og:url" content="https://autotechreview.ca/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AutoTech Review — Choose the Right Car">
+  <meta name="twitter:description" content="Canadian car reviews, comparisons and ownership guidance.">
+  <link rel="preload" href="assets/hero-car.svg" as="image" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AutoTech Review","url":"https://autotechreview.ca/","sameAs":["https://www.youtube.com/@autotechreview51","https://www.instagram.com/auto.techreview/","https://www.tiktok.com/@autotech.review"]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="AutoTech Review home"><span class="brand-mark">◉</span> AutoTechReview</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-links" id="nav-links">
+      <a href="#reviews">Reviews</a><a href="#compare">Compare</a><a href="#matchmaker">Find My Car</a><a href="#guides">Buying Guides</a>
+      <a class="button button-small button-ghost" href="#partner">Partner With Me</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="hero" id="top">
+      <div class="hero-copy">
+        <span class="eyebrow">GTA based <i></i> Canada-first</span>
+        <h1>Don’t just<br>watch cars.<br><em>Choose the<br>right one.</em></h1>
+        <p>Cinematic reviews, Canadian pricing and honest ownership guidance—built for the decision after the video ends.</p>
+        <div class="actions">
+          <a class="button" href="#matchmaker">Find My Next Car <span>→</span></a>
+          <a class="button button-ghost" href="#reviews">Watch Latest Review</a>
+        </div>
+        <div class="hero-metrics" aria-label="Channel statistics">
+          <div><strong>21.1K</strong><span>Subscribers</span></div>
+          <div><strong>67M+</strong><span>Lifetime views</span></div>
+          <div><strong>505</strong><span>Cars tested</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Featured vehicle">
+        <div class="vehicle-glow"></div>
+        <img src="assets/hero-car.svg" alt="Stylized electric performance SUV">
+        <div class="featured-label">Featured · 2027 BMW iX3</div>
+        <strong>8.7 <span>AutoTech score</span></strong>
+      </div>
+    </header>
+
+    <section class="matchmaker light-section" id="matchmaker">
+      <div class="match-intro">
+        <span class="section-number red">01 / Find your car</span>
+        <h2>Five questions. Three cars actually worth your time.</h2>
+        <p>Built around Canadian pricing, winter use and the way you really drive.</p>
+        <form id="match-form">
+          <label><span>01</span><select name="budget" required><option value="">Budget</option><option value="45">Under $45,000</option><option value="60">$45,000–$60,000</option><option value="80">$60,000–$80,000</option><option value="premium">$80,000+</option></select></label>
+          <label><span>02</span><select name="style" required><option value="">Body style</option><option value="suv">SUV</option><option value="sedan">Sedan</option><option value="ev">EV</option></select></label>
+          <label><span>03</span><select name="household" required><option value="">Household</option><option value="solo">One or two people</option><option value="family">Family</option><option value="large">Large family</option></select></label>
+          <label><span>04</span><select name="distance" required><option value="">Daily distance</option><option value="short">Under 30 km</option><option value="medium">30–80 km</option><option value="long">80+ km</option></select></label>
+          <label><span>05</span><select name="priority" required><option value="">Top priority</option><option value="value">Value</option><option value="comfort">Comfort</option><option value="performance">Performance</option><option value="tech">Technology</option></select></label>
+          <button class="button match-submit" type="submit">Find my match →</button>
+        </form>
+      </div>
+      <article class="match-result" aria-live="polite">
+        <span class="pill">Your match</span>
+        <p class="match-kicker" id="match-kicker">Recommended starting point</p>
+        <h3 id="match-title">2026 RAV4<br>Hybrid Limited</h3>
+        <p id="match-description">Best fit for your budget, winter driving and family cargo needs.</p>
+        <div class="result-stats"><div><strong id="match-price">$52,880</strong><span>Est. Ontario price</span></div><div><strong id="match-score">7.9 / 10</strong><span>AutoTech score</span></div></div>
+        <a class="button" id="match-link" href="https://www.youtube.com/watch?v=vsSSqjdFm1Q" target="_blank" rel="noopener">See why it matches →</a>
+      </article>
+    </section>
+
+    <section class="signature" id="reviews">
+      <span class="section-number gold">02 / Signature review</span>
+      <h2>One car. Every decision you need to make.</h2>
+      <div class="review-shell">
+        <div class="review-visual">
+          <span class="pill">Canada buyer review</span>
+          <img src="assets/review-car.svg" alt="Stylized BMW iX3 side profile">
+        </div>
+        <div class="chapters">
+          <h3>2027 BMW iX3</h3><p>Interactive video timeline</p>
+          <a href="https://www.youtube.com/watch?v=GmdUmrDhZSg&t=18s" target="_blank" rel="noopener"><span>01</span> Exterior <b>▶</b></a>
+          <a href="https://www.youtube.com/watch?v=GmdUmrDhZSg&t=132s" target="_blank" rel="noopener"><span>02</span> Cabin &amp; Tech <b>▶</b></a>
+          <a href="https://www.youtube.com/watch?v=GmdUmrDhZSg&t=260s" target="_blank" rel="noopener"><span>03</span> Cargo Test <b>▶</b></a>
+          <a href="https://www.youtube.com/watch?v=GmdUmrDhZSg&t=330s" target="_blank" rel="noopener"><span>04</span> Driving <b>▶</b></a>
+          <a href="https://www.youtube.com/watch?v=GmdUmrDhZSg&t=420s" target="_blank" rel="noopener"><span>05</span> Real Cost <b>▶</b></a>
+          <a class="verdict" href="https://www.youtube.com/watch?v=GmdUmrDhZSg&t=470s" target="_blank" rel="noopener"><span>06</span> Rishi Verdict <b>8.7</b></a>
+          <a class="button" href="https://www.youtube.com/watch?v=GmdUmrDhZSg" target="_blank" rel="noopener">Watch full review</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison" id="compare">
+      <span class="section-number blue">03 / Comparison lab</span>
+      <h2>Stop opening twelve tabs.</h2>
+      <p>Canadian cost, space, fuel use and a buyer-first verdict in one place.</p>
+      <div class="comparison-grid">
+        <article><span class="pill">Value leader</span><h3>2026 RAV4 Hybrid</h3><dl><div><dt>Ontario price</dt><dd>$52,880</dd></div><div><dt>Cargo</dt><dd>580 L</dd></div><div><dt>Fuel use</dt><dd>6.0 L/100 km</dd></div><div><dt>Verdict</dt><dd>8.0</dd></div></dl><a class="button button-ghost" href="https://www.youtube.com/watch?v=vsSSqjdFm1Q" target="_blank" rel="noopener">Open review</a></article>
+        <div class="versus">VS</div>
+        <article><span class="pill pill-blue">Space leader</span><h3>2026 CR-V Hybrid</h3><dl><div><dt>Ontario price</dt><dd>$55,120</dd></div><div><dt>Cargo</dt><dd>1,113 L</dd></div><div><dt>Fuel use</dt><dd>6.4 L/100 km</dd></div><div><dt>Verdict</dt><dd>8.2</dd></div></dl><a class="button" href="https://www.youtube.com/@autotechreview51/videos" target="_blank" rel="noopener">Open review</a></article>
+      </div>
+    </section>
+
+    <section class="latest" id="guides">
+      <span class="section-number gold">04 / Latest from the garage</span><h2>Fresh drives. Honest verdicts.</h2>
+      <div class="content-grid">
+        <a class="content-card" href="https://www.youtube.com/watch?v=QqwMlNI5iQQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/QqwMlNI5iQQ/maxresdefault.jpg" alt="Corolla Cross versus RAV4"><span class="pill">New review</span><h3>Corolla Cross vs RAV4</h3><p>Which Toyota SUV gives Canadians more?</p><b>Read + watch →</b></a>
+        <a class="content-card" href="https://www.youtube.com/watch?v=GmdUmrDhZSg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/GmdUmrDhZSg/maxresdefault.jpg" alt="2027 BMW iX3"><span class="pill">New review</span><h3>2027 BMW iX3</h3><p>The cabin changes everything.</p><b>Read + watch →</b></a>
+        <a class="content-card" href="https://www.youtube.com/watch?v=WJhoONm4Ohw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WJhoONm4Ohw/maxresdefault.jpg" alt="Canadian luxury car tax"><span class="pill">Buying guide</span><h3>Luxury tax explained</h3><p>What a $100,000 car really costs.</p><b>Read + watch →</b></a>
+      </div>
+    </section>
+
+    <section class="partner" id="partner">
+      <div><span class="section-number">For dealerships &amp; brands</span><h2>Put the right car in front of the right buyer.</h2><p>Professional reviews, short-form distribution and measurable Canadian reach.</p><a class="button button-dark" href="mailto:autotechreview51@gmail.com?subject=Partnership%20with%20AutoTech%20Review">Build a partnership →</a></div>
+      <div class="partner-stats"><div><strong>11M+</strong><span>Monthly platform views</span></div><div><strong>1.08M</strong><span>North American views</span></div><div><strong>4</strong><span>Platforms · one voice</span></div></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#top"><span class="brand-mark">◉</span> AutoTechReview</a><p>Canada-first. Buyer-focused.</p></footer>
+</body>
+</html>
