@@ -128,3 +128,99 @@ fetch('data/site-content.json', { cache: 'no-store' })
     }
   })
   .catch(() => {});
+
+const comparisonVehicles = [
+  { id: 'rav4', name: '2026 RAV4 Hybrid', badge: 'Value leader', price: '$52,880 est.', cargo: '580 L', energy: '6.0 L/100 km', powertrain: 'Hybrid AWD', score: '8.0', link: 'https://www.youtube.com/watch?v=vsSSqjdFm1Q' },
+  { id: 'crv', name: '2026 CR-V Hybrid', badge: 'Space leader', price: '$55,120 est.', cargo: '1,113 L', energy: '6.4 L/100 km', powertrain: 'Hybrid AWD', score: '8.2', link: 'https://www.youtube.com/@autotechreview51/videos' },
+  { id: 'sportage', name: '2026 Kia Sportage', badge: 'Feature leader', price: 'Verify current', cargo: '1,121 L', energy: '8.8 L/100 km', powertrain: '2.5L AWD', score: '7.8', link: 'https://www.youtube.com/@autotechreview51/videos' },
+  { id: 'tiguan', name: '2026 VW Tiguan', badge: 'Cabin leader', price: 'Verify current', cargo: '748 L', energy: '9.4 L/100 km', powertrain: '2.0T AWD', score: '8.1', link: 'https://www.youtube.com/@autotechreview51/videos' },
+  { id: 'ix3', name: '2027 BMW iX3', badge: 'Technology leader', price: 'Verify current', cargo: '520 L', energy: 'Electric', powertrain: 'Electric AWD', score: '8.7', link: 'https://www.youtube.com/watch?v=GmdUmrDhZSg' }
+];
+
+const compareA = document.querySelector('#compare-a');
+const compareB = document.querySelector('#compare-b');
+const comparisonOption = (vehicle) => {
+  const option = document.createElement('option');
+  option.value = vehicle.id;
+  option.textContent = vehicle.name;
+  return option;
+};
+
+const renderComparisonCard = (element, vehicle, blue = false) => {
+  element.replaceChildren();
+  const badge = document.createElement('span');
+  badge.className = `pill${blue ? ' pill-blue' : ''}`;
+  badge.textContent = vehicle.badge;
+  const heading = document.createElement('h3');
+  heading.textContent = vehicle.name;
+  const list = document.createElement('dl');
+  [['Canadian price', vehicle.price], ['Cargo', vehicle.cargo], ['Energy use', vehicle.energy], ['Powertrain', vehicle.powertrain], ['Verdict', vehicle.score]].forEach(([term, value]) => {
+    const row = document.createElement('div');
+    const dt = document.createElement('dt');
+    const dd = document.createElement('dd');
+    dt.textContent = term;
+    dd.textContent = value;
+    row.append(dt, dd);
+    list.append(row);
+  });
+  const link = document.createElement('a');
+  link.className = `button${blue ? '' : ' button-ghost'}`;
+  link.href = vehicle.link;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.textContent = 'Open review';
+  element.append(badge, heading, list, link);
+};
+
+const updateComparison = () => {
+  const first = comparisonVehicles.find((vehicle) => vehicle.id === compareA.value) ?? comparisonVehicles[0];
+  const second = comparisonVehicles.find((vehicle) => vehicle.id === compareB.value) ?? comparisonVehicles[1];
+  renderComparisonCard(document.querySelector('#compare-card-a'), first);
+  renderComparisonCard(document.querySelector('#compare-card-b'), second, true);
+};
+
+if (compareA && compareB) {
+  comparisonVehicles.forEach((vehicle) => {
+    compareA.append(comparisonOption(vehicle));
+    compareB.append(comparisonOption(vehicle));
+  });
+  compareA.value = 'rav4';
+  compareB.value = 'crv';
+  compareA.addEventListener('change', updateComparison);
+  compareB.addEventListener('change', updateComparison);
+  document.querySelector('#swap-cars').addEventListener('click', () => {
+    [compareA.value, compareB.value] = [compareB.value, compareA.value];
+    updateComparison();
+  });
+  updateComparison();
+}
+
+const costForm = document.querySelector('#cost-form');
+const formatCurrency = new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 });
+const updateOwnershipCost = () => {
+  const values = new FormData(costForm);
+  const price = Number(values.get('price')) || 0;
+  const tax = Number(values.get('province')) || 0;
+  const down = Math.min(Number(values.get('down')) || 0, price * (1 + tax));
+  const annualRate = (Number(values.get('rate')) || 0) / 100;
+  const months = Number(values.get('term')) || 72;
+  const financed = Math.max(0, price * (1 + tax) - down);
+  const monthlyRate = annualRate / 12;
+  const payment = monthlyRate === 0 ? financed / months : financed * monthlyRate / (1 - Math.pow(1 + monthlyRate, -months));
+  const annualDistance = Number(values.get('distance')) || 0;
+  const efficiency = Number(values.get('efficiency')) || 0;
+  const energyPrice = Number(values.get('energyPrice')) || 0;
+  const energy = annualDistance / 12 * efficiency / 100 * energyPrice;
+  const interest = Math.max(0, payment * months - financed);
+  document.querySelector('#monthly-payment').textContent = formatCurrency.format(payment);
+  document.querySelector('#monthly-energy').textContent = `${formatCurrency.format(energy)}/mo`;
+  document.querySelector('#monthly-combined').textContent = `${formatCurrency.format(payment + energy)}/mo`;
+  document.querySelector('#amount-financed').textContent = formatCurrency.format(financed);
+  document.querySelector('#total-interest').textContent = formatCurrency.format(interest);
+};
+
+if (costForm) {
+  costForm.addEventListener('input', updateOwnershipCost);
+  costForm.addEventListener('change', updateOwnershipCost);
+  updateOwnershipCost();
+}

@@ -30,8 +30,8 @@
     <a class="brand" href="#top" aria-label="AutoTech Review home"><span class="brand-mark">◉</span> AutoTechReview</a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
     <div class="nav-links" id="nav-links">
-      <a href="#reviews">Reviews</a><a href="#compare">Compare</a><a href="#matchmaker">Find My Car</a><a href="#guides">Buying Guides</a>
-      <a class="button button-small button-ghost" href="#partner">Partner With Me</a>
+      <a href="#reviews">Reviews</a><a href="#compare">Compare</a><a href="#matchmaker">Find My Car</a><a href="#ownership">Ownership Cost</a>
+      <a class="button button-small button-ghost" href="partner.html">Partner With Me</a>
     </div>
   </nav>
 
@@ -113,15 +113,45 @@
       <span class="section-number blue">03 / Comparison lab</span>
       <h2>Stop opening twelve tabs.</h2>
       <p>Canadian cost, space, fuel use and a buyer-first verdict in one place.</p>
-      <div class="comparison-grid">
-        <article><span class="pill">Value leader</span><h3>2026 RAV4 Hybrid</h3><dl><div><dt>Ontario price</dt><dd>$52,880</dd></div><div><dt>Cargo</dt><dd>580 L</dd></div><div><dt>Fuel use</dt><dd>6.0 L/100 km</dd></div><div><dt>Verdict</dt><dd>8.0</dd></div></dl><a class="button button-ghost" href="https://www.youtube.com/watch?v=vsSSqjdFm1Q" target="_blank" rel="noopener">Open review</a></article>
-        <div class="versus">VS</div>
-        <article><span class="pill pill-blue">Space leader</span><h3>2026 CR-V Hybrid</h3><dl><div><dt>Ontario price</dt><dd>$55,120</dd></div><div><dt>Cargo</dt><dd>1,113 L</dd></div><div><dt>Fuel use</dt><dd>6.4 L/100 km</dd></div><div><dt>Verdict</dt><dd>8.2</dd></div></dl><a class="button" href="https://www.youtube.com/@autotechreview51/videos" target="_blank" rel="noopener">Open review</a></article>
+      <div class="compare-controls" aria-label="Choose two vehicles to compare">
+        <label>Vehicle A<select id="compare-a"></select></label>
+        <button type="button" id="swap-cars" aria-label="Swap compared vehicles">⇄</button>
+        <label>Vehicle B<select id="compare-b"></select></label>
       </div>
+      <div class="comparison-grid" aria-live="polite">
+        <article id="compare-card-a"><span class="pill">Value leader</span><h3>2026 RAV4 Hybrid</h3><dl><div><dt>Ontario price</dt><dd>$52,880</dd></div><div><dt>Cargo</dt><dd>580 L</dd></div><div><dt>Fuel use</dt><dd>6.0 L/100 km</dd></div><div><dt>Powertrain</dt><dd>Hybrid AWD</dd></div><div><dt>Verdict</dt><dd>8.0</dd></div></dl><a class="button button-ghost" href="https://www.youtube.com/watch?v=vsSSqjdFm1Q" target="_blank" rel="noopener">Open review</a></article>
+        <div class="versus">VS</div>
+        <article id="compare-card-b"><span class="pill pill-blue">Space leader</span><h3>2026 CR-V Hybrid</h3><dl><div><dt>Ontario price</dt><dd>$55,120</dd></div><div><dt>Cargo</dt><dd>1,113 L</dd></div><div><dt>Fuel use</dt><dd>6.4 L/100 km</dd></div><div><dt>Powertrain</dt><dd>Hybrid AWD</dd></div><div><dt>Verdict</dt><dd>8.2</dd></div></dl><a class="button" href="https://www.youtube.com/@autotechreview51/videos" target="_blank" rel="noopener">Open review</a></article>
+      </div>
+      <p class="data-note">Canadian estimates for general comparison. Confirm current trim pricing and specifications with the manufacturer or dealer.</p>
+    </section>
+
+    <section class="ownership light-section" id="ownership">
+      <div class="ownership-copy">
+        <span class="section-number red">04 / Ownership calculator</span>
+        <h2>See the monthly cost—not just the window sticker.</h2>
+        <p>Estimate financing and energy costs before visiting the dealership. Taxes, insurance and fees vary.</p>
+        <form id="cost-form">
+          <label>Province<select name="province"><option value="0.13">Ontario · 13%</option><option value="0.12">British Columbia · 12%</option><option value="0.05">Alberta · 5%</option><option value="0.14975">Quebec · 14.975%</option></select></label>
+          <label>Vehicle price<input name="price" type="number" min="5000" max="300000" step="500" value="52880" required></label>
+          <label>Down payment<input name="down" type="number" min="0" max="200000" step="500" value="5000" required></label>
+          <label>Interest rate<input name="rate" type="number" min="0" max="25" step="0.1" value="6.49" required></label>
+          <label>Loan term<select name="term"><option value="48">48 months</option><option value="60">60 months</option><option value="72" selected>72 months</option><option value="84">84 months</option></select></label>
+          <label>Annual distance<input name="distance" type="number" min="1000" max="100000" step="1000" value="20000" required></label>
+          <label>Fuel use · L/100 km<input name="efficiency" type="number" min="0" max="30" step="0.1" value="6.0" required></label>
+          <label>Fuel price · $/L<input name="energyPrice" type="number" min="0" max="5" step="0.01" value="1.55" required></label>
+        </form>
+      </div>
+      <article class="cost-result" aria-live="polite">
+        <span class="pill">Estimated ownership</span>
+        <div class="cost-primary"><span>Payment</span><strong id="monthly-payment">$817</strong><small>per month</small></div>
+        <div class="cost-breakdown"><div><span>Fuel</span><strong id="monthly-energy">$155/mo</strong></div><div><span>Combined</span><strong id="monthly-combined">$972/mo</strong></div><div><span>Amount financed</span><strong id="amount-financed">$54,754</strong></div><div><span>Total interest</span><strong id="total-interest">$4,070</strong></div></div>
+        <p>This is an educational estimate, not a financing offer. It excludes insurance, licensing, maintenance and dealer fees.</p>
+      </article>
     </section>
 
     <section class="latest" id="guides">
-      <span class="section-number gold">04 / Latest from the garage</span><h2>Fresh drives. Honest verdicts.</h2>
+      <span class="section-number gold">05 / Latest from the garage</span><h2>Fresh drives. Honest verdicts.</h2>
       <div class="live-update"><span></span> Latest uploads refresh automatically every day</div>
       <div class="content-grid" id="latest-grid">
         <a class="content-card tilt-card" href="https://www.youtube.com/watch?v=QqwMlNI5iQQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/QqwMlNI5iQQ/maxresdefault.jpg" alt="Corolla Cross versus RAV4"><span class="pill">New review</span><h3>Corolla Cross vs RAV4</h3><p>Which Toyota SUV gives Canadians more?</p><b>Watch on YouTube →</b></a>
@@ -131,11 +161,11 @@
     </section>
 
     <section class="partner" id="partner">
-      <div><span class="section-number">For dealerships &amp; brands</span><h2>Put the right car in front of the right buyer.</h2><p>Professional reviews, short-form distribution and measurable Canadian reach.</p><a class="button button-dark" href="mailto:autotechreview51@gmail.com?subject=Partnership%20with%20AutoTech%20Review">Build a partnership →</a></div>
+      <div><span class="section-number">For dealerships &amp; brands</span><h2>Put the right car in front of the right buyer.</h2><p>Professional reviews, short-form distribution and measurable Canadian reach.</p><div class="actions"><a class="button button-dark" href="partner.html">Start a campaign brief →</a><a class="button partner-outline" href="media-kit.html">View media kit</a></div></div>
       <div class="partner-stats"><div><strong>11M+</strong><span>Monthly platform views</span></div><div><strong>1.08M</strong><span>North American views</span></div><div><strong>4</strong><span>Platforms · one voice</span></div></div>
     </section>
   </main>
 
-  <footer><a class="brand" href="#top"><span class="brand-mark">◉</span> AutoTechReview</a><p>Canada-first. Buyer-focused.</p></footer>
+  <footer><a class="brand" href="#top"><span class="brand-mark">◉</span> AutoTechReview</a><p>Canada-first. Buyer-focused.</p><div class="footer-links"><a href="media-kit.html">Media kit</a><a href="partner.html">Partnerships</a><a href="privacy.html">Privacy</a></div></footer>
 </body>
 </html>
