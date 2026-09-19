@@ -16,12 +16,24 @@ try {
   const response = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`);
   if (!response.ok) throw new Error(`RSS returned ${response.status}`);
   const xml = await response.text();
-  const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].slice(0, 3).map(([, entry]) => ({
+  const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, entry]) => ({
     id: entry.match(/<yt:videoId>([^<]+)<\/yt:videoId>/)?.[1],
     title: decodeXml(entry.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? 'Latest AutoTech Review video'),
     published: entry.match(/<published>([^<]+)<\/published>/)?.[1]
   })).filter((video) => video.id && video.published);
-  if (entries.length) content.latestVideos = entries;
+  const classified = await Promise.all(entries.map(async (video) => {
+    try {
+      const shortResponse = await fetch(`https://www.youtube.com/shorts/${video.id}`, {
+        redirect: 'follow', headers: { 'user-agent': 'Mozilla/5.0 AutoTechReviewSiteUpdater/1.0' }
+      });
+      return { ...video, isShort: new URL(shortResponse.url).pathname.startsWith('/shorts/') };
+    } catch {
+      return { ...video, isShort: false };
+    }
+  }));
+  content.latestLongVideos = classified.filter((video) => !video.isShort).slice(0, 3);
+  content.latestShorts = classified.filter((video) => video.isShort).slice(0, 3);
+  content.latestVideos = classified.slice(0, 3);
 } catch (error) {
   console.warn(`Keeping the existing video list: ${error.message}`);
 }

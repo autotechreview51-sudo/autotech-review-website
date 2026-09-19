@@ -89,7 +89,9 @@ if (!reduceMotion) {
 const createLatestCard = (video) => {
   const card = document.createElement('a');
   card.className = 'content-card tilt-card';
-  card.href = `https://www.youtube.com/watch?v=${encodeURIComponent(video.id)}`;
+  card.href = video.isShort
+    ? `https://www.youtube.com/shorts/${encodeURIComponent(video.id)}`
+    : `https://www.youtube.com/watch?v=${encodeURIComponent(video.id)}`;
   card.target = '_blank';
   card.rel = 'noopener';
 
@@ -100,14 +102,14 @@ const createLatestCard = (video) => {
   image.onerror = () => { image.src = `https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/hqdefault.jpg`; };
 
   const pill = document.createElement('span');
-  pill.className = 'pill';
-  pill.textContent = 'Latest upload';
+  pill.className = `pill${video.isShort ? ' pill-blue' : ''}`;
+  pill.textContent = video.isShort ? 'Short' : 'Long video';
   const heading = document.createElement('h3');
   heading.textContent = video.title;
   const published = document.createElement('p');
   published.textContent = new Intl.DateTimeFormat('en-CA', { dateStyle: 'medium' }).format(new Date(video.published));
   const action = document.createElement('b');
-  action.textContent = 'Watch on YouTube →';
+  action.textContent = video.isShort ? 'Watch Short →' : 'Watch long video →';
   card.append(image, pill, heading, published, action);
   return card;
 };
@@ -122,20 +124,44 @@ fetch('data/site-content.json', { cache: 'no-store' })
       document.querySelector('.hero-metrics strong').textContent = content.metrics.subscribers;
       document.querySelectorAll('[data-subscriber]').forEach((element) => { element.textContent = content.metrics.subscribers; });
     }
-    if (Array.isArray(content.latestVideos) && content.latestVideos.length) {
-      const grid = document.querySelector('#latest-grid');
-      grid.replaceChildren(...content.latestVideos.slice(0, 3).map(createLatestCard));
+    const renderVideoFeed = (selector, videos) => {
+      if (!Array.isArray(videos) || !videos.length) return;
+      const grid = document.querySelector(selector);
+      grid.replaceChildren(...videos.slice(0, 3).map(createLatestCard));
       if (!reduceMotion) grid.querySelectorAll('.tilt-card').forEach(enableTilt);
-    }
+    };
+    renderVideoFeed('#long-videos-grid', content.latestLongVideos);
+    renderVideoFeed('#shorts-grid', content.latestShorts);
   })
   .catch(() => {});
 
+const videoTabs = [...document.querySelectorAll('[data-video-tab]')];
+const setVideoTab = (selectedTab) => {
+  videoTabs.forEach((tab) => {
+    const selected = tab === selectedTab;
+    tab.setAttribute('aria-selected', String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+  });
+  document.querySelector('#long-videos-panel').hidden = selectedTab.dataset.videoTab !== 'long';
+  document.querySelector('#shorts-panel').hidden = selectedTab.dataset.videoTab !== 'shorts';
+};
+videoTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => setVideoTab(tab));
+  tab.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    const nextIndex = event.key === 'ArrowRight' ? (index + 1) % videoTabs.length : (index - 1 + videoTabs.length) % videoTabs.length;
+    setVideoTab(videoTabs[nextIndex]);
+    videoTabs[nextIndex].focus();
+  });
+});
+
 const comparisonVehicles = [
-  { id: 'rav4', name: '2026 RAV4 Hybrid', badge: 'Value leader', price: '$52,880 est.', cargo: '580 L', energy: '6.0 L/100 km', powertrain: 'Hybrid AWD', score: '8.0', link: 'https://www.youtube.com/watch?v=vsSSqjdFm1Q' },
-  { id: 'crv', name: '2026 CR-V Hybrid', badge: 'Space leader', price: '$55,120 est.', cargo: '1,113 L', energy: '6.4 L/100 km', powertrain: 'Hybrid AWD', score: '8.2', link: 'https://www.youtube.com/@autotechreview51/videos' },
-  { id: 'sportage', name: '2026 Kia Sportage', badge: 'Feature leader', price: 'Verify current', cargo: '1,121 L', energy: '8.8 L/100 km', powertrain: '2.5L AWD', score: '7.8', link: 'https://www.youtube.com/@autotechreview51/videos' },
-  { id: 'tiguan', name: '2026 VW Tiguan', badge: 'Cabin leader', price: 'Verify current', cargo: '748 L', energy: '9.4 L/100 km', powertrain: '2.0T AWD', score: '8.1', link: 'https://www.youtube.com/@autotechreview51/videos' },
-  { id: 'ix3', name: '2027 BMW iX3', badge: 'Technology leader', price: 'Verify current', cargo: '520 L', energy: 'Electric', powertrain: 'Electric AWD', score: '8.7', link: 'https://www.youtube.com/watch?v=GmdUmrDhZSg' }
+  { id: 'rav4', name: '2026 RAV4 Hybrid', badge: 'Value leader', price: '$52,880 est.', cargo: '580 L', energy: '6.0 L/100 km', powertrain: 'Hybrid AWD', score: '8.0', link: 'https://www.youtube.com/watch?v=vsSSqjdFm1Q', cta: 'Watch RAV4 review' },
+  { id: 'crv', name: '2026 CR-V Hybrid', badge: 'Space leader', price: '$55,120 est.', cargo: '1,113 L', energy: '6.4 L/100 km', powertrain: 'Hybrid AWD', score: '8.2', link: 'https://www.youtube.com/@autotechreview51/search?query=CR-V', cta: 'Find CR-V videos' },
+  { id: 'sportage', name: '2026 Kia Sportage', badge: 'Feature leader', price: 'Verify current', cargo: '1,121 L', energy: '8.8 L/100 km', powertrain: '2.5L AWD', score: '7.8', link: 'https://www.youtube.com/@autotechreview51/search?query=Sportage', cta: 'Find Sportage videos' },
+  { id: 'tiguan', name: '2026 VW Tiguan', badge: 'Cabin leader', price: 'Verify current', cargo: '748 L', energy: '9.4 L/100 km', powertrain: '2.0T AWD', score: '8.1', link: 'https://www.youtube.com/@autotechreview51/search?query=Tiguan', cta: 'Find Tiguan videos' },
+  { id: 'ix3', name: '2027 BMW iX3', badge: 'Technology leader', price: 'Verify current', cargo: '520 L', energy: 'Electric', powertrain: 'Electric AWD', score: '8.7', link: 'https://www.youtube.com/watch?v=GmdUmrDhZSg', cta: 'Watch iX3 review' }
 ];
 
 const compareA = document.querySelector('#compare-a');
@@ -169,7 +195,7 @@ const renderComparisonCard = (element, vehicle, blue = false) => {
   link.href = vehicle.link;
   link.target = '_blank';
   link.rel = 'noopener';
-  link.textContent = 'Open review';
+  link.textContent = vehicle.cta;
   element.append(badge, heading, list, link);
 };
 
