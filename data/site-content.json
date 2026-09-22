@@ -1,9 +1,15 @@
 {
-  "updatedAt": "2026-09-21T10:26:43.799Z",
+  "updatedAt": "2026-09-22T10:27:55.936Z",
   "metrics": {
     "subscribers": "21.1K"
   },
   "latestVideos": [
+    {
+      "id": "_rUVJbpXt3Y",
+      "title": "POV: Walking around the 2026 Corolla Cross Hybrid #toronto #brampton",
+      "published": "2026-09-21T22:12:37+00:00",
+      "isShort": true
+    },
     {
       "id": "9k8BoIZPZNo",
       "title": "Are the back seats in the 2026 Corolla Cross worth it? #toronto #brampton",
@@ -14,12 +20,6 @@
       "id": "P8E7krlD6WI",
       "title": "Is this the perfect daily driver? 2026 Corolla Cross Hybrid #toronto #brampton",
       "published": "2026-09-19T20:14:52+00:00",
-      "isShort": true
-    },
-    {
-      "id": "KA5nvH5kG2A",
-      "title": "Which Toyota SUV wins on value? Corolla Cross vs RAV4 #2026 #brampton #toronto",
-      "published": "2026-09-18T20:30:52+00:00",
       "isShort": true
     }
   ],
@@ -45,6 +45,12 @@
   ],
   "latestShorts": [
     {
+      "id": "_rUVJbpXt3Y",
+      "title": "POV: Walking around the 2026 Corolla Cross Hybrid #toronto #brampton",
+      "published": "2026-09-21T22:12:37+00:00",
+      "isShort": true
+    },
+    {
       "id": "9k8BoIZPZNo",
       "title": "Are the back seats in the 2026 Corolla Cross worth it? #toronto #brampton",
       "published": "2026-09-20T18:34:11+00:00",
@@ -54,12 +60,6 @@
       "id": "P8E7krlD6WI",
       "title": "Is this the perfect daily driver? 2026 Corolla Cross Hybrid #toronto #brampton",
       "published": "2026-09-19T20:14:52+00:00",
-      "isShort": true
-    },
-    {
-      "id": "KA5nvH5kG2A",
-      "title": "Which Toyota SUV wins on value? Corolla Cross vs RAV4 #2026 #brampton #toronto",
-      "published": "2026-09-18T20:30:52+00:00",
       "isShort": true
     }
   ]
