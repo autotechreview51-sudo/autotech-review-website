@@ -1,9 +1,15 @@
 {
-  "updatedAt": "2026-09-22T10:27:55.936Z",
+  "updatedAt": "2026-09-24T10:27:37.128Z",
   "metrics": {
     "subscribers": "21.1K"
   },
   "latestVideos": [
+    {
+      "id": "1tx4EhDBoxY",
+      "title": "Don't Buy the 2026 Toyota Camry XSE AWD Until You Watch This (Canada Price)",
+      "published": "2026-09-23T22:00:30+00:00",
+      "isShort": false
+    },
     {
       "id": "_rUVJbpXt3Y",
       "title": "POV: Walking around the 2026 Corolla Cross Hybrid #toronto #brampton",
@@ -21,9 +27,27 @@
       "title": "Is this the perfect daily driver? 2026 Corolla Cross Hybrid #toronto #brampton",
       "published": "2026-09-19T20:14:52+00:00",
       "isShort": true
+    },
+    {
+      "id": "KA5nvH5kG2A",
+      "title": "Which Toyota SUV wins on value? Corolla Cross vs RAV4 #2026 #brampton #toronto",
+      "published": "2026-09-18T20:30:52+00:00",
+      "isShort": true
+    },
+    {
+      "id": "FOPbgEgZv2s",
+      "title": "Don't Buy the Corolla Cross Until You See This #toronto #brampton",
+      "published": "2026-09-17T23:26:50+00:00",
+      "isShort": true
     }
   ],
   "latestLongVideos": [
+    {
+      "id": "1tx4EhDBoxY",
+      "title": "Don't Buy the 2026 Toyota Camry XSE AWD Until You Watch This (Canada Price)",
+      "published": "2026-09-23T22:00:30+00:00",
+      "isShort": false
+    },
     {
       "id": "QqwMlNI5iQQ",
       "title": "2026 Corolla Cross vs RAV4: Which Toyota SUV Should You Actually Buy? (Canada)",
@@ -34,12 +58,6 @@
       "id": "WJhoONm4Ohw",
       "title": "Canada’s Luxury Car Tax: What You Really Pay Over $100K",
       "published": "2026-09-12T21:00:34+00:00",
-      "isShort": false
-    },
-    {
-      "id": "GmdUmrDhZSg",
-      "title": "Don't Buy the 2027 BMW iX3 Before Watching This (Canada)",
-      "published": "2026-09-09T23:00:11+00:00",
       "isShort": false
     }
   ],
