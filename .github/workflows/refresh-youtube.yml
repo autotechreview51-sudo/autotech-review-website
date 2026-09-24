@@ -2,30 +2,48 @@ name: Refresh YouTube content
 
 on:
   schedule:
-    - cron: '17 10 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: refresh-youtube
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    env:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+
       - name: Refresh latest videos and subscriber count
         run: node scripts/update-youtube.mjs
-      - name: Commit refreshed content
+
+      - name: Commit only real content changes
+        id: commit
         run: |
           if git diff --quiet -- data/site-content.json; then
             echo "No content changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "AutoTech content bot"
-          git config user.email "actions@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/site-content.json
           git commit -m "Refresh YouTube content"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Netlify (optional)
+        if: steps.commit.outputs.changed == 'true' && env.NETLIFY_AUTH_TOKEN != '' && env.NETLIFY_SITE_ID != ''
+        run: npx --yes netlify-cli@latest deploy --prod --dir=. --functions=netlify/functions --site "$NETLIFY_SITE_ID" --auth "$NETLIFY_AUTH_TOKEN" --message "Hourly YouTube refresh"
