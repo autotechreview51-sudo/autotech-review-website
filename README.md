@@ -2,16 +2,12 @@
 
 ## Automatic YouTube updates
 
-The homepage reads `data/site-content.json`. GitHub Actions runs `scripts/update-youtube.mjs` every hour, separates the latest long videos and Shorts, refreshes subscriber text when available, commits only real feed changes, and then deploys to Netlify when the optional secrets are configured.
+- **Live feed:** `/api/youtube-feed` (Netlify function `netlify/functions/youtube-feed.mjs`) reads the channel RSS feed, separates Shorts from long videos and returns `latestVideos`, `latestLongVideos` and `latestShorts`. Responses are cached for ~15 minutes, so a new upload appears on the homepage without a redeploy.
+- **Fallback:** `script.js` requests the live feed first and falls back to `data/site-content.json` if the function is unavailable.
+- **Hourly refresh:** `.github/workflows/refresh-youtube.yml` runs `scripts/update-youtube.mjs` every hour (and on **Run workflow**). It keeps the last reliable data when YouTube is down and commits only when content actually changes.
+- **Deploys:** Netlify is connected to this repository, so each content commit redeploys automatically. The optional `NETLIFY_AUTH_TOKEN` / `NETLIFY_SITE_ID` repository secrets are only needed if the site is ever switched back to manual deploys; leave them unset while Git-connected to avoid double deploys.
 
-There are two supported deployment paths:
-
-1. Connect the Netlify site to this GitHub repository. A content commit will trigger a Netlify deploy automatically.
-2. If the Netlify site is a manual-drop site, add these GitHub repository secrets so the workflow can deploy directly:
-   - `NETLIFY_AUTH_TOKEN`
-   - `NETLIFY_SITE_ID`
-
-The workflow can also be started manually from GitHub Actions with **Run workflow**. If YouTube is temporarily unavailable, the updater preserves the last reliable content file instead of replacing it with an empty feed.
+Shared YouTube logic lives in `netlify/lib/youtube.mjs`.
 
 Responsive static implementation of the approved AutoTech Review Figma concept.
 

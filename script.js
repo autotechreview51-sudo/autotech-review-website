@@ -114,26 +114,48 @@ const createLatestCard = (video) => {
   return card;
 };
 
-fetch('data/site-content.json', { cache: 'no-store' })
-  .then((response) => {
-    if (!response.ok) throw new Error('Content feed unavailable');
-    return response.json();
+const hasVideos = (feed) => Array.isArray(feed?.latestLongVideos) && Array.isArray(feed?.latestShorts)
+  && (feed.latestLongVideos.length > 0 || feed.latestShorts.length > 0);
+
+const loadJson = (url, options) => fetch(url, options).then((response) => {
+  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
+  return response.json();
+});
+
+const renderVideoFeed = (selector, videos) => {
+  if (!Array.isArray(videos) || !videos.length) return;
+  const grid = document.querySelector(selector);
+  if (!grid) return;
+  grid.replaceChildren(...videos.slice(0, 3).map(createLatestCard));
+  if (!reduceMotion) grid.querySelectorAll('.tilt-card').forEach(enableTilt);
+};
+
+const renderMetrics = (content) => {
+  if (!content?.metrics?.subscribers) return;
+  const heroMetric = document.querySelector('.hero-metrics strong');
+  if (heroMetric) heroMetric.textContent = content.metrics.subscribers;
+  document.querySelectorAll('[data-subscriber]').forEach((element) => { element.textContent = content.metrics.subscribers; });
+};
+
+const renderFeeds = (feed) => {
+  renderVideoFeed('#long-videos-grid', feed.latestLongVideos);
+  renderVideoFeed('#shorts-grid', feed.latestShorts);
+};
+
+// Static content file: subscriber count + fallback video lists.
+const staticContent = loadJson('/data/site-content.json', { cache: 'no-store' }).catch(() => null);
+staticContent.then(renderMetrics);
+
+// Live feed first (Netlify function, cached ~15 min); fall back to the static file if it is unavailable.
+loadJson('/api/youtube-feed', { headers: { accept: 'application/json' } })
+  .then((feed) => {
+    if (!hasVideos(feed)) throw new Error('Live feed empty');
+    renderFeeds(feed);
   })
-  .then((content) => {
-    if (content.metrics?.subscribers) {
-      document.querySelector('.hero-metrics strong').textContent = content.metrics.subscribers;
-      document.querySelectorAll('[data-subscriber]').forEach((element) => { element.textContent = content.metrics.subscribers; });
-    }
-    const renderVideoFeed = (selector, videos) => {
-      if (!Array.isArray(videos) || !videos.length) return;
-      const grid = document.querySelector(selector);
-      grid.replaceChildren(...videos.slice(0, 3).map(createLatestCard));
-      if (!reduceMotion) grid.querySelectorAll('.tilt-card').forEach(enableTilt);
-    };
-    renderVideoFeed('#long-videos-grid', content.latestLongVideos);
-    renderVideoFeed('#shorts-grid', content.latestShorts);
-  })
-  .catch(() => {});
+  .catch(async () => {
+    const content = await staticContent;
+    if (hasVideos(content)) renderFeeds(content);
+  });
 
 const videoTabs = [...document.querySelectorAll('[data-video-tab]')];
 const setVideoTab = (selectedTab) => {

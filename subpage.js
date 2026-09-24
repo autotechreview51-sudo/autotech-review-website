@@ -1,6 +1,6 @@
 document.querySelector('#print-kit')?.addEventListener('click', () => window.print());
 
-fetch('data/site-content.json', { cache: 'no-store' })
+fetch('/data/site-content.json', { cache: 'no-store' })
   .then((response) => response.ok ? response.json() : Promise.reject())
   .then((content) => {
     if (content.metrics?.subscribers) document.querySelectorAll('[data-subscriber]').forEach((element) => { element.textContent = content.metrics.subscribers; });

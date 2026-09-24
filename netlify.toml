@@ -1,5 +1,20 @@
 [build]
   publish = "."
+  # Static site: this explicit no-op overrides any build command set in the Netlify UI.
+  command = "echo 'Static site - no build step required'"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/youtube-feed"
+  to = "/.netlify/functions/youtube-feed"
+  status = 200
+  force = true
 
 [[headers]]
   for = "/*"
@@ -14,3 +29,8 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
