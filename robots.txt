@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://autotechreview51-sudo.github.io/autotech-review-website/sitemap.xml
+Sitemap: https://www.autotechreview.ca/sitemap.xml

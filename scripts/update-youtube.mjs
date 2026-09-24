@@ -4,6 +4,9 @@ const channelId = 'UCNmOAbN5owAdafiNTgiOWDw';
 const channelHandle = '@autotechreview51';
 const fileUrl = new URL('../data/site-content.json', import.meta.url);
 const content = JSON.parse(await readFile(fileUrl, 'utf8'));
+const previous = JSON.stringify(content);
+let feedRefreshed = false;
+let subscriberRefreshed = false;
 
 const decodeXml = (value) => value
   .replaceAll('&amp;', '&')
@@ -33,7 +36,8 @@ try {
   }));
   content.latestLongVideos = classified.filter((video) => !video.isShort).slice(0, 3);
   content.latestShorts = classified.filter((video) => video.isShort).slice(0, 3);
-  content.latestVideos = classified.slice(0, 3);
+  content.latestVideos = classified.slice(0, 6);
+  feedRefreshed = true;
 } catch (error) {
   console.warn(`Keeping the existing video list: ${error.message}`);
 }
@@ -45,11 +49,19 @@ try {
   if (!response.ok) throw new Error(`Channel page returned ${response.status}`);
   const html = await response.text();
   const match = html.match(/"subscriberCountText":\{"simpleText":"([^"]+) subscribers"/);
-  if (match?.[1]) content.metrics.subscribers = match[1];
+    if (match?.[1]) {
+      content.metrics.subscribers = match[1];
+      subscriberRefreshed = true;
+    }
 } catch (error) {
   console.warn(`Keeping the existing subscriber count: ${error.message}`);
 }
 
-content.updatedAt = new Date().toISOString();
-await writeFile(fileUrl, `${JSON.stringify(content, null, 2)}\n`);
-console.log(`Updated ${content.latestVideos.length} videos and subscriber count ${content.metrics.subscribers}.`);
+const next = JSON.stringify(content);
+if ((feedRefreshed || subscriberRefreshed) && next !== previous) {
+  content.updatedAt = new Date().toISOString();
+  await writeFile(fileUrl, `${JSON.stringify(content, null, 2)}\n`);
+  console.log(`Updated ${content.latestLongVideos.length} long videos, ${content.latestShorts.length} Shorts and subscriber count ${content.metrics.subscribers}.`);
+} else {
+  console.log('No reliable YouTube feed change detected; keeping the existing content file.');
+}

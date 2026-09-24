@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d080f"/>
+      <stop offset="0.52" stop-color="#07080a"/>
+      <stop offset="1" stop-color="#101824"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f0003c" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#f0003c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <rect x="42" y="42" width="1116" height="546" rx="24" fill="none" stroke="#292d35"/>
+  <circle cx="930" cy="320" r="245" fill="url(#glow)"/>
+  <g transform="translate(78 80)">
+    <circle cx="30" cy="30" r="29" fill="#f0003c"/>
+    <path d="M15 31 29 15l4 13 13-5-16 22-4-13z" fill="#fff"/>
+    <text x="75" y="43" fill="#f7f4ee" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="800" letter-spacing="-1">AUTOTECH REVIEW</text>
+  </g>
+  <text x="78" y="234" fill="#f7f4ee" font-family="Inter,Arial,sans-serif" font-size="71" font-weight="900" letter-spacing="-3">CANADIAN CAR</text>
+  <text x="78" y="307" fill="#f0003c" font-family="Inter,Arial,sans-serif" font-size="71" font-weight="900" letter-spacing="-3">REVIEWS &amp; TOOLS</text>
+  <text x="82" y="366" fill="#9ca3af" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="500">Pricing. Comparisons. Ownership. Honest verdicts.</text>
+  <g transform="translate(650 310)">
+    <ellipse cx="255" cy="170" rx="245" ry="40" fill="#000" opacity=".55" filter="url(#shadow)"/>
+    <path d="M29 120c35-12 69-43 119-69 47-24 144-28 205-3l87 48c26 6 50 22 59 43l-17 38H33L8 152c2-15 8-25 21-32z" fill="#e5e7eb"/>
+    <path d="M150 56c43-20 137-20 193-2l61 39-294 2c11-16 24-29 40-39z" fill="#28303b"/>
+    <path d="M170 58c34-12 83-14 119-9l-6 43-142 1c8-13 18-25 29-35zm132-7c18 2 34 6 48 11l45 29-99 1z" fill="#7bc8ff" opacity=".5"/>
+    <path d="M22 126h59l-17 22H15zm421-24 43 15 10 20h-54z" fill="#f0003c"/>
+    <circle cx="116" cy="167" r="47" fill="#12151a" stroke="#5d6570" stroke-width="8"/>
+    <circle cx="116" cy="167" r="20" fill="#aab0b8"/>
+    <circle cx="399" cy="167" r="47" fill="#12151a" stroke="#5d6570" stroke-width="8"/>
+    <circle cx="399" cy="167" r="20" fill="#aab0b8"/>
+  </g>
+  <g transform="translate(80 492)">
+    <rect width="340" height="58" rx="29" fill="#151820" stroke="#292d35"/>
+    <circle cx="31" cy="29" r="7" fill="#6ee7a0"/>
+    <text x="54" y="37" fill="#f7f4ee" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700">www.autotechreview.ca</text>
+  </g>
+</svg>
