@@ -99,6 +99,9 @@ const createLatestCard = (video) => {
   image.src = `https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/maxresdefault.jpg`;
   image.alt = video.title;
   image.loading = 'lazy';
+  image.decoding = 'async';
+  image.width = 480;
+  image.height = 270;
   image.onerror = () => { image.src = `https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/hqdefault.jpg`; };
 
   const pill = document.createElement('span');
