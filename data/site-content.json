@@ -1,9 +1,15 @@
 {
-  "updatedAt": "2026-09-24T18:34:54.804Z",
+  "updatedAt": "2026-09-25T20:30:28.986Z",
   "metrics": {
     "subscribers": "21.2K"
   },
   "latestVideos": [
+    {
+      "id": "5Sv0TjG9ytg",
+      "title": "Is the 2026 Camry XSE Worth It? My Verdict!",
+      "published": "2026-09-25T19:36:14+00:00",
+      "isShort": true
+    },
     {
       "id": "1tx4EhDBoxY",
       "title": "Don't Buy the 2026 Toyota Camry XSE AWD Until You Watch This (Canada Price)",
@@ -33,12 +39,6 @@
       "title": "Which Toyota SUV wins on value? Corolla Cross vs RAV4 #2026 #brampton #toronto",
       "published": "2026-09-18T20:30:52+00:00",
       "isShort": true
-    },
-    {
-      "id": "FOPbgEgZv2s",
-      "title": "Don't Buy the Corolla Cross Until You See This #toronto #brampton",
-      "published": "2026-09-17T23:26:50+00:00",
-      "isShort": true
     }
   ],
   "latestLongVideos": [
@@ -63,6 +63,12 @@
   ],
   "latestShorts": [
     {
+      "id": "5Sv0TjG9ytg",
+      "title": "Is the 2026 Camry XSE Worth It? My Verdict!",
+      "published": "2026-09-25T19:36:14+00:00",
+      "isShort": true
+    },
+    {
       "id": "_rUVJbpXt3Y",
       "title": "POV: Walking around the 2026 Corolla Cross Hybrid #toronto #brampton",
       "published": "2026-09-21T22:12:37+00:00",
@@ -72,12 +78,6 @@
       "id": "9k8BoIZPZNo",
       "title": "Are the back seats in the 2026 Corolla Cross worth it? #toronto #brampton",
       "published": "2026-09-20T18:34:11+00:00",
-      "isShort": true
-    },
-    {
-      "id": "P8E7krlD6WI",
-      "title": "Is this the perfect daily driver? 2026 Corolla Cross Hybrid #toronto #brampton",
-      "published": "2026-09-19T20:14:52+00:00",
       "isShort": true
     }
   ]
