@@ -1,8 +1,10 @@
-name: Refresh YouTube content
+name: Refresh YouTube fallback content
 
 on:
+  # The live site loads new uploads through the Netlify function (cached about 15 minutes).
+  # This daily job only refreshes the static fallback and avoids unnecessary hourly deploys.
   schedule:
-    - cron: '17 * * * *'
+    - cron: '17 14 * * *'
   workflow_dispatch:
 
 permissions:
@@ -15,9 +17,6 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    env:
-      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
     steps:
       - uses: actions/checkout@v4
 
@@ -25,25 +24,18 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Refresh latest videos and subscriber count
+      - name: Refresh fallback videos and subscriber count
         run: node scripts/update-youtube.mjs
 
       - name: Commit only real content changes
-        id: commit
         run: |
           if git diff --quiet -- data/site-content.json; then
             echo "No content changes"
-            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "AutoTech content bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/site-content.json
-          git commit -m "Refresh YouTube content"
+          git commit -m "Refresh YouTube fallback content"
           git pull --rebase origin main
           git push origin HEAD:main
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-
-      - name: Deploy to Netlify (optional)
-        if: steps.commit.outputs.changed == 'true' && env.NETLIFY_AUTH_TOKEN != '' && env.NETLIFY_SITE_ID != ''
-        run: npx --yes netlify-cli@latest deploy --prod --dir=. --functions=netlify/functions --site "$NETLIFY_SITE_ID" --auth "$NETLIFY_AUTH_TOKEN" --message "Hourly YouTube refresh"
