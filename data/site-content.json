@@ -1,9 +1,15 @@
 {
-  "updatedAt": "2026-09-30T14:36:41.514Z",
+  "updatedAt": "2026-10-01T14:36:25.994Z",
   "metrics": {
     "subscribers": "21.3K"
   },
   "latestVideos": [
+    {
+      "id": "Zl3P77Mk39o",
+      "title": "2027 Mercedes GLC 300: Buy New, Shop 2026 or Wait? (ON)",
+      "published": "2026-09-30T22:30:35+00:00",
+      "isShort": false
+    },
     {
       "id": "4JiGVKNsTdQ",
       "title": "Will you buy the RAV4 over its competition #toronto #brampton",
@@ -33,15 +39,15 @@
       "title": "Don't Buy the 2026 Toyota Camry XSE AWD Until You Watch This (Canada Price)",
       "published": "2026-09-23T22:00:30+00:00",
       "isShort": false
-    },
-    {
-      "id": "_rUVJbpXt3Y",
-      "title": "POV: Walking around the 2026 Corolla Cross Hybrid #toronto #brampton",
-      "published": "2026-09-21T22:12:37+00:00",
-      "isShort": true
     }
   ],
   "latestLongVideos": [
+    {
+      "id": "Zl3P77Mk39o",
+      "title": "2027 Mercedes GLC 300: Buy New, Shop 2026 or Wait? (ON)",
+      "published": "2026-09-30T22:30:35+00:00",
+      "isShort": false
+    },
     {
       "id": "1tx4EhDBoxY",
       "title": "Don't Buy the 2026 Toyota Camry XSE AWD Until You Watch This (Canada Price)",
@@ -52,12 +58,6 @@
       "id": "QqwMlNI5iQQ",
       "title": "2026 Corolla Cross vs RAV4: Which Toyota SUV Should You Actually Buy? (Canada)",
       "published": "2026-09-16T23:00:14+00:00",
-      "isShort": false
-    },
-    {
-      "id": "WJhoONm4Ohw",
-      "title": "Canada’s Luxury Car Tax: What You Really Pay Over $100K",
-      "published": "2026-09-12T21:00:34+00:00",
       "isShort": false
     }
   ],
