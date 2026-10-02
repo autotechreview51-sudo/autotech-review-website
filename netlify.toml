@@ -1,7 +1,6 @@
 [build]
-  publish = "."
-  # Static site: this explicit no-op overrides any build command set in the Netlify UI.
-  command = "echo 'Static site - no build step required'"
+  publish = "dist"
+  command = "node scripts/sync-publication.mjs && node scripts/build-publication.mjs"
 
 [build.environment]
   NODE_VERSION = "22"
@@ -28,7 +27,7 @@
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/data/*"

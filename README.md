@@ -1,32 +1,23 @@
-# AutoTech Review redesign
+# AutoTech Review publication
 
-## Automatic YouTube updates
+Public publication for https://www.autotechreview.ca, continuing the existing GitHub and Netlify project.
 
-- **Live feed:** `/api/youtube-feed` (Netlify function `netlify/functions/youtube-feed.mjs`) reads the channel RSS feed, separates Shorts from long videos and returns `latestVideos`, `latestLongVideos` and `latestShorts`. Responses are cached for ~15 minutes, so a new upload appears on the homepage without a redeploy.
-- **Fallback:** `script.js` requests the live feed first and falls back to `data/site-content.json` if the function is unavailable.
-- **Hourly refresh:** `.github/workflows/refresh-youtube.yml` runs `scripts/update-youtube.mjs` every hour (and on **Run workflow**). It keeps the last reliable data when YouTube is down and commits only when content actually changes.
-- **Deploys:** Netlify is connected to this repository, so each content commit redeploys automatically. The optional `NETLIFY_AUTH_TOKEN` / `NETLIFY_SITE_ID` repository secrets are only needed if the site is ever switched back to manual deploys; leave them unset while Git-connected to avoid double deploys.
+## Pages and discovery
 
-Shared YouTube logic lives in `netlify/lib/youtube.mjs`.
-
-Responsive static implementation of the approved AutoTech Review Figma concept.
-
-## Preview
-
-Run any static server in this directory, for example:
-
-```sh
-python3 -m http.server 4173
-```
-
-Then open `http://localhost:4173`.
+Separate Long Videos and Shorts libraries, combined make/type/year/format filters, vehicle and make collections, video companions, related coverage, a campaign-brief email draft, printable media kit, Privacy and Transparency pages. Structured HTML and JSON-LD provide Organization, WebSite, Article, VideoObject, Vehicle, BreadcrumbList and ItemList metadata. URL and video sitemaps use the public canonical origin.
 
 ## Deployment
 
-The site is configured for Netlify as a zero-build static site. The repository root is the publish directory and no build command is required.
+Netlify builds with `node scripts/sync-publication.mjs && node scripts/build-publication.mjs` and publishes `dist/`. Existing Netlify YouTube-feed functions are retained. The daily GitHub content-refresh workflow updates the source feed and structured publication pages. Libraries also check `/api/youtube-feed` between rebuilds; new uploads link to YouTube until their companion pages have been built.
 
-## Before production
+If this Netlify project is configured for manual deployment, connect the existing repository or deploy the release package to the existing project. Do not create a replacement project or change DNS just to release the publication.
 
-- Connect live channel statistics to a maintained data source.
-- Confirm vehicle prices and specifications before publication.
-- Add Analytics and Search Console IDs through the production environment.
+## Content
+
+Edit `data/publication.json` for curated coverage and vehicle classifications. The sync script imports new source-feed videos, attaches a vehicle only when a model and model year match, and avoids inventing scores or driving experiences. Existing creator photographs serve as collection covers. The media kit uses a dated rounded subscriber snapshot and requests other current analytics instead of claiming unverified metrics.
+
+## Checks
+
+`python scripts/validate-publication.py` (requires lxml), `node scripts/verify-interactions.cjs`, and `node --check dist/assets/publication.js` check local links, anchors, assets, metadata, schemas, sitemaps, public indexing guards, responsive source rules, combined filters, format separation, empty states, resets, menu behavior, email-draft encoding and click-to-load video playback. Live browser layout QA was unavailable in the editing environment.
+
+No new analytics, advertising, payments or account services are added. The campaign brief creates an email draft and does not send it or submit visitor information to a website database.
