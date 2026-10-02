@@ -1,5 +1,5 @@
 /*
-  X-Robots-Tag: index, follow
+  X-Robots-Tag: index, follow, max-image-preview:large
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()

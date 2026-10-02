@@ -29,7 +29,7 @@ for file in sorted(dist.rglob('*.html')):
     check(len(canonical)==1, f'{relative}: missing/duplicate canonical')
     check(bool(doc.xpath('//title/text()')),f'{relative}: missing title')
     check(bool(doc.xpath('//meta[@name="viewport"]')),f'{relative}: missing viewport')
-    check(doc.xpath('//meta[@name="robots"]/@content')==(['noindex, nofollow, noarchive'] if config['private'] else ['index, follow']) or bool(doc.xpath('//meta[@http-equiv="refresh"]')),f'{relative}: private indexing guard missing')
+    check(doc.xpath('//meta[@name="robots"]/@content')==(['noindex, nofollow, noarchive'] if config['private'] else ['index, follow, max-image-preview:large']) or bool(doc.xpath('//meta[@http-equiv="refresh"]')),f'{relative}: private indexing guard missing')
     ids=doc.xpath('//*[@id]/@id')
     check(len(ids)==len(set(ids)),f'{relative}: duplicate element IDs')
     is_alias=bool(doc.xpath('//meta[@http-equiv="refresh"]'))
