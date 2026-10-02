@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T13:00:12.812Z",
+  "updatedAt": "2026-10-02T14:17:16.542Z",
   "metrics": {
     "subscribers": "21.3K"
   },
@@ -142,7 +142,7 @@
       "id": "KA5nvH5kG2A",
       "title": "Which Toyota SUV wins on value? Corolla Cross vs RAV4 #2026 #brampton #toronto",
       "published": "2026-09-18T20:30:52+00:00",
-      "isShort": null,
+      "isShort": true,
       "makes": [
         "Toyota"
       ],
@@ -157,7 +157,7 @@
       "id": "FOPbgEgZv2s",
       "title": "Don't Buy the Corolla Cross Until You See This #toronto #brampton",
       "published": "2026-09-17T23:26:50+00:00",
-      "isShort": null,
+      "isShort": true,
       "makes": [
         "Toyota"
       ],
@@ -183,7 +183,7 @@
       "id": "211JlZYRqug",
       "title": "What does a 2027 BMW X3 horn actually sound like? #bmw #x3 #carfacts",
       "published": "2026-09-15T19:12:32+00:00",
-      "isShort": null,
+      "isShort": true,
       "makes": [
         "BMW"
       ],
@@ -196,7 +196,7 @@
       "id": "KtimZCnQJhI",
       "title": "Is this the future of BMW interiors? #brampton #toronto",
       "published": "2026-09-14T19:10:14+00:00",
-      "isShort": null,
+      "isShort": true,
       "makes": [
         "BMW"
       ],
@@ -480,7 +480,7 @@
       "id": "KA5nvH5kG2A",
       "title": "Which Toyota SUV wins on value? Corolla Cross vs RAV4 #2026 #brampton #toronto",
       "published": "2026-09-18T20:30:52+00:00",
-      "isShort": null,
+      "isShort": true,
       "makes": [
         "Toyota"
       ],
@@ -495,7 +495,7 @@
       "id": "FOPbgEgZv2s",
       "title": "Don't Buy the Corolla Cross Until You See This #toronto #brampton",
       "published": "2026-09-17T23:26:50+00:00",
-      "isShort": null,
+      "isShort": true,
       "makes": [
         "Toyota"
       ],
@@ -521,7 +521,7 @@
       "id": "211JlZYRqug",
       "title": "What does a 2027 BMW X3 horn actually sound like? #bmw #x3 #carfacts",
       "published": "2026-09-15T19:12:32+00:00",
-      "isShort": null,
+      "isShort": true,
       "makes": [
         "BMW"
       ],
@@ -534,7 +534,7 @@
       "id": "KtimZCnQJhI",
       "title": "Is this the future of BMW interiors? #brampton #toronto",
       "published": "2026-09-14T19:10:14+00:00",
-      "isShort": null,
+      "isShort": true,
       "makes": [
         "BMW"
       ],
