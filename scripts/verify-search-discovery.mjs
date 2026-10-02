@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {writeSearchDiscovery} from './search-discovery.mjs';
+const out = fs.mkdtempSync(path.join(os.tmpdir(),'autotech-discovery-'));
+const origin='https://www.autotechreview.ca';
+const key='0123456789abcdef0123456789abcdef';
+const route='/watch/example/';
+fs.mkdirSync(path.join(out,'watch/example'),{recursive:true});
+fs.writeFileSync(path.join(out,'index.html'),'<h1>Home</h1><span>Content catalogue checked Oct 2, 2026</span>');
+fs.writeFileSync(path.join(out,'watch/example/index.html'),'<h1>Example</h1>');
+const options={out,origin,routes:['/',route],videos:[{id:'01234567890',slug:'example',originalTitle:'Title & details',description:'A useful <video>',published:'2026-10-01T12:00:00Z',format:'long'}],href:v=>'/videos/'+v.slug+'/',view:v=>'/watch/'+v.slug+'/',absoluteImage:()=>origin+'/assets/image.jpg',esc:s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),privateSite:false,key};
+try {
+  const first=writeSearchDiscovery(options);
+  const unchanged=writeSearchDiscovery(options);
+  assert.deepEqual(unchanged,first,'Build must be idempotent');
+  fs.writeFileSync(path.join(out,'index.html'),'<h1>Home</h1><span>Content catalogue checked Oct 3, 2026</span>');
+  assert.deepEqual(writeSearchDiscovery(options),first,'Check date must not change every sitemap date');
+  fs.writeFileSync(path.join(out,'watch/example/index.html'),'<h1>A real content edit</h1>');
+  const edited=writeSearchDiscovery(options);
+  assert.deepEqual(edited.changed,[origin+route],'Only changed page should be notified');
+  assert.notEqual(edited.version,first.version);
+  assert.match(fs.readFileSync(path.join(out,'video-sitemap.xml'),'utf8'),/<loc>https:\/\/www\.autotechreview\.ca\/watch\/example\/<\/loc>/);
+  assert.match(fs.readFileSync(path.join(out,'feed.xml'),'utf8'),/Title &amp; details/);
+  assert.match(fs.readFileSync(path.join(out,'long-videos-feed.xml'),'utf8'),/<item>/);
+  assert.doesNotMatch(fs.readFileSync(path.join(out,'shorts-feed.xml'),'utf8'),/<item>/);
+  assert.equal(fs.readFileSync(path.join(out,key+'.txt'),'utf8'),key);
+  writeSearchDiscovery({...options,privateSite:true});
+  assert.equal(fs.existsSync(path.join(out,key+'.txt')),false,'Private site must not expose notification proof');
+  assert.equal(fs.readFileSync(path.join(out,'robots.txt'),'utf8'),'User-agent: *\nDisallow: /\n');
+  console.log('Search discovery checks passed: stable builds, meaningful changes, watch URLs, escaping, format feeds and private guard.');
+} finally {fs.rmSync(out,{recursive:true,force:true});}

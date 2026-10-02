@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Sitemap: https://www.autotechreview.ca/sitemap-index.xml
 Sitemap: https://www.autotechreview.ca/sitemap.xml
 Sitemap: https://www.autotechreview.ca/video-sitemap.xml

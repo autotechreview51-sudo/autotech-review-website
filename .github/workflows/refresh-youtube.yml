@@ -13,6 +13,8 @@ on:
       - 'scripts/sync-publication.mjs'
       - 'scripts/update-thumbnails.mjs'
       - 'scripts/build-publication.mjs'
+      - 'scripts/search-content.mjs'
+      - 'scripts/search-discovery.mjs'
 
 permissions:
   contents: write
@@ -33,7 +35,7 @@ jobs:
         with:
           node-version: '22'
       - name: Test refresh and outage recovery
-        run: node scripts/verify-auto-refresh.mjs && node scripts/verify-feed-fallback.mjs
+        run: node scripts/verify-auto-refresh.mjs && node scripts/verify-feed-fallback.mjs && node scripts/verify-search-discovery.mjs
       - name: Refresh channel uploads
         run: node scripts/update-youtube.mjs && node scripts/sync-publication.mjs
       - name: Update exact video thumbnails
@@ -48,6 +50,7 @@ jobs:
       - name: Build publication, RSS and sitemaps
         run: node scripts/build-publication.mjs
       - name: Commit only actual content changes
+        id: content
         run: |
           git add data/site-content.json data/publication.json data/cover-provenance.json dist
           if git diff --cached --quiet; then
@@ -64,3 +67,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Refresh channel videos and publication pages"
           git push origin HEAD:main
+          echo "published=true" >> "$GITHUB_OUTPUT"
+      - name: Notify search engines after new uploads are published
+        if: steps.content.outputs.published == 'true'
+        run: node scripts/notify-search.mjs --wait

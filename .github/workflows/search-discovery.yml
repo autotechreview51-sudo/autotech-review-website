@@ -1,0 +1,26 @@
+name: Notify search engines after publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dist/data/search-manifest.json'
+      - 'data/search-discovery.json'
+      - 'scripts/notify-search.mjs'
+      - '.github/workflows/search-discovery.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: search-discovery
+  cancel-in-progress: false
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Wait for the public version and notify IndexNow
+        run: node scripts/notify-search.mjs --wait

@@ -254,6 +254,40 @@
 
   document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
 
+  document.querySelectorAll('[data-share]').forEach(button => {
+    button.hidden = false;
+    button.addEventListener('click', async () => {
+      const status = button.closest('.share-tools, .watch-details, article')?.querySelector('[data-share-status]');
+      const canonical = document.querySelector('link[rel="canonical"]')?.href;
+      if (!canonical) return;
+      try {
+        if (typeof navigator.share === 'function') {
+          await navigator.share({title:document.querySelector('h1')?.textContent || 'AutoTech Review',url:canonical});
+          if(status) status.textContent = 'Share completed.';
+        } else {
+          await navigator.clipboard.writeText(canonical);
+          if(status) status.textContent = 'Link copied.';
+        }
+      } catch(error) {
+        if(error?.name==='AbortError') return;
+        if(status) status.textContent = 'Copy this page’s address from your browser to share it.';
+      }
+    });
+  });
+  const copyFeed = document.querySelector('[data-copy-feed]');
+  if(copyFeed) {
+    copyFeed.hidden = false;
+    copyFeed.addEventListener('click',async () => {
+      const status = document.querySelector('[data-feed-copy-status]');
+      try {
+        const address = document.querySelector('.feed-address')?.href;
+        if(!address) return;
+        await navigator.clipboard.writeText(address);
+        status.textContent = 'RSS address copied. Add it to your feed reader.';
+      } catch { status.textContent = 'Copy the RSS address shown above and add it to your feed reader.'; }
+    });
+  }
+
   const brief = document.querySelector('#partner-form');
   if (brief) {
     brief.addEventListener('submit', event => {
