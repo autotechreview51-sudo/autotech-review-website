@@ -1,11 +1,18 @@
-name: Refresh YouTube fallback content
+name: Refresh YouTube publication
 
 on:
-  # The live site loads new uploads through the Netlify function (cached about 15 minutes).
-  # This daily job only refreshes the static fallback and avoids unnecessary hourly deploys.
   schedule:
-    - cron: '17 14 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-youtube.yml'
+      - 'netlify/lib/**'
+      - 'scripts/update-youtube.mjs'
+      - 'scripts/sync-publication.mjs'
+      - 'scripts/update-thumbnails.mjs'
+      - 'scripts/build-publication.mjs'
 
 permissions:
   contents: write
@@ -17,28 +24,43 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-
-      - name: Refresh fallback videos and subscriber count
-        run: node scripts/update-youtube.mjs
-
-      - name: Refresh structured publication pages
-        run: node scripts/sync-publication.mjs && node scripts/update-thumbnails.mjs --refresh && node scripts/build-publication.mjs
-
-      - name: Commit only real content changes
+      - name: Test refresh and outage recovery
+        run: node scripts/verify-auto-refresh.mjs && node scripts/verify-feed-fallback.mjs
+      - name: Refresh channel uploads
+        run: node scripts/update-youtube.mjs && node scripts/sync-publication.mjs
+      - name: Update exact video thumbnails
+        env:
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          if git diff --quiet -- data/site-content.json data/publication.json data/cover-provenance.json dist; then
+          if [ "$EVENT_NAME" != "schedule" ] || [ "$(date -u +%H)" = "14" ]; then
+            node scripts/update-thumbnails.mjs --refresh
+          else
+            node scripts/update-thumbnails.mjs
+          fi
+      - name: Build publication, RSS and sitemaps
+        run: node scripts/build-publication.mjs
+      - name: Commit only actual content changes
+        run: |
+          git add data/site-content.json data/publication.json data/cover-provenance.json dist
+          if git diff --cached --quiet; then
             echo "No content changes"
+            exit 0
+          fi
+          # If an editor changed main, let the next hourly run regenerate from it.
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo "Main changed during refresh; skipping this commit safely"
             exit 0
           fi
           git config user.name "AutoTech content bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/site-content.json data/publication.json data/cover-provenance.json dist
-          git commit -m "Refresh YouTube fallback content"
-          git pull --rebase origin main
+          git commit -m "Refresh channel videos and publication pages"
           git push origin HEAD:main

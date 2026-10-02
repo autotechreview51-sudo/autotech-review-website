@@ -34,9 +34,10 @@ for (let start = 0; start < publication.videos.length; start += 4) {
     if (!/^[\w-]{11}$/.test(video.id)) throw new Error('Invalid video ID');
     const file = path.join(directory, video.id + '.jpg');
     const old = previous.get(video.id);
+    const savedRecord = old && { ...old, title:video.originalTitle, format:video.format };
     const verifiedSaved = old?.kind === 'YouTube video thumbnail' && fs.existsSync(file) &&
       createHash('sha256').update(fs.readFileSync(file)).digest('hex') === old.sha256;
-    if (verifiedSaved && !process.argv.includes('--refresh')) return old;
+    if (verifiedSaved && !process.argv.includes('--refresh')) return savedRecord;
     for (const quality of ['maxresdefault', 'hqdefault']) {
       const source = `https://img.youtube.com/vi/${video.id}/${quality}.jpg`;
       try {
@@ -50,9 +51,9 @@ for (let start = 0; start < publication.videos.length; start += 4) {
           format: video.format, ...size, sha256: createHash('sha256').update(bytes).digest('hex') };
       } catch { /* Keep a verified saved thumbnail when the upstream is unavailable. */ }
     }
-    if (verifiedSaved) return old;
+    if (verifiedSaved) return savedRecord;
     // Build uses this video's remote thumbnail until a download succeeds.
-    return { id: video.id, kind: 'YouTube remote thumbnail', source: `https://img.youtube.com/vi/${video.id}/hqdefault.jpg` };
+    return { id: video.id, kind: 'YouTube remote thumbnail', source: `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`, title:video.originalTitle, format:video.format };
   }));
   results.push(...batch);
 }

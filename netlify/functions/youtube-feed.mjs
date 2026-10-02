@@ -1,7 +1,9 @@
 import { loadChannelFeed } from '../lib/youtube.mjs';
 import savedFeed from '../../data/site-content.json' with { type: 'json' };
+import publication from '../../data/publication.json' with { type: 'json' };
+import { feedVideos } from '../lib/catalogue.mjs';
 
-const FRESH_SECONDS = 900; // ~15 minutes
+const FRESH_SECONDS = 300;
 let lastGood = null;       // survives between requests on a warm instance
 
 const json = (body, status, cacheHeaders) => new Response(JSON.stringify(body), {
@@ -11,16 +13,18 @@ const json = (body, status, cacheHeaders) => new Response(JSON.stringify(body), 
 
 export default async () => {
   try {
-    const feed = await loadChannelFeed({ previous: lastGood?.latestVideos ?? [...savedFeed.latestVideos, ...savedFeed.latestLongVideos, ...savedFeed.latestShorts] });
+    const feed = await loadChannelFeed({ previous: lastGood?.archive ?? feedVideos(savedFeed), vehicles: publication.vehicles });
     lastGood = { updatedAt: new Date().toISOString(), source: 'youtube-rss', ...feed };
-    return json(lastGood, 200, {
-      'cache-control': `public, max-age=${FRESH_SECONDS}`,
-      'netlify-cdn-cache-control': `public, s-maxage=${FRESH_SECONDS}, stale-while-revalidate=3600, durable`
+    const { archive, ...publicFeed } = lastGood;
+    return json(publicFeed, 200, {
+      'cache-control': 'public, max-age=0, must-revalidate',
+      'netlify-cdn-cache-control': `public, s-maxage=${FRESH_SECONDS}, stale-while-revalidate=60, durable`
     });
   } catch (error) {
     console.warn(`youtube-feed: ${error.message}`);
     if (lastGood) {
-      return json({ ...lastGood, stale: true }, 200, {
+      const { archive, ...publicFeed } = lastGood;
+      return json({ ...publicFeed, stale: true }, 200, {
         'cache-control': 'public, max-age=60',
         'netlify-cdn-cache-control': 'public, s-maxage=60'
       });

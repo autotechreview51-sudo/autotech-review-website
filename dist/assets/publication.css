@@ -72,3 +72,5 @@
 @media(max-width:800px){.tool-layout{grid-template-columns:1fr}.tool-card{padding:24px}.fuel-results{max-width:100%}}
 @media(max-width:560px){.tool-card-grid,.tool-fields{grid-template-columns:1fr}.tool-form,.fuel-results,.drive-checklist{padding:22px 18px}.tool-card h2{font-size:1.7rem}.tools-content{padding-bottom:35px}.fuel-table{font-size:.85rem}.checklist-toolbar{align-items:flex-start}.return-note,.buying-help{padding:22px}}
 @media print{.checklist-toolbar button,.tools-content>.tool-help,.drive-checklist>.actions,.checklist-content>.related-band,.drive-checklist .check-notes{display:none!important}.drive-checklist{padding:0;border:0}.drive-checklist fieldset{break-inside:avoid;margin-top:18px;padding-top:8px}.drive-checklist .check-item{padding:7px 0;min-height:0}.drive-checklist .tool-fields{grid-template-columns:1fr 1fr}.print-notes{display:block}.print-notes p{white-space:pre-wrap;overflow-wrap:anywhere}.print-notes h2{font-size:16pt;margin-top:24px}.checklist-toolbar p{font-size:11pt}.checklist-content .page-intro{padding-bottom:10px}}
+
+.feed-status{margin:0 0 1.4rem;color:var(--muted,#62656d);font-size:.8rem;line-height:1.5}

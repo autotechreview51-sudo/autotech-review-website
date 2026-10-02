@@ -102,53 +102,100 @@
     form.addEventListener('reset', event => { event.preventDefault(); reset(); });
     discovery.querySelector('[data-clear]').addEventListener('click', () => { reset(); controls.make.focus(); });
     applyFilters(false);
-    // Keep discovery current between the existing daily publication rebuilds.
+    // Live updates supplement the crawlable catalogue between hourly rebuilds.
     if (typeof fetch === 'function' && ['/', '/reviews/', '/long-videos/', '/shorts/'].includes(location.pathname)) {
-      (async () => {
-        try {
-          const catalogueResponse = await fetch('/data/publication.json', {signal:AbortSignal.timeout(8000)});
-          if (!catalogueResponse.ok) return;
-          const catalogue = await catalogueResponse.json();
-          let feedResponse;
-          try { feedResponse = await fetch('/api/youtube-feed', {signal:AbortSignal.timeout(10000)}); }
-          catch { feedResponse = await fetch('/data/site-content.json'); }
-          if (!feedResponse.ok) feedResponse = await fetch('/data/site-content.json');
-          if (!feedResponse.ok) return;
-          const feed = await feedResponse.json();
-          const seen = new Set(cards.map(c => c.dataset.video));
-          const latest = new Map([...(feed.latestVideos || []), ...(feed.latestLongVideos || []), ...(feed.latestShorts || [])].map(v => [v.id, v]));
-          const models = {'GLC 300': /\bGLC\s*300\b/i, 'Camry XSE AWD': /\bCamry\b/i, 'Corolla Cross Hybrid': /\bCorolla\s*Cross\b/i, 'RAV4': /\bRAV4\b/i, 'iX3': /\biX3\b/i};
-          for (const v of latest.values()) {
-            if (seen.has(v.id) || !/^[\w-]{11}$/.test(v.id) || typeof v.isShort !== 'boolean' || typeof v.title !== 'string' || !Number.isFinite(Date.parse(v.published))) continue;
-            const contentFormat = v.isShort ? 'short' : 'long';
-            if (fixedFormat && contentFormat !== fixedFormat) continue;
-            const title = v.title.replace(/\s*#\S+/g, '').trim();
-            const year = title.match(/\b20\d{2}\b/)?.[0] || '';
-            const vehicles = catalogue.vehicles.filter(vehicle => year && String(vehicle.year) === year && models[vehicle.model]?.test(title));
-            const makes = [...new Set(vehicles.map(vehicle => vehicle.make))];
-            if (!makes.length) {
-              if (/\bToyota|Camry|RAV4|Corolla\b/i.test(title)) makes.push('Toyota');
-              else if (/\bMercedes|GLC\b/i.test(title)) makes.push('Mercedes-Benz');
-              else if (/\bBMW\b/i.test(title)) makes.push('BMW');
-            }
-            const knownVideo = catalogue.videos.find(video => video.id === v.id);
-            const videoUrl = knownVideo ? `/videos/${knownVideo.slug}/` : v.isShort ? `https://www.youtube.com/shorts/${v.id}` : `https://www.youtube.com/watch?v=${v.id}`;
-            const node = document.createElement('article');
-            node.className = 'video-card' + (v.isShort ? ' short-card' : '');
-            Object.assign(node.dataset, {video:v.id,published:v.published,make:makes.join('|'),year,type:[...new Set(vehicles.map(vehicle => vehicle.type))].join('|'),format:contentFormat,search:v.title,url:videoUrl});
-            const link = document.createElement('a'); link.className='card-image';link.href=videoUrl;link.setAttribute('aria-label', title);
-            const img=document.createElement('img');img.src=`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;img.alt='YouTube thumbnail for '+title;img.width=480;img.height=360;img.loading='lazy';img.dataset.thumbnailId=v.id;protectThumbnail(img);
-            const badge=document.createElement('span');badge.className='image-label';badge.textContent=v.isShort?'Short':'Long video';link.append(img,badge);
-            const copy=document.createElement('div');copy.className='card-copy';
-            const meta=document.createElement('div');meta.className='meta';const label=document.createElement('span');label.textContent='New upload';const timestamp=document.createElement('time');timestamp.dateTime=v.published;timestamp.textContent=new Date(v.published).toLocaleDateString('en-CA',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Toronto'});meta.append(label,timestamp);
-            const heading=document.createElement('h3');const headingLink=document.createElement('a');headingLink.href=videoUrl;headingLink.textContent=title;heading.append(headingLink);
-            copy.append(meta,heading);node.append(link,copy);discovery.querySelector('.video-grid').append(node);cards.push(node);seen.add(v.id);
+      let refreshing = false;
+      const feedStatus = discovery.querySelector('[data-feed-status]');
+      const titleText = v => (v.automatic || !v.slug ? v.title.replace(/\s*#\S+/g, '').trim() : v.title);
+      const videoUrl = v => v.slug ? `/videos/${v.slug}/` : v.isShort === true ? `https://www.youtube.com/shorts/${v.id}` : `https://www.youtube.com/watch?v=${v.id}`;
+      const dateText = value => new Date(value).toLocaleDateString('en-CA',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Toronto'});
+      function createCard(v) {
+        const title = titleText(v), url = videoUrl(v);
+        const node = document.createElement('article');
+        node.className = 'video-card' + (v.format === 'short' ? ' short-card' : '');
+        Object.assign(node.dataset,{video:v.id,published:v.published,make:(v.makes||[]).join('|'),year:(v.years||[]).join('|'),type:(v.types||[]).join('|'),format:v.format,search:(v.originalTitle||v.title)+' '+(v.description||''),url});
+        const link=document.createElement('a');link.className='card-image';link.href=url+(url.startsWith('/')?'#watch':'');link.setAttribute('aria-label','Watch '+title);
+        const img=document.createElement('img');
+        const saved=document.querySelector(`[data-thumbnail-id="${v.id}"]`);
+        img.src=saved?.getAttribute('src')||`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;
+        img.alt='YouTube thumbnail for '+(v.originalTitle||v.title);img.width=480;img.height=360;img.loading='lazy';img.dataset.thumbnailId=v.id;protectThumbnail(img);
+        const badge=document.createElement('span');badge.className='image-label';badge.textContent=v.format==='short'?'Short':v.format==='long'?'Long video':'Video';
+        const play=document.createElement('span');play.className='play-icon';play.setAttribute('aria-hidden','true');play.textContent='▶';link.append(img,badge,play);
+        const copy=document.createElement('div');copy.className='card-copy';
+        const meta=document.createElement('div');meta.className='meta';const label=document.createElement('span');label.textContent=v.kind||'New upload';const timestamp=document.createElement('time');timestamp.dateTime=v.published;timestamp.textContent=dateText(v.published);meta.append(label,timestamp);
+        const heading=document.createElement('h3');const headingLink=document.createElement('a');headingLink.href=url;headingLink.textContent=title;heading.append(headingLink);copy.append(meta,heading);
+        if(v.format==='long'&&v.description){const description=document.createElement('p');description.textContent=v.description;copy.append(description);}
+        node.append(link,copy);return node;
+      }
+      function addFilterOptions() {
+        for(const key of ['make','type','year']) {
+          const selected=controls[key].value;
+          const values=[...new Set(cards.flatMap(card=>(card.dataset[key]||'').split('|').filter(Boolean)))].sort((a,b)=>key==='year'?Number(b)-Number(a):a.localeCompare(b));
+          for(const value of values) if(![...controls[key].options].some(option=>option.value===value)) {
+            const option=document.createElement('option');option.value=value;option.textContent=value;controls[key].append(option);
           }
-          const grid=discovery.querySelector('.video-grid');
-          [...cards].sort((a,b)=>(b.dataset.published||'').localeCompare(a.dataset.published||'')).forEach(card=>grid.append(card));
-          applyFilters(false);
-        } catch { /* The existing structured collection stays available if the feed fails. */ }
-      })();
+          // Honour a bookmarked new make/year once its upload has arrived.
+          const requested=new URLSearchParams(location.search).get(key);
+          if(!selected&&requested&&values.includes(requested)) controls[key].value=requested;
+        }
+      }
+      async function refreshChannel() {
+        if(refreshing||document.visibilityState==='hidden')return;
+        refreshing=true;
+        try {
+          const catalogueResponse=await fetch('/data/publication.json',{signal:AbortSignal.timeout(10000)});
+          if(!catalogueResponse.ok)throw new Error('Catalogue unavailable');
+          const catalogue=await catalogueResponse.json();
+          let response;
+          try{response=await fetch('/api/youtube-feed',{signal:AbortSignal.timeout(12000)});}catch{}
+          if(!response?.ok)response=await fetch('/data/site-content.json',{signal:AbortSignal.timeout(8000)});
+          if(!response.ok)throw new Error('Feed unavailable');
+          const feed=await response.json();
+          const merged=new Map(catalogue.videos.map(v=>[v.id,{...v,isShort:v.format==='short'?true:v.format==='long'?false:null}]));
+          const live=new Map([...(feed.latestLongVideos||[]),...(feed.latestShorts||[]),...(feed.latestVideos||[])].map(v=>[v.id,v]));
+          for(const v of live.values()) {
+            if(!/^[\w-]{11}$/.test(v.id)||typeof v.title!=='string'||!Number.isFinite(Date.parse(v.published)))continue;
+            const old=merged.get(v.id);
+            const contentFormat=v.isShort===true?'short':v.isShort===false?'long':old?.format||'unclassified';
+            merged.set(v.id,{...old,...v,format:contentFormat,originalTitle:v.title,title:old&&!old.automatic?old.title:v.title,makes:old&&!old.automatic?old.makes:v.makes||old?.makes||[],years:old&&!old.automatic?old.years:v.years||old?.years||[],types:old&&!old.automatic?old.types:v.types||old?.types||[]});
+          }
+          const current=[...merged.values()].sort((a,b)=>Date.parse(b.published)-Date.parse(a.published));
+          for(const v of current) {
+            const existing=cards.find(card=>card.dataset.video===v.id);
+            if(existing) {
+              // Refresh renamed automatic imports, format and link without losing the current filters.
+              const fresh=createCard(v);
+              if(typeof existing.replaceWith==='function'){existing.replaceWith(fresh);cards[cards.indexOf(existing)]=fresh;}
+              continue;
+            }
+            if(fixedFormat&&v.format!==fixedFormat)continue;
+            const node=createCard(v);grid.append(node);cards.push(node);
+          }
+          addFilterOptions();applyFilters(false);
+          document.querySelectorAll('[data-latest-format]').forEach(section=>{
+            const strip=section.querySelector('.video-grid');
+            strip.replaceChildren(...current.filter(v=>v.format===section.dataset.latestFormat).slice(0,Number(section.dataset.limit)).map(createCard));
+          });
+          const lead=document.querySelector('[data-lead-video]');
+          const newest=current.find(v=>v.format==='long');
+          if(lead&&newest&&(newest.id!==lead.dataset.leadVideo||newest.automatic)) {
+            const url=videoUrl(newest),imageLink=lead.querySelector('.lead-image'),img=createCard(newest).querySelector('img');
+            img.loading='eager';img.fetchPriority='high';imageLink.href=url;imageLink.querySelector('img').replaceWith(img);
+            lead.querySelector('.lead-index').textContent='01 / LATEST LONG VIDEO';
+            lead.querySelector('.kicker').textContent='LATEST FULL VIDEO';lead.querySelector('h1').textContent=titleText(newest);
+            lead.querySelector('.lead-copy p').textContent=newest.description||'The newest full video from AutoTech Review. Watch the complete discussion on YouTube.';
+            lead.querySelector('.lead-actions .button').href=url+(url.startsWith('/')?'#watch':'');lead.querySelector('.lead-actions .button').textContent='Watch the full video';lead.querySelector('.lead-date').textContent=dateText(newest.published)+' · Long video';lead.dataset.leadVideo=newest.id;lead.dataset.published=newest.published;
+          }
+          if(feedStatus)feedStatus.textContent=feed.stale||feed.source==='saved-catalogue'||!feed.source?'Showing saved coverage. Live channel checks retry automatically.':'Channel checked '+new Date(feed.updatedAt).toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit',timeZone:'America/Toronto'})+' ET · Updates automatically';
+        } catch {if(feedStatus)feedStatus.textContent='Showing saved coverage. Live channel checks retry automatically.';}
+        finally{refreshing=false;}
+      }
+      refreshChannel();
+      if(typeof setInterval==='function') {
+        const timer=setInterval(refreshChannel,300000);
+        document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refreshChannel();});
+        window.addEventListener('pagehide',()=>clearInterval(timer),{once:true});
+      }
     }
     window.addEventListener('popstate', () => {
       const next = new URLSearchParams(location.search);

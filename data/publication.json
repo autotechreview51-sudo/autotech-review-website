@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-01",
+  "contentChecked": "2026-10-02",
   "subscribers": "21.3K",
   "vehicles": [
     {
@@ -74,6 +74,15 @@
         "Compare written quotes for the exact trim and options.",
         "Ask what changes between the model years on offer.",
         "Confirm delivery timing, warranty start date and finance terms."
+      ],
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
       ]
     },
     {
@@ -98,6 +107,15 @@
         "Confirm the current Canadian price and itemized dealer quote.",
         "Check the equipment included with the specific XSE AWD on sale.",
         "Try the seating position and rear-seat space yourself."
+      ],
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": [
+        "Sedan"
       ]
     },
     {
@@ -123,6 +141,15 @@
         "Compare the exact trims rather than starting prices alone.",
         "Bring the cargo you carry most often to a showroom visit.",
         "Request current availability and ownership-cost estimates for both."
+      ],
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": [
+        "SUV"
       ]
     },
     {
@@ -145,7 +172,10 @@
         "Request an itemized, dated quote showing applicable taxes and fees.",
         "Verify current rules with the Canada Revenue Agency.",
         "Confirm whether the figures in a past video still apply to your purchase."
-      ]
+      ],
+      "makes": [],
+      "years": [],
+      "types": []
     },
     {
       "id": "GmdUmrDhZSg",
@@ -169,6 +199,15 @@
         "Confirm Canadian specifications and delivery timing with BMW.",
         "Check charging options at home and on your regular routes.",
         "Ask for current range, warranty and equipment information for your trim."
+      ],
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
       ]
     },
     {
@@ -182,7 +221,16 @@
       "vehicles": [
         "2026-toyota-rav4"
       ],
-      "description": "A quick RAV4 buying question from AutoTech Review. Follow it with the full Toyota SUV comparison."
+      "description": "A quick RAV4 buying question from AutoTech Review. Follow it with the full Toyota SUV comparison.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": [
+        "SUV"
+      ]
     },
     {
       "id": "gYYxSmZe1Sk",
@@ -193,7 +241,10 @@
       "format": "short",
       "kind": "Cabin detail",
       "vehicles": [],
-      "description": "A quick look at a red cabin. This video’s title does not identify the vehicle, so it is listed without a model classification."
+      "description": "A quick look at a red cabin. This video’s title does not identify the vehicle, so it is listed without a model classification.",
+      "makes": [],
+      "years": [],
+      "types": []
     },
     {
       "id": "ciwldF2hUn4",
@@ -206,7 +257,16 @@
       "vehicles": [
         "2026-toyota-camry-xse-awd"
       ],
-      "description": "See the 2026 Toyota Camry XSE entry and start-up sequence in this AutoTech Review Short."
+      "description": "See the 2026 Toyota Camry XSE entry and start-up sequence in this AutoTech Review Short.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": [
+        "Sedan"
+      ]
     },
     {
       "id": "5Sv0TjG9ytg",
@@ -219,7 +279,16 @@
       "vehicles": [
         "2026-toyota-camry-xse-awd"
       ],
-      "description": "Rishi’s short-form take on the 2026 Toyota Camry XSE. Watch the full video for the complete Canadian context."
+      "description": "Rishi’s short-form take on the 2026 Toyota Camry XSE. Watch the full video for the complete Canadian context.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": [
+        "Sedan"
+      ]
     },
     {
       "id": "_rUVJbpXt3Y",
@@ -232,7 +301,16 @@
       "vehicles": [
         "2026-toyota-corolla-cross-hybrid"
       ],
-      "description": "A POV walkaround of the 2026 Toyota Corolla Cross Hybrid."
+      "description": "A POV walkaround of the 2026 Toyota Corolla Cross Hybrid.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": [
+        "SUV"
+      ]
     },
     {
       "id": "9k8BoIZPZNo",
@@ -245,7 +323,16 @@
       "vehicles": [
         "2026-toyota-corolla-cross-hybrid"
       ],
-      "description": "Take a quick look at the back seat of the 2026 Toyota Corolla Cross."
+      "description": "Take a quick look at the back seat of the 2026 Toyota Corolla Cross.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": [
+        "SUV"
+      ]
     },
     {
       "id": "P8E7krlD6WI",
@@ -258,7 +345,16 @@
       "vehicles": [
         "2026-toyota-corolla-cross-hybrid"
       ],
-      "description": "A short-form look at the 2026 Toyota Corolla Cross Hybrid’s daily-driver appeal."
+      "description": "A short-form look at the 2026 Toyota Corolla Cross Hybrid’s daily-driver appeal.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": [
+        "SUV"
+      ]
     },
     {
       "id": "Jbl0aGFtihU",
@@ -271,7 +367,132 @@
       "vehicles": [
         "2027-mercedes-benz-glc-300"
       ],
-      "description": "A quick look at what’s new on the 2027 Mercedes-Benz GLC 300. Continue with the full model-year buying discussion."
+      "description": "A quick look at what’s new on the 2027 Mercedes-Benz GLC 300. Continue with the full model-year buying discussion.",
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
+    {
+      "id": "KA5nvH5kG2A",
+      "slug": "channel-KA5nvH5kG2A",
+      "title": "Which Toyota SUV wins on value? Corolla Cross vs RAV4",
+      "originalTitle": "Which Toyota SUV wins on value? Corolla Cross vs RAV4 #2026 #brampton #toronto",
+      "published": "2026-09-18T20:30:52+00:00",
+      "format": "unclassified",
+      "kind": "Channel video",
+      "vehicles": [
+        "2026-toyota-rav4"
+      ],
+      "automatic": true,
+      "description": "Watch this video from AutoTech Review: Which Toyota SUV wins on value? Corolla Cross vs RAV4.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
+    {
+      "id": "FOPbgEgZv2s",
+      "slug": "channel-FOPbgEgZv2s",
+      "title": "Don't Buy the Corolla Cross Until You See This",
+      "originalTitle": "Don't Buy the Corolla Cross Until You See This #toronto #brampton",
+      "published": "2026-09-17T23:26:50+00:00",
+      "format": "unclassified",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this video from AutoTech Review: Don't Buy the Corolla Cross Until You See This.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "211JlZYRqug",
+      "slug": "channel-211JlZYRqug",
+      "title": "What does a 2027 BMW X3 horn actually sound like?",
+      "originalTitle": "What does a 2027 BMW X3 horn actually sound like? #bmw #x3 #carfacts",
+      "published": "2026-09-15T19:12:32+00:00",
+      "format": "unclassified",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this video from AutoTech Review: What does a 2027 BMW X3 horn actually sound like?.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
+      "id": "KtimZCnQJhI",
+      "slug": "channel-KtimZCnQJhI",
+      "title": "Is this the future of BMW interiors?",
+      "originalTitle": "Is this the future of BMW interiors? #brampton #toronto",
+      "published": "2026-09-14T19:10:14+00:00",
+      "format": "unclassified",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this video from AutoTech Review: Is this the future of BMW interiors?.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "BMW"
+      ],
+      "years": [],
+      "types": []
     }
   ]
 }

@@ -102,12 +102,14 @@ check(not re.search(r'(?:^|[;{])(?:min-width|width):(?:[5-9]\d\d|\d{4,})px',css)
 provenance={v['id']:v for v in json.loads((root/'data/cover-provenance.json').read_text())}
 for video in config['videos']:
     record=provenance.get(video['id'],{})
-    check(record.get('kind')=='YouTube video thumbnail',video['id']+': unverified thumbnail')
+    check(record.get('kind') in ['YouTube video thumbnail','YouTube remote thumbnail'],video['id']+': invalid thumbnail provenance')
     check('/vi/'+video['id']+'/' in record.get('source',''),video['id']+': wrong thumbnail source')
     check(record.get('title')==video['originalTitle'],video['id']+': thumbnail title mismatch')
     cover=dist/'assets/thumbnails'/ (video['id']+'.jpg')
-    check(cover.is_file(),video['id']+': thumbnail missing')
-    if cover.is_file():
+    check(record.get('format')==video['format'],video['id']+': thumbnail format mismatch')
+    if record.get('kind')=='YouTube video thumbnail':
+        check(cover.is_file(),video['id']+': thumbnail missing')
+    if record.get('kind')=='YouTube video thumbnail' and cover.is_file():
         check(hashlib.sha256(cover.read_bytes()).hexdigest()==record.get('sha256'),video['id']+': thumbnail hash mismatch')
 fixtures_path=root/'.sites-runtime/publication-fixtures.json'
 fixtures_path.parent.mkdir(parents=True,exist_ok=True)

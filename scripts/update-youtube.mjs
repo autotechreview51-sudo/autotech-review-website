@@ -1,19 +1,23 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { CHANNEL_HANDLE, loadChannelFeed } from '../netlify/lib/youtube.mjs';
+import { feedVideos } from '../netlify/lib/catalogue.mjs';
 
 const fileUrl = new URL('../data/site-content.json', import.meta.url);
 const content = JSON.parse(await readFile(fileUrl, 'utf8'));
+const publication = JSON.parse(await readFile(new URL('../data/publication.json', import.meta.url), 'utf8'));
 const { updatedAt: _ignored, ...previousComparable } = content;
 const previous = JSON.stringify(previousComparable);
 
 try {
-  const feed = await loadChannelFeed({ previous: [...(content.latestVideos || []), ...(content.latestLongVideos || []), ...(content.latestShorts || [])] });
+  const curated = publication.videos.map(v => ({id:v.id,title:v.originalTitle,published:v.published,isShort:v.format === 'short' ? true : v.format === 'long' ? false : null}));
+  const feed = await loadChannelFeed({ previous: [...curated, ...feedVideos(content)], vehicles: publication.vehicles });
   // Never replace a populated tab with an empty one.
   if (feed.latestLongVideos.length) content.latestLongVideos = feed.latestLongVideos;
   else console.warn('No long videos detected; keeping the previous long-video list.');
   if (feed.latestShorts.length) content.latestShorts = feed.latestShorts;
   else console.warn('No Shorts detected; keeping the previous Shorts list.');
   content.latestVideos = feed.latestVideos;
+  content.archive = feed.archive;
 } catch (error) {
   console.warn(`Keeping the existing video list: ${error.message}`);
 }

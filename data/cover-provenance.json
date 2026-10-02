@@ -128,5 +128,45 @@
     "width": 1280,
     "height": 720,
     "sha256": "99a1af5e61743cac1d2c7dc877622fd65c446a7522297aa93fbc88281090c7de"
+  },
+  {
+    "id": "KA5nvH5kG2A",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/KA5nvH5kG2A/maxresdefault.jpg",
+    "title": "Which Toyota SUV wins on value? Corolla Cross vs RAV4 #2026 #brampton #toronto",
+    "format": "unclassified",
+    "width": 1280,
+    "height": 720,
+    "sha256": "4063c3aacca9193e75ddd5c39d0791e5429195c9ca76f7ac9b1216357cb2f1c3"
+  },
+  {
+    "id": "FOPbgEgZv2s",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/FOPbgEgZv2s/maxresdefault.jpg",
+    "title": "Don't Buy the Corolla Cross Until You See This #toronto #brampton",
+    "format": "unclassified",
+    "width": 1280,
+    "height": 720,
+    "sha256": "30fdcd1ee3cdb8df342e9f398e8a0ed8781cebaa7a6ab7f870cc1fcd4b8115ae"
+  },
+  {
+    "id": "211JlZYRqug",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/211JlZYRqug/maxresdefault.jpg",
+    "title": "What does a 2027 BMW X3 horn actually sound like? #bmw #x3 #carfacts",
+    "format": "unclassified",
+    "width": 1280,
+    "height": 720,
+    "sha256": "8e336e904ee62df7badb61eb8905d1bdd73461f9719a0743f2f2634d39fcc5b5"
+  },
+  {
+    "id": "KtimZCnQJhI",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/KtimZCnQJhI/maxresdefault.jpg",
+    "title": "Is this the future of BMW interiors? #brampton #toronto",
+    "format": "unclassified",
+    "width": 1280,
+    "height": 720,
+    "sha256": "af796f78555283585306302b8aa828a42f496acf8306bbecd200d85c17a22599"
   }
 ]
