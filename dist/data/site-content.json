@@ -1,9 +1,20 @@
 {
-  "updatedAt": "2026-10-02T14:17:16.542Z",
+  "updatedAt": "2026-10-02T23:28:16.037Z",
   "metrics": {
     "subscribers": "21.3K"
   },
   "latestVideos": [
+    {
+      "id": "f6nT3auHL78",
+      "title": "Is the new Mercedes GLC 300 a waste of money? #toronto #brampton #mercedes",
+      "published": "2026-10-02T22:34:21+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [],
+      "types": []
+    },
     {
       "id": "Jbl0aGFtihU",
       "title": "What’s actually new on the 2027 Mercedes GLC 300? #toronto #brampton",
@@ -191,17 +202,6 @@
         "2027"
       ],
       "types": []
-    },
-    {
-      "id": "KtimZCnQJhI",
-      "title": "Is this the future of BMW interiors? #brampton #toronto",
-      "published": "2026-09-14T19:10:14+00:00",
-      "isShort": true,
-      "makes": [
-        "BMW"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "latestLongVideos": [
@@ -265,6 +265,17 @@
   ],
   "latestShorts": [
     {
+      "id": "f6nT3auHL78",
+      "title": "Is the new Mercedes GLC 300 a waste of money? #toronto #brampton #mercedes",
+      "published": "2026-10-02T22:34:21+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
       "id": "Jbl0aGFtihU",
       "title": "What’s actually new on the 2027 Mercedes GLC 300? #toronto #brampton",
       "published": "2026-10-01T23:14:40+00:00",
@@ -324,24 +335,20 @@
         "2026"
       ],
       "types": []
-    },
-    {
-      "id": "_rUVJbpXt3Y",
-      "title": "POV: Walking around the 2026 Corolla Cross Hybrid #toronto #brampton",
-      "published": "2026-09-21T22:12:37+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "archive": [
+    {
+      "id": "f6nT3auHL78",
+      "title": "Is the new Mercedes GLC 300 a waste of money? #toronto #brampton #mercedes",
+      "published": "2026-10-02T22:34:21+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [],
+      "types": []
+    },
     {
       "id": "Jbl0aGFtihU",
       "title": "What’s actually new on the 2027 Mercedes GLC 300? #toronto #brampton",

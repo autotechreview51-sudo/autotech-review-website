@@ -168,5 +168,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "af796f78555283585306302b8aa828a42f496acf8306bbecd200d85c17a22599"
+  },
+  {
+    "id": "f6nT3auHL78",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/f6nT3auHL78/maxresdefault.jpg",
+    "title": "Is the new Mercedes GLC 300 a waste of money? #toronto #brampton #mercedes",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "d48d7b2efa772d18332c90169e26e75cf2d1a00a73041593b70cb9c0d9526b07"
   }
 ]
