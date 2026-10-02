@@ -1,4 +1,4 @@
-import json, pathlib, re, sys, hashlib
+import json, pathlib, re, sys, hashlib, calendar, datetime
 from urllib.parse import urlsplit, unquote
 from lxml import html, etree
 
@@ -22,6 +22,9 @@ fixtures={}
 for file in sorted(dist.rglob('*.html')):
     relative=file.relative_to(dist)
     doc=html.fromstring(file.read_text())
+    checked=datetime.date.fromisoformat(config['contentChecked'])
+    expected_date=f'{calendar.month_abbr[checked.month]} {checked.day}, {checked.year}'
+    check('Content catalogue checked '+expected_date in doc.text_content(),f'{relative}: calendar date shifted by timezone')
     canonical=doc.xpath('//link[@rel="canonical"]/@href')
     check(len(canonical)==1, f'{relative}: missing/duplicate canonical')
     check(bool(doc.xpath('//title/text()')),f'{relative}: missing title')

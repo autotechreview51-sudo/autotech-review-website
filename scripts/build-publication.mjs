@@ -15,7 +15,7 @@ const href = v => `/videos/${v.slug}/`;
 const watch = v => v.format === 'short' ? `https://www.youtube.com/shorts/${v.id}` : `https://www.youtube.com/watch?v=${v.id}`;
 const image = v => fs.existsSync(path.join(out,'assets/thumbnails',v.id+'.jpg')) ? `/assets/thumbnails/${v.id}.jpg?v=${thumbnailInfo.get(v.id)?.sha256?.slice(0,12)||'saved'}` : `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;
 const absoluteImage = v => image(v).startsWith('https:') ? image(v) : origin+image(v);
-const date = d => new Date(d).toLocaleDateString('en-CA', {day:'numeric',month:'short',year:'numeric',timeZone:'America/Toronto'});
+const date = d => new Date(d).toLocaleDateString('en-CA', {day:'numeric',month:'short',year:'numeric',timeZone:/^\d{4}-\d{2}-\d{2}$/.test(d)?'UTC':'America/Toronto'});
 const format = v => v.format === 'short' ? 'Short' : 'Long video';
 const videos = [...data.videos].sort((a,b) => b.published.localeCompare(a.published));
 const longs = videos.filter(v => v.format === 'long');
