@@ -22,7 +22,7 @@ function fuel(query = '') {
   let current = new URL('https://www.autotechreview.ca/tools/fuel-cost-calculator/' + query);
   const document = {querySelector:selector => nodes[selector] || null, querySelectorAll:() => labels};
   const history = {replaceState(a,b,url) { current = new URL(url, current); }};
-  const context = {document,location:{href:current.href,search:current.search},history,URL,URLSearchParams,Intl,navigator:{clipboard:{writeText:async value => {context.copied = value;}}},queueMicrotask:fn => pending.push(fn)};
+  const context = {document,location:{href:current.href,search:current.search},history,URL,URLSearchParams,Intl,navigator:{clipboard:{writeText:async value => {context.copied = value;}}},setTimeout:fn => pending.push(fn)};
   vm.runInNewContext(source, context);
   return {controls,form,nodes,linkInput,context,url:() => current,reset() {form.fire('reset'); for (const [key,value] of Object.entries(defaults)) controls[key].value = value; pending.splice(0).forEach(fn => fn());}};
 }
@@ -53,7 +53,7 @@ async function main() {
   const checklist = new Node(), notes = new Node(), progress = new Node(), printed = new Node(), pending = [], window = new Node();
   checklist.elements = {namedItem:() => notes}; checklist.querySelectorAll = () => checks;
   const document = {querySelector:s => ({'[data-drive-checklist]':checklist,'[data-check-progress]':progress,'[data-print-notes]':printed}[s] || null)};
-  vm.runInNewContext(source, {document,window,queueMicrotask:fn => pending.push(fn)});
+  vm.runInNewContext(source, {document,window,setTimeout:fn => pending.push(fn)});
   checks[0].checked = checks[15].checked = true; notes.value = 'Try the stroller.\nAsk about the exact trim.'; checklist.fire('input');
   assert.equal(progress.textContent, '2 of 16 items checked'); window.fire('beforeprint'); assert.equal(printed.textContent, notes.value);
   checklist.fire('reset'); checks.forEach(c => c.checked = false); notes.value = ''; pending.splice(0).forEach(fn => fn()); assert.equal(progress.textContent, '0 of 16 items checked');

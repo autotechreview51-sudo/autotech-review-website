@@ -65,7 +65,7 @@
       previousUnits = next; labels(); calculate();
     });
     field('currency').addEventListener('change', () => { labels(); calculate(); });
-    form.addEventListener('reset', () => { queueMicrotask(() => { previousUnits = field('units').value; labels(); calculate(); }); });
+    form.addEventListener('reset', () => { setTimeout(() => { previousUnits = field('units').value; labels(); calculate(); }, 0); });
     document.querySelector('[data-copy-comparison]').addEventListener('click', async () => {
       if (!calculate()) return;
       const url = comparisonUrl().href;
@@ -88,7 +88,7 @@
     checklist.addEventListener('submit', event => event.preventDefault());
     checklist.addEventListener('input', update);
     checklist.addEventListener('change', update);
-    checklist.addEventListener('reset', () => queueMicrotask(update));
+    checklist.addEventListener('reset', () => setTimeout(update, 0));
     window.addEventListener('beforeprint', update);
     update();
   }
