@@ -15,14 +15,12 @@ const matches=(title,vehicle)=>{
 };
 let added=0;
 for(const v of candidates.values()){
- if(known.has(v.id)||!/^[-\w]{11}$/.test(v.id)||typeof v.isShort!=='boolean'||!v.published)continue;
+ if(known.has(v.id)||!/^[-\w]{11}$/.test(v.id)||typeof v.isShort!=='boolean'||typeof v.title!=='string'||!Number.isFinite(Date.parse(v.published)))continue;
  const vehicles=data.vehicles.filter(x=>matches(v.title,x)).map(x=>x.slug);
  const title=String(v.title).replace(/\s*#\S+/g,'').trim();
  const entry={id:v.id,slug:'channel-'+v.id,title,originalTitle:v.title,published:v.published,format:v.isShort?'short':'long',kind:v.isShort?'Quick look':'Channel video',vehicles,description:`Watch ${v.isShort?'this Short':'the full video'} from AutoTech Review: ${title}.`};
  if(!v.isShort)Object.assign(entry,{question:'Watch the complete discussion.',topics:['Published channel coverage','Vehicle details','Related coverage'],checks:['Confirm the exact model year and local-market trim.','Check current pricing and availability with the manufacturer or retailer.','Watch the full video for the complete context.']});
- const cover=data.videos.find(x=>x.vehicles.some(s=>vehicles.includes(s))&&fs.existsSync(path.join(root,'dist/assets/images',x.id+'.jpg')));
- if(cover){fs.copyFileSync(path.join(root,'dist/assets/images',cover.id+'.jpg'),path.join(root,'dist/assets/images',v.id+'.jpg'));provenance.push({id:v.id,kind:'collection photograph',source:cover.id});}
- else{entry.cover='/assets/new-channel-cover.svg';provenance.push({id:v.id,kind:'typographic video cover'});}
+ provenance.push({id:v.id,kind:'YouTube remote thumbnail',source:`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`});
  data.videos.push(entry);known.add(v.id);added++;
 }
 if(added){data.contentChecked=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto'}).format(new Date(feed.updatedAt||Date.now()));fs.writeFileSync(path.join(root,'data/publication.json'),JSON.stringify(data,null,2)+'\n');fs.writeFileSync(path.join(root,'data/cover-provenance.json'),JSON.stringify(provenance,null,2)+'\n');}

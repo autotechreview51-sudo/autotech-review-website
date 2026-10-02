@@ -4,17 +4,17 @@ Public publication for https://www.autotechreview.ca, continuing the existing Gi
 
 ## Pages and discovery
 
-Separate Long Videos and Shorts libraries, combined make/type/year/format filters, vehicle and make collections, video companions, related coverage, a campaign-brief email draft, printable media kit, Privacy and Transparency pages. Structured HTML and JSON-LD provide Organization, WebSite, Article, VideoObject, Vehicle, BreadcrumbList and ItemList metadata. URL and video sitemaps use the public canonical origin.
+Separate Long Videos and Shorts libraries, combined make/type/year/format filters, title search, date sorting, filtered “Surprise me” suggestions, vehicle and make collections, video companions, related coverage, a campaign-brief email draft, printable media kit, Privacy and Transparency pages. Structured HTML and JSON-LD provide Organization, WebSite, Article, VideoObject, Vehicle, BreadcrumbList and ItemList metadata. URL and video sitemaps use the public canonical origin.
 
 ## Deployment
 
-Netlify builds with `node scripts/sync-publication.mjs && node scripts/build-publication.mjs` and publishes `dist/`. Existing Netlify YouTube-feed functions are retained. The daily GitHub content-refresh workflow updates the source feed and structured publication pages. Libraries also check `/api/youtube-feed` between rebuilds; new uploads link to YouTube until their companion pages have been built.
+Netlify builds with `node scripts/sync-publication.mjs && node scripts/update-thumbnails.mjs && node scripts/build-publication.mjs` and publishes `dist/`. Existing Netlify YouTube-feed functions are retained. The daily GitHub content-refresh workflow updates the source feed, exact video thumbnails and structured publication pages. Libraries also check `/api/youtube-feed` between rebuilds; new uploads link to YouTube until their companion pages have been built.
 
 Pushing `main` deploys through the existing Netlify project. Legacy URLs use forced 301 redirects so they cannot shadow the canonical directory pages. The feed returns the saved catalogue if YouTube is temporarily unavailable.
 
 ## Content
 
-Edit `data/publication.json` for curated coverage and vehicle classifications. The sync script imports new source-feed videos, attaches a vehicle only when a model and model year match, and avoids inventing scores or driving experiences. Existing creator photographs serve as collection covers. The media kit uses a dated rounded subscriber snapshot and requests other current analytics instead of claiming unverified metrics.
+Edit `data/publication.json` for curated coverage and vehicle classifications. The sync script imports new source-feed videos, attaches a vehicle only when a model and model year match, and avoids inventing scores or driving experiences. Each thumbnail comes from its own YouTube video ID; `data/cover-provenance.json` records the exact source and file hash. New uploads never inherit another video's artwork. The media kit uses a dated rounded subscriber snapshot and requests other current analytics instead of claiming unverified metrics.
 
 ## Checks
 

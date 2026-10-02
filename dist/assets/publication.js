@@ -1,5 +1,19 @@
 (() => {
   'use strict';
+  function protectThumbnail(img) {
+    const id = img.dataset.thumbnailId;
+    if (!/^[\w-]{11}$/.test(id || '')) return;
+    const remote = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+    function fallback() { img.src = '/assets/new-channel-cover.svg'; img.classList.add('image-unavailable'); img.alt = 'Thumbnail unavailable; open the video to watch.'; }
+    const recover = () => {
+      if (img.getAttribute('src') === remote) return fallback();
+      img.addEventListener('error', fallback, { once: true });
+      img.src = remote;
+    };
+    img.addEventListener('error', recover, { once: true });
+    if (img.complete && img.naturalWidth === 0) recover();
+  }
+  document.querySelectorAll('[data-thumbnail-id]').forEach(protectThumbnail);
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#primary-nav');
   if (menu && nav) {
@@ -29,7 +43,14 @@
     const baseMake = controls.make.value;
     const count = discovery.querySelector('[data-result-count]');
     const empty = discovery.querySelector('[data-empty]');
+    const search = form.elements.namedItem('q');
+    const sort = form.elements.namedItem('sort');
+    const grid = discovery.querySelector('.video-grid');
+    const sortLabel = discovery.querySelector('[data-sort-label]');
+    const pick = discovery.querySelector('[data-pick]');
     const params = new URLSearchParams(location.search);
+    if (search) search.value = (params.get('q') || '').slice(0, 120);
+    if (sort) sort.value = params.get('sort') === 'oldest' ? 'oldest' : 'newest';
     for (const key of fields) {
       const value = params.get(key);
       if (value && !controls[key].disabled && [...controls[key].options].some(o => o.value === value)) controls[key].value = value;
@@ -37,29 +58,47 @@
     function applyFilters(updateUrl = true) {
       const state = Object.fromEntries(fields.map(key => [key, key === 'format' && fixedFormat ? fixedFormat : controls[key].value]));
       let found = 0;
+      const query = (search?.value || '').trim().toLocaleLowerCase();
       for (const card of cards) {
-        const matches = fields.every(key => !state[key] || (card.dataset[key] || '').split('|').includes(state[key]));
+        const matches = fields.every(key => !state[key] || (card.dataset[key] || '').split('|').includes(state[key])) &&
+          query.split(/\s+/).every(word => (card.dataset.search || card.textContent || '').toLocaleLowerCase().includes(word));
         card.hidden = !matches;
         if (matches) found++;
       }
       count.textContent = `${found} ${found === 1 ? 'video' : 'videos'}`;
       empty.hidden = found !== 0;
+      const oldest = sort?.value === 'oldest';
+      cards.sort((a,b) => (oldest ? 1 : -1) * (Date.parse(a.dataset.published) - Date.parse(b.dataset.published)));
+      if (grid) cards.forEach(card => grid.append(card));
+      if (sortLabel) sortLabel.textContent = oldest ? 'Oldest first' : 'Newest first';
+      if (pick) { pick.hidden = false; pick.disabled = found === 0; }
       if (updateUrl) {
         const url = new URL(location.href);
         fields.forEach(key => {
           if (state[key] && !(key === 'format' && fixedFormat)) url.searchParams.set(key, state[key]);
           else url.searchParams.delete(key);
         });
+        if (query) url.searchParams.set('q', search.value.trim()); else url.searchParams.delete('q');
+        if (oldest) url.searchParams.set('sort', 'oldest'); else url.searchParams.delete('sort');
         history.replaceState(null, '', url.pathname + url.search + url.hash);
       }
-      return { filters: state, count: found, videos: cards.filter(card => !card.hidden).map(card => card.dataset.video) };
+      return { filters: {...state,q:search?.value||'',sort:sort?.value||'newest'}, count: found, videos: cards.filter(card => !card.hidden).map(card => card.dataset.video) };
     }
     function reset() {
       fields.forEach(key => { controls[key].value = key === 'format' ? fixedFormat : key === 'make' ? baseMake : ''; });
+      if (search) search.value = '';
+      if (sort) sort.value = 'newest';
       applyFilters();
     }
     form.addEventListener('submit', event => event.preventDefault());
     form.addEventListener('change', () => applyFilters());
+    search?.addEventListener('input', () => applyFilters());
+    pick?.addEventListener('click', () => {
+      const choices = cards.filter(card => !card.hidden);
+      if (!choices.length) return;
+      const target = choices[Math.floor(Math.random() * choices.length)].dataset.url;
+      if (target && (target.startsWith('/videos/') || /^https:\/\/www\.youtube\.com\/(watch\?|shorts\/)/.test(target))) window.location.assign(target + (target.startsWith('/') ? '#watch' : ''));
+    });
     form.addEventListener('reset', event => { event.preventDefault(); reset(); });
     discovery.querySelector('[data-clear]').addEventListener('click', () => { reset(); controls.make.focus(); });
     applyFilters(false);
@@ -67,10 +106,12 @@
     if (typeof fetch === 'function' && ['/', '/reviews/', '/long-videos/', '/shorts/'].includes(location.pathname)) {
       (async () => {
         try {
-          const catalogueResponse = await fetch('/data/publication.json');
+          const catalogueResponse = await fetch('/data/publication.json', {signal:AbortSignal.timeout(8000)});
           if (!catalogueResponse.ok) return;
           const catalogue = await catalogueResponse.json();
-          let feedResponse = await fetch('/api/youtube-feed');
+          let feedResponse;
+          try { feedResponse = await fetch('/api/youtube-feed', {signal:AbortSignal.timeout(10000)}); }
+          catch { feedResponse = await fetch('/data/site-content.json'); }
           if (!feedResponse.ok) feedResponse = await fetch('/data/site-content.json');
           if (!feedResponse.ok) return;
           const feed = await feedResponse.json();
@@ -94,10 +135,9 @@
             const videoUrl = knownVideo ? `/videos/${knownVideo.slug}/` : v.isShort ? `https://www.youtube.com/shorts/${v.id}` : `https://www.youtube.com/watch?v=${v.id}`;
             const node = document.createElement('article');
             node.className = 'video-card' + (v.isShort ? ' short-card' : '');
-            Object.assign(node.dataset, {video:v.id,published:v.published,make:makes.join('|'),year,type:[...new Set(vehicles.map(vehicle => vehicle.type))].join('|'),format:contentFormat});
+            Object.assign(node.dataset, {video:v.id,published:v.published,make:makes.join('|'),year,type:[...new Set(vehicles.map(vehicle => vehicle.type))].join('|'),format:contentFormat,search:v.title,url:videoUrl});
             const link = document.createElement('a'); link.className='card-image';link.href=videoUrl;link.setAttribute('aria-label', title);
-            const img=document.createElement('img');img.src=`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`;img.alt='Cover for '+title;img.width=480;img.height=360;img.loading='lazy';
-            img.addEventListener('error',()=>{img.src='/assets/new-channel-cover.svg';img.classList.add('text-cover');},{once:true});
+            const img=document.createElement('img');img.src=`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;img.alt='YouTube thumbnail for '+title;img.width=480;img.height=360;img.loading='lazy';img.dataset.thumbnailId=v.id;protectThumbnail(img);
             const badge=document.createElement('span');badge.className='image-label';badge.textContent=v.isShort?'Short':'Long video';link.append(img,badge);
             const copy=document.createElement('div');copy.className='card-copy';
             const meta=document.createElement('div');meta.className='meta';const label=document.createElement('span');label.textContent='New upload';const timestamp=document.createElement('time');timestamp.dateTime=v.published;timestamp.textContent=new Date(v.published).toLocaleDateString('en-CA',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Toronto'});meta.append(label,timestamp);
@@ -112,6 +152,8 @@
     }
     window.addEventListener('popstate', () => {
       const next = new URLSearchParams(location.search);
+      if (search) search.value = (next.get('q') || '').slice(0,120);
+      if (sort) sort.value = next.get('sort') === 'oldest' ? 'oldest' : 'newest';
       fields.forEach(key => { const val=next.get(key)||''; controls[key].value=key==='format'&&fixedFormat?fixedFormat:[...controls[key].options].some(o=>o.value===val)?val:''; });
       applyFilters(false);
     });
@@ -120,6 +162,8 @@
       const validInput = input => {
         if (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error('Expected a filters object.');
         for (const [key, value] of Object.entries(input)) {
+          if (key === 'q' && typeof value === 'string' && value.length <= 120) continue;
+          if (key === 'sort' && ['newest','oldest'].includes(value)) continue;
           if (!fields.includes(key) || typeof value !== 'string' || ![...controls[key].options].some(o => o.value === value)) throw new Error('Unsupported filter: ' + key);
           if (key === 'format' && fixedFormat && value !== fixedFormat) throw new Error('This library has a fixed content format.');
         }
@@ -129,9 +173,9 @@
         Promise.resolve(document.modelContext.registerTool({
           name: 'filter_review_library', title: 'Filter AutoTech Review videos',
           description: 'Set the visible library filters and return matching video IDs. Changes only this page’s filters; does not publish or submit data.',
-          inputSchema: { type: 'object', properties: { make: { type:'string', enum:['','Toyota','BMW','Mercedes-Benz'] }, type:{type:'string',enum:['','SUV','Sedan']}, year:{type:'string',enum:['','2026','2027']}, format:{type:'string',enum:fixedFormat?[fixedFormat]:['','long','short']} }, additionalProperties:false },
+          inputSchema: { type: 'object', properties: { ...Object.fromEntries(fields.map(key=>[key,{type:'string',enum:key==='format'&&fixedFormat?[fixedFormat]:[...controls[key].options].map(o=>o.value)}])),q:{type:'string',maxLength:120},sort:{type:'string',enum:['newest','oldest']} }, additionalProperties:false },
           annotations: { readOnlyHint:false, untrustedContentHint:false },
-          execute(input) { const parsed=validInput(input);Object.entries(parsed).forEach(([key,value])=>{controls[key].value=value;});return applyFilters(); }
+          execute(input) { const parsed=validInput(input);Object.entries(parsed).forEach(([key,value])=>{const control=key==='q'?search:key==='sort'?sort:controls[key];if(control)control.value=value;});return applyFilters(); }
         }, {signal:lifecycle.signal})).catch(() => {});
         window.addEventListener('pagehide', () => lifecycle.abort(), {once:true});
       } catch { /* Browsers without the proposed API keep the normal controls. */ }
@@ -144,7 +188,7 @@
       const id = player.dataset.id;
       if (!/^[\w-]{11}$/.test(id)) return;
       const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
       iframe.title = document.querySelector('h1')?.textContent || 'AutoTech Review video';
       iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
       iframe.allowFullscreen = true;

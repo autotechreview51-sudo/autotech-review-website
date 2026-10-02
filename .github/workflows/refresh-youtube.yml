@@ -28,7 +28,7 @@ jobs:
         run: node scripts/update-youtube.mjs
 
       - name: Refresh structured publication pages
-        run: node scripts/sync-publication.mjs && node scripts/build-publication.mjs
+        run: node scripts/sync-publication.mjs && node scripts/update-thumbnails.mjs --refresh && node scripts/build-publication.mjs
 
       - name: Commit only real content changes
         run: |

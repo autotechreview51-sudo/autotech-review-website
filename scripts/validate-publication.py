@@ -1,4 +1,4 @@
-import json, pathlib, re, sys
+import json, pathlib, re, sys, hashlib
 from urllib.parse import urlsplit, unquote
 from lxml import html, etree
 
@@ -69,7 +69,8 @@ for file in sorted(dist.rglob('*.html')):
             options=[o.get('value','') for o in select.xpath('./option')]
             selected=select.xpath('./option[@selected]/@value')
             controls[select.get('name')]={'options':options,'value':selected[0] if selected else options[0],'disabled':'disabled' in select.attrib}
-        fixtures['/'+str(relative).replace('index.html','')]={'controls':controls,'fixedFormat':discovery.get('data-fixed-format'),'cards':[{key:node.get('data-'+key,'') for key in ['video','make','year','type','format']} for node in discovery.xpath('.//*[@data-video]')]}
+        controls['q']={'options':[],'value':'','disabled':False}
+        fixtures['/'+str(relative).replace('index.html','')]={'controls':controls,'fixedFormat':discovery.get('data-fixed-format'),'cards':[{key:node.get('data-'+key,'') for key in ['video','make','year','type','format','search','published','url']} for node in discovery.xpath('.//*[@data-video]')]}
 
 for name in ['sitemap.xml','video-sitemap.xml']:
     tree=etree.parse(str(dist/name))
@@ -95,8 +96,16 @@ check('.brief-form{grid-template-columns:1fr' in css,'Mobile form layout missing
 check('.primary-nav.is-open{display:flex}' in css,'Mobile menu layout missing')
 check('max-width:100%' in css and 'min-width:0' in css,'Width containment missing')
 check(not re.search(r'(?:^|[;{])(?:min-width|width):(?:[5-9]\d\d|\d{4,})px',css),'Large fixed content width risks mobile overflow')
-for cover in dist.glob('assets/images/*.jpg'):
-    check(cover.stat().st_size>2000,f'Invalid cover: {cover.name}')
+provenance={v['id']:v for v in json.loads((root/'data/cover-provenance.json').read_text())}
+for video in config['videos']:
+    record=provenance.get(video['id'],{})
+    check(record.get('kind')=='YouTube video thumbnail',video['id']+': unverified thumbnail')
+    check('/vi/'+video['id']+'/' in record.get('source',''),video['id']+': wrong thumbnail source')
+    check(record.get('title')==video['originalTitle'],video['id']+': thumbnail title mismatch')
+    cover=dist/'assets/thumbnails'/ (video['id']+'.jpg')
+    check(cover.is_file(),video['id']+': thumbnail missing')
+    if cover.is_file():
+        check(hashlib.sha256(cover.read_bytes()).hexdigest()==record.get('sha256'),video['id']+': thumbnail hash mismatch')
 fixtures_path=root/'.sites-runtime/publication-fixtures.json'
 fixtures_path.parent.mkdir(parents=True,exist_ok=True)
 fixtures_path.write_text(json.dumps(fixtures))
