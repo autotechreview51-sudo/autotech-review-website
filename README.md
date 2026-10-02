@@ -10,7 +10,7 @@ Separate Long Videos and Shorts libraries, combined make/type/year/format filter
 
 Netlify builds with `node scripts/sync-publication.mjs && node scripts/build-publication.mjs` and publishes `dist/`. Existing Netlify YouTube-feed functions are retained. The daily GitHub content-refresh workflow updates the source feed and structured publication pages. Libraries also check `/api/youtube-feed` between rebuilds; new uploads link to YouTube until their companion pages have been built.
 
-If this Netlify project is configured for manual deployment, connect the existing repository or deploy the release package to the existing project. Do not create a replacement project or change DNS just to release the publication.
+Pushing `main` deploys through the existing Netlify project. Legacy URLs use forced 301 redirects so they cannot shadow the canonical directory pages. The feed returns the saved catalogue if YouTube is temporarily unavailable.
 
 ## Content
 
@@ -18,6 +18,6 @@ Edit `data/publication.json` for curated coverage and vehicle classifications. T
 
 ## Checks
 
-`python scripts/validate-publication.py` (requires lxml), `node scripts/verify-interactions.cjs`, and `node --check dist/assets/publication.js` check local links, anchors, assets, metadata, schemas, sitemaps, public indexing guards, responsive source rules, combined filters, format separation, empty states, resets, menu behavior, email-draft encoding and click-to-load video playback. Live browser layout QA was unavailable in the editing environment.
+`python scripts/validate-publication.py` (requires lxml), `node scripts/verify-interactions.cjs`, `node scripts/verify-feed-fallback.mjs`, and `node --check dist/assets/publication.js` check local links, anchors, assets, metadata, schemas, sitemaps, redirects, public indexing guards, responsive source rules, filters, format separation, empty states, resets, menu behavior, email-draft encoding, click-to-load playback and feed outage recovery. Deployment also checks live routes and desktop browser filtering. Mobile layouts have source checks; a physical-device check remains useful.
 
 No new analytics, advertising, payments or account services are added. The campaign brief creates an email draft and does not send it or submit visitor information to a website database.

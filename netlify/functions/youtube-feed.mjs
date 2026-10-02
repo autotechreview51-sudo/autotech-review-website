@@ -1,4 +1,5 @@
 import { loadChannelFeed } from '../lib/youtube.mjs';
+import savedFeed from '../../data/site-content.json' with { type: 'json' };
 
 const FRESH_SECONDS = 900; // ~15 minutes
 let lastGood = null;       // survives between requests on a warm instance
@@ -10,7 +11,7 @@ const json = (body, status, cacheHeaders) => new Response(JSON.stringify(body), 
 
 export default async () => {
   try {
-    const feed = await loadChannelFeed({ previous: lastGood?.latestVideos ?? [] });
+    const feed = await loadChannelFeed({ previous: lastGood?.latestVideos ?? [...savedFeed.latestVideos, ...savedFeed.latestLongVideos, ...savedFeed.latestShorts] });
     lastGood = { updatedAt: new Date().toISOString(), source: 'youtube-rss', ...feed };
     return json(lastGood, 200, {
       'cache-control': `public, max-age=${FRESH_SECONDS}`,
@@ -24,8 +25,11 @@ export default async () => {
         'netlify-cdn-cache-control': 'public, s-maxage=60'
       });
     }
-    return json({ error: 'YouTube feed temporarily unavailable', fallback: '/data/site-content.json' }, 503, {
-      'cache-control': 'no-store'
+    return json({ updatedAt: savedFeed.updatedAt, source: 'saved-catalogue', stale: true,
+      latestVideos: savedFeed.latestVideos, latestLongVideos: savedFeed.latestLongVideos,
+      latestShorts: savedFeed.latestShorts }, 200, {
+      'cache-control': 'public, max-age=60',
+      'netlify-cdn-cache-control': 'public, s-maxage=60'
     });
   }
 };

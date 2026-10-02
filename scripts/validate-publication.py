@@ -79,6 +79,14 @@ for name in ['sitemap.xml','video-sitemap.xml']:
         check(target is not None and target.is_file(),name+': missing route '+loc)
 check(('Disallow: /' if config['private'] else 'Allow: /') in (dist/'robots.txt').read_text(),'Robots guard incorrect')
 check(('X-Robots-Tag: noindex' if config['private'] else 'X-Robots-Tag: index') in (dist/'_headers').read_text(),'Robots header incorrect')
+if not config['private']:
+    redirects=(dist/'_redirects').read_text().splitlines()
+    check(len(redirects)==7,'Legacy redirects missing')
+    for line in redirects:
+        old,new,status=line.split()
+        check(status=='301!','Legacy redirect must override pretty URL handling')
+        check(not local_target(old).exists(),'Legacy HTML file can shadow a canonical route')
+        check(local_target(new).is_file(),'Legacy redirect destination missing')
 css=(dist/'assets/publication.css').read_text()
 for width in [1050,800,560]:check(f'@media(max-width:{width}px)' in css,f'Responsive breakpoint {width} missing')
 check('repeat(2,minmax(0,1fr))' in css and 'grid-template-columns:1fr' in css,'Mobile columns missing')
@@ -92,6 +100,6 @@ for cover in dist.glob('assets/images/*.jpg'):
 fixtures_path=root/'.sites-runtime/publication-fixtures.json'
 fixtures_path.parent.mkdir(parents=True,exist_ok=True)
 fixtures_path.write_text(json.dumps(fixtures))
-report={'htmlPages':len(list(dist.rglob('*.html'))),'linkAndAssetReferences':links,'videoPages':len(config['videos']),'indexingGuards':'private' if config['private'] else 'public','responsiveSourceChecks':'passed' if not errors else 'failed','liveBrowserLayoutQA':'unavailable: managed static preview has no compatible browser workflow','errors':errors}
+report={'htmlPages':len(list(dist.rglob('*.html'))),'linkAndAssetReferences':links,'videoPages':len(config['videos']),'indexingGuards':'private' if config['private'] else 'public','responsiveSourceChecks':'passed' if not errors else 'failed','scope':'source checks; live browser checks are separate','errors':errors}
 print(json.dumps(report,indent=2))
 if errors:sys.exit(1)

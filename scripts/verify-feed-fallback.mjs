@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+let mode = 'offline';
+globalThis.fetch = async (url) => {
+  if (mode === 'offline') throw new Error('Simulated upstream outage');
+  if (String(url).includes('/shorts/')) return new Response(null, { status: 302, headers: { location: '/watch?v=Zl3P77Mk39o' } });
+  return new Response('<feed><entry><yt:videoId>Zl3P77Mk39o</yt:videoId><title>Live review</title><published>2026-09-30T22:30:35+00:00</published></entry></feed>');
+};
+const { default: handler } = await import('../netlify/functions/youtube-feed.mjs');
+let response = await handler();
+let body = await response.json();
+assert.equal(response.status, 200);
+assert.equal(body.source, 'saved-catalogue');
+assert.equal(body.stale, true);
+assert(body.latestVideos.some(v => v.id === 'Jbl0aGFtihU'));
+assert(body.latestLongVideos.every(v => !v.isShort));
+assert(body.latestShorts.every(v => v.isShort));
+mode = 'online';
+response = await handler();
+body = await response.json();
+assert.equal(body.source, 'youtube-rss');
+assert.equal(body.latestLongVideos[0].id, 'Zl3P77Mk39o');
+mode = 'offline';
+body = await (await handler()).json();
+assert.equal(body.stale, true);
+assert.equal(body.source, 'youtube-rss');
+assert.equal(body.latestLongVideos[0].title, 'Live review');
+console.log('Feed checks passed: cold fallback, live recovery and warm stale fallback.');
