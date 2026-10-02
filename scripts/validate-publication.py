@@ -27,6 +27,7 @@ for file in sorted(dist.rglob('*.html')):
     check('Content catalogue checked '+expected_date in doc.text_content(),f'{relative}: calendar date shifted by timezone')
     canonical=doc.xpath('//link[@rel="canonical"]/@href')
     check(len(canonical)==1, f'{relative}: missing/duplicate canonical')
+    if canonical: check(urlsplit(canonical[0]).path == urlsplit(canonical[0]).path.lower(),f'{relative}: canonical redirects to lowercase')
     check(bool(doc.xpath('//title/text()')),f'{relative}: missing title')
     check(bool(doc.xpath('//meta[@name="viewport"]')),f'{relative}: missing viewport')
     check(doc.xpath('//meta[@name="robots"]/@content')==(['noindex, nofollow, noarchive'] if config['private'] else ['index, follow, max-image-preview:large']) or bool(doc.xpath('//meta[@http-equiv="refresh"]')),f'{relative}: private indexing guard missing')

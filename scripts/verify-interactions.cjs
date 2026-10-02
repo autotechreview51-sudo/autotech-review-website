@@ -14,6 +14,7 @@ class Node {
   replaceChildren(...nodes){this.children=[];this.append(...nodes);}
   replaceWith(node){if(this.parent){const index=this.parent.children.indexOf(this);this.parent.children[index]=node;node.parent=this.parent;}}
   querySelector(selector){const found=(this.children||[]).find(node=>selector.startsWith('.')?(node.className||'').split(' ').includes(selector.slice(1)):node.tagName===selector.toUpperCase());return found||(this.children||[]).map(node=>node.querySelector(selector)).find(Boolean)||null;}
+  querySelectorAll(selector){return (this.children||[]).flatMap(node=>[...(selector==='[data-video]'&&node.dataset.video?[node]:[]),...node.querySelectorAll(selector)]);}
 }
 function runtime(route='/',query='',liveFeed=null){
   const fix=fixtures[route], menu=new Node(),nav=new Node(),count=new Node(),empty=new Node(),clear=new Node(),form=new Node(),document=new Node();

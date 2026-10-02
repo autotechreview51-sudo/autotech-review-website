@@ -12,7 +12,7 @@ export function syncPublication(data, feed, provenance, now = new Date()) {
     const contentFormat = source.isShort === true ? 'short' : source.isShort === false ? 'long' : 'unclassified';
     const title = cleanTitle(source.title);
     if (!entry) {
-      entry = {id:source.id,slug:'channel-'+source.id,title,originalTitle:source.title,published:source.published,format:contentFormat,kind:'Channel video',vehicles:matchingVehicles(source.title,data.vehicles).map(v=>v.slug),automatic:true};
+      entry = {id:source.id,slug:'channel-'+source.id.toLowerCase(),title,originalTitle:source.title,published:source.published,format:contentFormat,kind:'Channel video',vehicles:matchingVehicles(source.title,data.vehicles).map(v=>v.slug),automatic:true};
       data.videos.push(entry); known.set(entry.id,entry); added++;
       provenance.push({id:entry.id,kind:'YouTube remote thumbnail',source:`https://img.youtube.com/vi/${entry.id}/hqdefault.jpg`,title:source.title,format:contentFormat});
     }
@@ -20,6 +20,8 @@ export function syncPublication(data, feed, provenance, now = new Date()) {
     entry.published = source.published;
     if (contentFormat !== 'unclassified' || !['long','short'].includes(entry.format)) entry.format = contentFormat;
     if (entry.automatic) {
+      // Netlify redirects paths to lowercase; keep canonical URLs at that destination.
+      if (entry.slug === 'channel-'+source.id) entry.slug = entry.slug.toLowerCase();
       entry.title = title;
       entry.kind = entry.format === 'short' ? 'Quick look' : 'Channel video';
       entry.vehicles = matchingVehicles(source.title,data.vehicles).map(v=>v.slug);

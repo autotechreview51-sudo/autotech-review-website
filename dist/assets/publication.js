@@ -125,6 +125,10 @@
         const meta=document.createElement('div');meta.className='meta';const label=document.createElement('span');label.textContent=v.kind||'New upload';const timestamp=document.createElement('time');timestamp.dateTime=v.published;timestamp.textContent=dateText(v.published);meta.append(label,timestamp);
         const heading=document.createElement('h3');const headingLink=document.createElement('a');headingLink.href=url;headingLink.textContent=title;heading.append(headingLink);copy.append(meta,heading);
         if(v.format==='long'&&v.description){const description=document.createElement('p');description.textContent=v.description;copy.append(description);}
+        const tags=document.createElement('div');tags.className='card-tags';
+        for(const make of v.makes||[]){const tag=document.createElement('a');tag.href='/reviews/?make='+encodeURIComponent(make);tag.textContent=make;tags.append(tag);}
+        for(const year of v.years||[]){const tag=document.createElement('a');tag.href='/reviews/?year='+encodeURIComponent(year);tag.textContent=year;tags.append(tag);}
+        copy.append(tags);
         node.append(link,copy);return node;
       }
       function addFilterOptions() {
@@ -165,6 +169,7 @@
             if(existing) {
               // Refresh renamed automatic imports, format and link without losing the current filters.
               const fresh=createCard(v);
+              if(Object.entries(fresh.dataset).every(([key,value])=>existing.dataset[key]===value)&&existing.querySelector('h3')?.textContent===titleText(v))continue;
               if(typeof existing.replaceWith==='function'){existing.replaceWith(fresh);cards[cards.indexOf(existing)]=fresh;}
               continue;
             }
@@ -174,7 +179,10 @@
           addFilterOptions();applyFilters(false);
           document.querySelectorAll('[data-latest-format]').forEach(section=>{
             const strip=section.querySelector('.video-grid');
-            strip.replaceChildren(...current.filter(v=>v.format===section.dataset.latestFormat).slice(0,Number(section.dataset.limit)).map(createCard));
+            const items=current.filter(v=>v.format===section.dataset.latestFormat).slice(0,Number(section.dataset.limit));
+            const old=[...strip.querySelectorAll('[data-video]')];
+            if(old.length===items.length&&old.every((card,index)=>card.dataset.video===items[index].id&&card.querySelector('h3')?.textContent===titleText(items[index])))return;
+            strip.replaceChildren(...items.map(createCard));
           });
           const lead=document.querySelector('[data-lead-video]');
           const newest=current.find(v=>v.format==='long');
