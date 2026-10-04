@@ -178,5 +178,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "d48d7b2efa772d18332c90169e26e75cf2d1a00a73041593b70cb9c0d9526b07"
+  },
+  {
+    "id": "igvc6hjl8AA",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/igvc6hjl8AA/maxresdefault.jpg",
+    "title": "Guess what’s new in 2027 GLC 300? #toronto #brampton",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "d9bc243baa895c7043c4d1e36a7cd9af8d39383c7954aebbc3710eb4dd256391"
   }
 ]

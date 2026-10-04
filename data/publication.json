@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-02",
+  "contentChecked": "2026-10-04",
   "subscribers": "21.3K",
   "vehicles": [
     {
@@ -510,6 +510,29 @@
       ],
       "years": [],
       "types": []
+    },
+    {
+      "id": "igvc6hjl8AA",
+      "slug": "channel-igvc6hjl8aa",
+      "title": "Guess what’s new in 2027 GLC 300?",
+      "originalTitle": "Guess what’s new in 2027 GLC 300? #toronto #brampton",
+      "published": "2026-10-04T20:16:31+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [
+        "2027-mercedes-benz-glc-300"
+      ],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Guess what’s new in 2027 GLC 300?.",
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
     }
   ]
 }

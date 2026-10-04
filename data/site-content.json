@@ -1,9 +1,24 @@
 {
-  "updatedAt": "2026-10-02T23:28:16.037Z",
+  "updatedAt": "2026-10-04T20:28:49.339Z",
   "metrics": {
     "subscribers": "21.3K"
   },
   "latestVideos": [
+    {
+      "id": "igvc6hjl8AA",
+      "title": "Guess what’s new in 2027 GLC 300? #toronto #brampton",
+      "published": "2026-10-04T20:16:31+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "f6nT3auHL78",
       "title": "Is the new Mercedes GLC 300 a waste of money? #toronto #brampton #mercedes",
@@ -189,19 +204,6 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "211JlZYRqug",
-      "title": "What does a 2027 BMW X3 horn actually sound like? #bmw #x3 #carfacts",
-      "published": "2026-09-15T19:12:32+00:00",
-      "isShort": true,
-      "makes": [
-        "BMW"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": []
     }
   ],
   "latestLongVideos": [
@@ -265,6 +267,21 @@
   ],
   "latestShorts": [
     {
+      "id": "igvc6hjl8AA",
+      "title": "Guess what’s new in 2027 GLC 300? #toronto #brampton",
+      "published": "2026-10-04T20:16:31+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
+    {
       "id": "f6nT3auHL78",
       "title": "Is the new Mercedes GLC 300 a waste of money? #toronto #brampton #mercedes",
       "published": "2026-10-02T22:34:21+00:00",
@@ -322,22 +339,24 @@
         "2026"
       ],
       "types": []
-    },
-    {
-      "id": "5Sv0TjG9ytg",
-      "title": "Is the 2026 Camry XSE Worth It? My Verdict!",
-      "published": "2026-09-25T19:36:14+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "igvc6hjl8AA",
+      "title": "Guess what’s new in 2027 GLC 300? #toronto #brampton",
+      "published": "2026-10-04T20:16:31+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "f6nT3auHL78",
       "title": "Is the new Mercedes GLC 300 a waste of money? #toronto #brampton #mercedes",
