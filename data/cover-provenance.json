@@ -188,5 +188,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "d9bc243baa895c7043c4d1e36a7cd9af8d39383c7954aebbc3710eb4dd256391"
+  },
+  {
+    "id": "-_Kx4lUqJLs",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/-_Kx4lUqJLs/maxresdefault.jpg",
+    "title": "2027 Mercedes GLC 300: Is this storage space enough? #toronto #brampton",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "6481c51eba97cda0adbfb57339e46249cdd0f2f88f1d246ceb3dcb5e5460755e"
   }
 ]
