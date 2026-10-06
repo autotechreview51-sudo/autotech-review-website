@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-05T21:32:56.470Z",
+  "updatedAt": "2026-10-06T19:32:05.726Z",
   "metrics": {
     "subscribers": "21.4K"
   },
   "latestVideos": [
+    {
+      "id": "rF2fHaESqiA",
+      "title": "2026 vs 2027 Mercedes GLC 300: Save your money #mercedes #glc #carreview #tips #shorts",
+      "published": "2026-10-06T18:48:06+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "-_Kx4lUqJLs",
       "title": "2027 Mercedes GLC 300: Is this storage space enough? #toronto #brampton",
@@ -193,17 +206,6 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "FOPbgEgZv2s",
-      "title": "Don't Buy the Corolla Cross Until You See This #toronto #brampton",
-      "published": "2026-09-17T23:26:50+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "latestLongVideos": [
@@ -266,6 +268,19 @@
     }
   ],
   "latestShorts": [
+    {
+      "id": "rF2fHaESqiA",
+      "title": "2026 vs 2027 Mercedes GLC 300: Save your money #mercedes #glc #carreview #tips #shorts",
+      "published": "2026-10-06T18:48:06+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "-_Kx4lUqJLs",
       "title": "2027 Mercedes GLC 300: Is this storage space enough? #toronto #brampton",
@@ -332,18 +347,22 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "gYYxSmZe1Sk",
-      "title": "Is this red interior too much? #toronto #brampton",
-      "published": "2026-09-27T22:27:17+00:00",
-      "isShort": true,
-      "makes": [],
-      "years": [],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "rF2fHaESqiA",
+      "title": "2026 vs 2027 Mercedes GLC 300: Save your money #mercedes #glc #carreview #tips #shorts",
+      "published": "2026-10-06T18:48:06+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "-_Kx4lUqJLs",
       "title": "2027 Mercedes GLC 300: Is this storage space enough? #toronto #brampton",

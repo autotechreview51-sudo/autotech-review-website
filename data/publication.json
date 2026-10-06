@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-05",
+  "contentChecked": "2026-10-06",
   "subscribers": "21.4K",
   "vehicles": [
     {
@@ -556,6 +556,25 @@
       "types": [
         "SUV"
       ]
+    },
+    {
+      "id": "rF2fHaESqiA",
+      "slug": "channel-rf2fhaesqia",
+      "title": "2026 vs 2027 Mercedes GLC 300: Save your money",
+      "originalTitle": "2026 vs 2027 Mercedes GLC 300: Save your money #mercedes #glc #carreview #tips #shorts",
+      "published": "2026-10-06T18:48:06+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: 2026 vs 2027 Mercedes GLC 300: Save your money.",
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
     }
   ]
 }
