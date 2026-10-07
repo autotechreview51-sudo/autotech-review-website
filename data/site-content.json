@@ -1,9 +1,24 @@
 {
-  "updatedAt": "2026-10-06T19:32:05.726Z",
+  "updatedAt": "2026-10-07T15:42:59.491Z",
   "metrics": {
     "subscribers": "21.4K"
   },
   "latestVideos": [
+    {
+      "id": "zQtK-QAd2sc",
+      "title": "How much legroom is really in the 2027 Mercedes GLC 300? #toronto  #mercedes #suv",
+      "published": "2026-10-07T15:09:48+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "rF2fHaESqiA",
       "title": "2026 vs 2027 Mercedes GLC 300: Save your money #mercedes #glc #carreview #tips #shorts",
@@ -191,21 +206,6 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "KA5nvH5kG2A",
-      "title": "Which Toyota SUV wins on value? Corolla Cross vs RAV4 #2026 #brampton #toronto",
-      "published": "2026-09-18T20:30:52+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "latestLongVideos": [
@@ -268,6 +268,21 @@
     }
   ],
   "latestShorts": [
+    {
+      "id": "zQtK-QAd2sc",
+      "title": "How much legroom is really in the 2027 Mercedes GLC 300? #toronto  #mercedes #suv",
+      "published": "2026-10-07T15:09:48+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "rF2fHaESqiA",
       "title": "2026 vs 2027 Mercedes GLC 300: Save your money #mercedes #glc #carreview #tips #shorts",
@@ -336,20 +351,24 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "4JiGVKNsTdQ",
-      "title": "Will you buy the RAV4 over its competition #toronto #brampton",
-      "published": "2026-09-29T21:14:18+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "zQtK-QAd2sc",
+      "title": "How much legroom is really in the 2027 Mercedes GLC 300? #toronto  #mercedes #suv",
+      "published": "2026-10-07T15:09:48+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "rF2fHaESqiA",
       "title": "2026 vs 2027 Mercedes GLC 300: Save your money #mercedes #glc #carreview #tips #shorts",

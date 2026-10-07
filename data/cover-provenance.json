@@ -208,5 +208,15 @@
     "width": 480,
     "height": 360,
     "sha256": "85d24857b25be8b2b0fc74b846e63a785606aaccc86307004736991530b0427c"
+  },
+  {
+    "id": "zQtK-QAd2sc",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/zQtK-QAd2sc/maxresdefault.jpg",
+    "title": "How much legroom is really in the 2027 Mercedes GLC 300? #toronto  #mercedes #suv",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "a9f9361ed4a409bee6e00e2f3c8c6f2e9edbed9757926d1c5f48d89b4b636a63"
   }
 ]

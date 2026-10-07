@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-06",
+  "contentChecked": "2026-10-07",
   "subscribers": "21.4K",
   "vehicles": [
     {
@@ -575,6 +575,29 @@
         "2026"
       ],
       "types": []
+    },
+    {
+      "id": "zQtK-QAd2sc",
+      "slug": "channel-zqtk-qad2sc",
+      "title": "How much legroom is really in the 2027 Mercedes GLC 300?",
+      "originalTitle": "How much legroom is really in the 2027 Mercedes GLC 300? #toronto  #mercedes #suv",
+      "published": "2026-10-07T15:09:48+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [
+        "2027-mercedes-benz-glc-300"
+      ],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: How much legroom is really in the 2027 Mercedes GLC 300?.",
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
     }
   ]
 }
