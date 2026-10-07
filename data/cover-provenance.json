@@ -218,5 +218,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "a9f9361ed4a409bee6e00e2f3c8c6f2e9edbed9757926d1c5f48d89b4b636a63"
+  },
+  {
+    "id": "KHvh0nymAdo",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/KHvh0nymAdo/maxresdefault.jpg",
+    "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
+    "format": "long",
+    "width": 1280,
+    "height": 720,
+    "sha256": "4e3ddb1f074f4ec18371619ca3f827f4618fa0429b735f1a4d184254ae78e1da"
   }
 ]

@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-07T15:42:59.491Z",
+  "updatedAt": "2026-10-07T22:31:01.584Z",
   "metrics": {
     "subscribers": "21.4K"
   },
   "latestVideos": [
+    {
+      "id": "KHvh0nymAdo",
+      "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
+      "published": "2026-10-07T22:30:03+00:00",
+      "isShort": false,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "zQtK-QAd2sc",
       "title": "How much legroom is really in the 2027 Mercedes GLC 300? #toronto  #mercedes #suv",
@@ -191,24 +204,22 @@
         "2026"
       ],
       "types": []
-    },
+    }
+  ],
+  "latestLongVideos": [
     {
-      "id": "P8E7krlD6WI",
-      "title": "Is this the perfect daily driver? 2026 Corolla Cross Hybrid #toronto #brampton",
-      "published": "2026-09-19T20:14:52+00:00",
-      "isShort": true,
+      "id": "KHvh0nymAdo",
+      "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
+      "published": "2026-10-07T22:30:03+00:00",
+      "isShort": false,
       "makes": [
         "Toyota"
       ],
       "years": [
-        "2026"
+        "2027"
       ],
-      "types": [
-        "SUV"
-      ]
-    }
-  ],
-  "latestLongVideos": [
+      "types": []
+    },
     {
       "id": "Zl3P77Mk39o",
       "title": "2027 Mercedes GLC 300: Buy New, Shop 2026 or Wait? (ON)",
@@ -354,6 +365,19 @@
     }
   ],
   "archive": [
+    {
+      "id": "KHvh0nymAdo",
+      "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
+      "published": "2026-10-07T22:30:03+00:00",
+      "isShort": false,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "zQtK-QAd2sc",
       "title": "How much legroom is really in the 2027 Mercedes GLC 300? #toronto  #mercedes #suv",

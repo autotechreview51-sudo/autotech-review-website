@@ -598,6 +598,35 @@
       "types": [
         "SUV"
       ]
+    },
+    {
+      "id": "KHvh0nymAdo",
+      "slug": "channel-khvh0nymado",
+      "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
+      "originalTitle": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
+      "published": "2026-10-07T22:30:03+00:00",
+      "format": "long",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch the full video from AutoTech Review: 2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "Toyota"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
     }
   ]
 }
