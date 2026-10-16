@@ -1,9 +1,90 @@
 {
-  "updatedAt": "2026-10-07T22:31:01.584Z",
+  "updatedAt": "2026-10-16T22:46:02.236Z",
   "metrics": {
-    "subscribers": "21.4K"
+    "subscribers": "21.5K"
   },
   "latestVideos": [
+    {
+      "id": "wY1QpDaMer0",
+      "title": "Is this real life? Tesla Roadster extreme loop #shorts #trending",
+      "published": "2026-10-16T20:29:20+00:00",
+      "isShort": true,
+      "makes": [
+        "Tesla"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "aQAon2lnMYs",
+      "title": "Why I’d skip the 2027 Honda CR-V Touring #toronto #honda #suv",
+      "published": "2026-10-16T01:40:39+00:00",
+      "isShort": true,
+      "makes": [
+        "Honda"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
+    {
+      "id": "lZE3VueaDbM",
+      "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "published": "2026-10-14T23:00:30+00:00",
+      "isShort": false,
+      "makes": [
+        "Honda"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "7vhQmTFDIp0",
+      "title": "Don't pick the wrong Prius wheels! #caradvice #toyota #hybrid",
+      "published": "2026-10-12T23:15:18+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "y1Aj8qGrCwY",
+      "title": "Stop Paying Over MSRP for Your Prius #toyota #toronto #shorts",
+      "published": "2026-10-11T18:30:13+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "ZC22wVcyveY",
+      "title": "Why I plug in my Prius every single night #toyota #prius #evlife #toronto",
+      "published": "2026-10-09T21:30:03+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "JRkN28Zrgmk",
+      "title": "Stop buying the wrong Prius: Plug-in vs Standard explained #prius #toyota #toronto #brampton",
+      "published": "2026-10-08T19:15:36+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
     {
       "id": "KHvh0nymAdo",
       "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
@@ -115,98 +196,20 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "4JiGVKNsTdQ",
-      "title": "Will you buy the RAV4 over its competition #toronto #brampton",
-      "published": "2026-09-29T21:14:18+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
-    },
-    {
-      "id": "gYYxSmZe1Sk",
-      "title": "Is this red interior too much? #toronto #brampton",
-      "published": "2026-09-27T22:27:17+00:00",
-      "isShort": true,
-      "makes": [],
-      "years": [],
-      "types": []
-    },
-    {
-      "id": "ciwldF2hUn4",
-      "title": "Getting into the 2026 Toyota Camry XSE and hitting start #toronto #brampton",
-      "published": "2026-09-26T22:33:35+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": []
-    },
-    {
-      "id": "5Sv0TjG9ytg",
-      "title": "Is the 2026 Camry XSE Worth It? My Verdict!",
-      "published": "2026-09-25T19:36:14+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": []
-    },
-    {
-      "id": "1tx4EhDBoxY",
-      "title": "Don't Buy the 2026 Toyota Camry XSE AWD Until You Watch This (Canada Price)",
-      "published": "2026-09-23T22:00:30+00:00",
-      "isShort": false,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": [
-        "Sedan"
-      ]
-    },
-    {
-      "id": "_rUVJbpXt3Y",
-      "title": "POV: Walking around the 2026 Corolla Cross Hybrid #toronto #brampton",
-      "published": "2026-09-21T22:12:37+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": [
-        "SUV"
-      ]
-    },
-    {
-      "id": "9k8BoIZPZNo",
-      "title": "Are the back seats in the 2026 Corolla Cross worth it? #toronto #brampton",
-      "published": "2026-09-20T18:34:11+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": []
     }
   ],
   "latestLongVideos": [
+    {
+      "id": "lZE3VueaDbM",
+      "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "published": "2026-10-14T23:00:30+00:00",
+      "isShort": false,
+      "makes": [
+        "Honda"
+      ],
+      "years": [],
+      "types": []
+    },
     {
       "id": "KHvh0nymAdo",
       "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
@@ -270,91 +273,27 @@
       "title": "Canada’s Luxury Car Tax: What You Really Pay Over $100K",
       "published": "2026-09-12T21:00:34+00:00",
       "isShort": false
-    },
-    {
-      "id": "GmdUmrDhZSg",
-      "title": "Don't Buy the 2027 BMW iX3 Before Watching This (Canada)",
-      "published": "2026-09-09T23:00:11+00:00",
-      "isShort": false
     }
   ],
   "latestShorts": [
     {
-      "id": "zQtK-QAd2sc",
-      "title": "How much legroom is really in the 2027 Mercedes GLC 300? #toronto  #mercedes #suv",
-      "published": "2026-10-07T15:09:48+00:00",
+      "id": "wY1QpDaMer0",
+      "title": "Is this real life? Tesla Roadster extreme loop #shorts #trending",
+      "published": "2026-10-16T20:29:20+00:00",
       "isShort": true,
       "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
-    },
-    {
-      "id": "rF2fHaESqiA",
-      "title": "2026 vs 2027 Mercedes GLC 300: Save your money #mercedes #glc #carreview #tips #shorts",
-      "published": "2026-10-06T18:48:06+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": []
-    },
-    {
-      "id": "-_Kx4lUqJLs",
-      "title": "2027 Mercedes GLC 300: Is this storage space enough? #toronto #brampton",
-      "published": "2026-10-05T20:05:18+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
-    },
-    {
-      "id": "igvc6hjl8AA",
-      "title": "Guess what’s new in 2027 GLC 300? #toronto #brampton",
-      "published": "2026-10-04T20:16:31+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
-    },
-    {
-      "id": "f6nT3auHL78",
-      "title": "Is the new Mercedes GLC 300 a waste of money? #toronto #brampton #mercedes",
-      "published": "2026-10-02T22:34:21+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
+        "Tesla"
       ],
       "years": [],
       "types": []
     },
     {
-      "id": "Jbl0aGFtihU",
-      "title": "What’s actually new on the 2027 Mercedes GLC 300? #toronto #brampton",
-      "published": "2026-10-01T23:14:40+00:00",
+      "id": "aQAon2lnMYs",
+      "title": "Why I’d skip the 2027 Honda CR-V Touring #toronto #honda #suv",
+      "published": "2026-10-16T01:40:39+00:00",
       "isShort": true,
       "makes": [
-        "Mercedes-Benz"
+        "Honda"
       ],
       "years": [
         "2027"
@@ -362,9 +301,134 @@
       "types": [
         "SUV"
       ]
+    },
+    {
+      "id": "7vhQmTFDIp0",
+      "title": "Don't pick the wrong Prius wheels! #caradvice #toyota #hybrid",
+      "published": "2026-10-12T23:15:18+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "y1Aj8qGrCwY",
+      "title": "Stop Paying Over MSRP for Your Prius #toyota #toronto #shorts",
+      "published": "2026-10-11T18:30:13+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "ZC22wVcyveY",
+      "title": "Why I plug in my Prius every single night #toyota #prius #evlife #toronto",
+      "published": "2026-10-09T21:30:03+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "JRkN28Zrgmk",
+      "title": "Stop buying the wrong Prius: Plug-in vs Standard explained #prius #toyota #toronto #brampton",
+      "published": "2026-10-08T19:15:36+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "wY1QpDaMer0",
+      "title": "Is this real life? Tesla Roadster extreme loop #shorts #trending",
+      "published": "2026-10-16T20:29:20+00:00",
+      "isShort": true,
+      "makes": [
+        "Tesla"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "aQAon2lnMYs",
+      "title": "Why I’d skip the 2027 Honda CR-V Touring #toronto #honda #suv",
+      "published": "2026-10-16T01:40:39+00:00",
+      "isShort": true,
+      "makes": [
+        "Honda"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
+    {
+      "id": "lZE3VueaDbM",
+      "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "published": "2026-10-14T23:00:30+00:00",
+      "isShort": false,
+      "makes": [
+        "Honda"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "7vhQmTFDIp0",
+      "title": "Don't pick the wrong Prius wheels! #caradvice #toyota #hybrid",
+      "published": "2026-10-12T23:15:18+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "y1Aj8qGrCwY",
+      "title": "Stop Paying Over MSRP for Your Prius #toyota #toronto #shorts",
+      "published": "2026-10-11T18:30:13+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "ZC22wVcyveY",
+      "title": "Why I plug in my Prius every single night #toyota #prius #evlife #toronto",
+      "published": "2026-10-09T21:30:03+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "JRkN28Zrgmk",
+      "title": "Stop buying the wrong Prius: Plug-in vs Standard explained #prius #toyota #toronto #brampton",
+      "published": "2026-10-08T19:15:36+00:00",
+      "isShort": true,
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
     {
       "id": "KHvh0nymAdo",
       "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",

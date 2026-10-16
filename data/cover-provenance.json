@@ -228,5 +228,75 @@
     "width": 1280,
     "height": 720,
     "sha256": "4e3ddb1f074f4ec18371619ca3f827f4618fa0429b735f1a4d184254ae78e1da"
+  },
+  {
+    "id": "wY1QpDaMer0",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/wY1QpDaMer0/maxresdefault.jpg",
+    "title": "Is this real life? Tesla Roadster extreme loop #shorts #trending",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "19b761e502cd684af3095c47a0a9e300e156050da820146857a7a6b2a79c4abd"
+  },
+  {
+    "id": "aQAon2lnMYs",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/aQAon2lnMYs/maxresdefault.jpg",
+    "title": "Why I’d skip the 2027 Honda CR-V Touring #toronto #honda #suv",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "2b999419f075a3c07bc58837edc22785771af67bd32726598ce66b2a739a2c83"
+  },
+  {
+    "id": "lZE3VueaDbM",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/lZE3VueaDbM/maxresdefault.jpg",
+    "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+    "format": "long",
+    "width": 1280,
+    "height": 720,
+    "sha256": "9ea6d898900c8028e218450cce20e0404448ff7bca6294cf0b9649b58d171f9a"
+  },
+  {
+    "id": "7vhQmTFDIp0",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/7vhQmTFDIp0/maxresdefault.jpg",
+    "title": "Don't pick the wrong Prius wheels! #caradvice #toyota #hybrid",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "44dbca3c5dba196a49e0f3df72ef78e7f596074b1ec93cefac0108acd6ec134e"
+  },
+  {
+    "id": "y1Aj8qGrCwY",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/y1Aj8qGrCwY/maxresdefault.jpg",
+    "title": "Stop Paying Over MSRP for Your Prius #toyota #toronto #shorts",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "93c8dc2762fc17679d70f8d43f6b56b15f065377445fd9e1110275a84cbccb5d"
+  },
+  {
+    "id": "ZC22wVcyveY",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/ZC22wVcyveY/maxresdefault.jpg",
+    "title": "Why I plug in my Prius every single night #toyota #prius #evlife #toronto",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "f59aad1554dfead87d37d989648d09907c5300205d29556e1467d78cd1a58002"
+  },
+  {
+    "id": "JRkN28Zrgmk",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/JRkN28Zrgmk/maxresdefault.jpg",
+    "title": "Stop buying the wrong Prius: Plug-in vs Standard explained #prius #toyota #toronto #brampton",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "d425d5266c1d433700c020a02d85068a15c929f5a4e0e83eddbc67c4543d8a44"
   }
 ]

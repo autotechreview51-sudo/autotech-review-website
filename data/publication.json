@@ -2,8 +2,8 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-07",
-  "subscribers": "21.4K",
+  "contentChecked": "2026-10-16",
+  "subscribers": "21.5K",
   "vehicles": [
     {
       "slug": "2027-mercedes-benz-glc-300",
@@ -626,6 +626,139 @@
       "years": [
         "2027"
       ],
+      "types": []
+    },
+    {
+      "id": "wY1QpDaMer0",
+      "slug": "channel-wy1qpdamer0",
+      "title": "Is this real life? Tesla Roadster extreme loop",
+      "originalTitle": "Is this real life? Tesla Roadster extreme loop #shorts #trending",
+      "published": "2026-10-16T20:29:20+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Is this real life? Tesla Roadster extreme loop.",
+      "makes": [
+        "Tesla"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "aQAon2lnMYs",
+      "slug": "channel-aqaon2lnmys",
+      "title": "Why I’d skip the 2027 Honda CR-V Touring",
+      "originalTitle": "Why I’d skip the 2027 Honda CR-V Touring #toronto #honda #suv",
+      "published": "2026-10-16T01:40:39+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Why I’d skip the 2027 Honda CR-V Touring.",
+      "makes": [
+        "Honda"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
+    {
+      "id": "lZE3VueaDbM",
+      "slug": "channel-lze3vueadbm",
+      "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "originalTitle": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "published": "2026-10-14T23:00:30+00:00",
+      "format": "long",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch the full video from AutoTech Review: Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON).",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "Honda"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "7vhQmTFDIp0",
+      "slug": "channel-7vhqmtfdip0",
+      "title": "Don't pick the wrong Prius wheels!",
+      "originalTitle": "Don't pick the wrong Prius wheels! #caradvice #toyota #hybrid",
+      "published": "2026-10-12T23:15:18+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Don't pick the wrong Prius wheels!.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "y1Aj8qGrCwY",
+      "slug": "channel-y1aj8qgrcwy",
+      "title": "Stop Paying Over MSRP for Your Prius",
+      "originalTitle": "Stop Paying Over MSRP for Your Prius #toyota #toronto #shorts",
+      "published": "2026-10-11T18:30:13+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Stop Paying Over MSRP for Your Prius.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "ZC22wVcyveY",
+      "slug": "channel-zc22wvcyvey",
+      "title": "Why I plug in my Prius every single night",
+      "originalTitle": "Why I plug in my Prius every single night #toyota #prius #evlife #toronto",
+      "published": "2026-10-09T21:30:03+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Why I plug in my Prius every single night.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "JRkN28Zrgmk",
+      "slug": "channel-jrkn28zrgmk",
+      "title": "Stop buying the wrong Prius: Plug-in vs Standard explained",
+      "originalTitle": "Stop buying the wrong Prius: Plug-in vs Standard explained #prius #toyota #toronto #brampton",
+      "published": "2026-10-08T19:15:36+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Stop buying the wrong Prius: Plug-in vs Standard explained.",
+      "makes": [
+        "Toyota"
+      ],
+      "years": [],
       "types": []
     }
   ]
