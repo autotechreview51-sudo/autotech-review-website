@@ -1,9 +1,18 @@
 {
-  "updatedAt": "2026-10-16T22:46:02.236Z",
+  "updatedAt": "2026-10-17T23:36:35.893Z",
   "metrics": {
     "subscribers": "21.5K"
   },
   "latestVideos": [
+    {
+      "id": "vEOF-zzGn2Q",
+      "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",
+      "published": "2026-10-17T23:15:33+00:00",
+      "isShort": true,
+      "makes": [],
+      "years": [],
+      "types": []
+    },
     {
       "id": "wY1QpDaMer0",
       "title": "Is this real life? Tesla Roadster extreme loop #shorts #trending",
@@ -181,21 +190,6 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "Zl3P77Mk39o",
-      "title": "2027 Mercedes GLC 300: Buy New, Shop 2026 or Wait? (ON)",
-      "published": "2026-09-30T22:30:35+00:00",
-      "isShort": false,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "latestLongVideos": [
@@ -277,6 +271,15 @@
   ],
   "latestShorts": [
     {
+      "id": "vEOF-zzGn2Q",
+      "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",
+      "published": "2026-10-17T23:15:33+00:00",
+      "isShort": true,
+      "makes": [],
+      "years": [],
+      "types": []
+    },
+    {
       "id": "wY1QpDaMer0",
       "title": "Is this real life? Tesla Roadster extreme loop #shorts #trending",
       "published": "2026-10-16T20:29:20+00:00",
@@ -334,20 +337,18 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "JRkN28Zrgmk",
-      "title": "Stop buying the wrong Prius: Plug-in vs Standard explained #prius #toyota #toronto #brampton",
-      "published": "2026-10-08T19:15:36+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "vEOF-zzGn2Q",
+      "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",
+      "published": "2026-10-17T23:15:33+00:00",
+      "isShort": true,
+      "makes": [],
+      "years": [],
+      "types": []
+    },
     {
       "id": "wY1QpDaMer0",
       "title": "Is this real life? Tesla Roadster extreme loop #shorts #trending",

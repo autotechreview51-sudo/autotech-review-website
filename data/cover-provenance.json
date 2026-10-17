@@ -298,5 +298,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "d425d5266c1d433700c020a02d85068a15c929f5a4e0e83eddbc67c4543d8a44"
+  },
+  {
+    "id": "vEOF-zzGn2Q",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/vEOF-zzGn2Q/maxresdefault.jpg",
+    "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "1b92b9047ccd5400c1245174f441c9d65e0505008d5bf5b0dc000ae63df0b4fe"
   }
 ]

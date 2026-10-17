@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-16",
+  "contentChecked": "2026-10-17",
   "subscribers": "21.5K",
   "vehicles": [
     {
@@ -758,6 +758,21 @@
       "makes": [
         "Toyota"
       ],
+      "years": [],
+      "types": []
+    },
+    {
+      "id": "vEOF-zzGn2Q",
+      "slug": "channel-veof-zzgn2q",
+      "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This",
+      "originalTitle": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",
+      "published": "2026-10-17T23:15:33+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Don't Buy the CR-V Hybrid Touring Until You Watch This.",
+      "makes": [],
       "years": [],
       "types": []
     }
