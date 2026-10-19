@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-17T23:36:35.893Z",
+  "updatedAt": "2026-10-19T22:24:19.522Z",
   "metrics": {
     "subscribers": "21.5K"
   },
   "latestVideos": [
+    {
+      "id": "yaI8D9qvjZ0",
+      "title": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
+      "published": "2026-10-19T19:18:10+00:00",
+      "isShort": true,
+      "makes": [],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "vEOF-zzGn2Q",
       "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",
@@ -175,21 +188,6 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "Jbl0aGFtihU",
-      "title": "What’s actually new on the 2027 Mercedes GLC 300? #toronto #brampton",
-      "published": "2026-10-01T23:14:40+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "latestLongVideos": [
@@ -271,6 +269,19 @@
   ],
   "latestShorts": [
     {
+      "id": "yaI8D9qvjZ0",
+      "title": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
+      "published": "2026-10-19T19:18:10+00:00",
+      "isShort": true,
+      "makes": [],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
+    {
       "id": "vEOF-zzGn2Q",
       "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",
       "published": "2026-10-17T23:15:33+00:00",
@@ -326,20 +337,22 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "ZC22wVcyveY",
-      "title": "Why I plug in my Prius every single night #toyota #prius #evlife #toronto",
-      "published": "2026-10-09T21:30:03+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "yaI8D9qvjZ0",
+      "title": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
+      "published": "2026-10-19T19:18:10+00:00",
+      "isShort": true,
+      "makes": [],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "vEOF-zzGn2Q",
       "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",

@@ -308,5 +308,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "1b92b9047ccd5400c1245174f441c9d65e0505008d5bf5b0dc000ae63df0b4fe"
+  },
+  {
+    "id": "yaI8D9qvjZ0",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/yaI8D9qvjZ0/maxresdefault.jpg",
+    "title": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "33abdf38520aabd7e721721116daa31690fe7b7bae4e39fb6222029480164ea6"
   }
 ]

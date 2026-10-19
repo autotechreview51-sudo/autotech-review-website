@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-17",
+  "contentChecked": "2026-10-19",
   "subscribers": "21.5K",
   "vehicles": [
     {
@@ -775,6 +775,25 @@
       "makes": [],
       "years": [],
       "types": []
+    },
+    {
+      "id": "yaI8D9qvjZ0",
+      "slug": "channel-yai8d9qvjz0",
+      "title": "Is this the best family SUV for 2027?",
+      "originalTitle": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
+      "published": "2026-10-19T19:18:10+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Is this the best family SUV for 2027?.",
+      "makes": [],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
     }
   ]
 }
