@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-19",
+  "contentChecked": "2026-10-22",
   "subscribers": "21.5K",
   "vehicles": [
     {
@@ -788,6 +788,57 @@
       "automatic": true,
       "description": "Watch this Short from AutoTech Review: Is this the best family SUV for 2027?.",
       "makes": [],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
+    {
+      "id": "qm4alJ0_rT0",
+      "slug": "channel-qm4alj0_rt0",
+      "title": "2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing",
+      "originalTitle": "2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing",
+      "published": "2026-10-21T22:00:13+00:00",
+      "format": "long",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch the full video from AutoTech Review: 2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
+    {
+      "id": "ii8E4OK7Acs",
+      "slug": "channel-ii8e4ok7acs",
+      "title": "What's the Best SUV for You: 2027 Honda CR-V or 2026 Toyota RAV4?",
+      "originalTitle": "What's the Best SUV for You: 2027 Honda CR-V or 2026 Toyota RAV4? #honda #toyota #suv",
+      "published": "2026-10-20T23:00:04+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: What's the Best SUV for You: 2027 Honda CR-V or 2026 Toyota RAV4?.",
+      "makes": [
+        "Honda",
+        "Toyota"
+      ],
       "years": [
         "2027"
       ],

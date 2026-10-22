@@ -318,5 +318,25 @@
     "width": 1280,
     "height": 720,
     "sha256": "33abdf38520aabd7e721721116daa31690fe7b7bae4e39fb6222029480164ea6"
+  },
+  {
+    "id": "qm4alJ0_rT0",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/qm4alJ0_rT0/maxresdefault.jpg",
+    "title": "2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing",
+    "format": "long",
+    "width": 1280,
+    "height": 720,
+    "sha256": "6e27373f83d54f43feb5659b1cc51ab3835da7641efb9eadc7fa9bcb6ec46e24"
+  },
+  {
+    "id": "ii8E4OK7Acs",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/ii8E4OK7Acs/maxresdefault.jpg",
+    "title": "What's the Best SUV for You: 2027 Honda CR-V or 2026 Toyota RAV4? #honda #toyota #suv",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "a8b893142b604df1a4c8262f410369c591dbb2adcf743941e3bb655cb78e9e5e"
   }
 ]

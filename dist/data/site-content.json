@@ -1,9 +1,38 @@
 {
-  "updatedAt": "2026-10-19T22:24:19.522Z",
+  "updatedAt": "2026-10-22T07:38:58.924Z",
   "metrics": {
     "subscribers": "21.5K"
   },
   "latestVideos": [
+    {
+      "id": "qm4alJ0_rT0",
+      "title": "2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing",
+      "published": "2026-10-21T22:00:13+00:00",
+      "isShort": false,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
+    {
+      "id": "ii8E4OK7Acs",
+      "title": "What's the Best SUV for You: 2027 Honda CR-V or 2026 Toyota RAV4? #honda #toyota #suv",
+      "published": "2026-10-20T23:00:04+00:00",
+      "isShort": true,
+      "makes": [
+        "Honda",
+        "Toyota"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "yaI8D9qvjZ0",
       "title": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
@@ -162,35 +191,22 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "igvc6hjl8AA",
-      "title": "Guess what’s new in 2027 GLC 300? #toronto #brampton",
-      "published": "2026-10-04T20:16:31+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
-    },
-    {
-      "id": "f6nT3auHL78",
-      "title": "Is the new Mercedes GLC 300 a waste of money? #toronto #brampton #mercedes",
-      "published": "2026-10-02T22:34:21+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "latestLongVideos": [
+    {
+      "id": "qm4alJ0_rT0",
+      "title": "2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing",
+      "published": "2026-10-21T22:00:13+00:00",
+      "isShort": false,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "lZE3VueaDbM",
       "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
@@ -259,15 +275,25 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "WJhoONm4Ohw",
-      "title": "Canada’s Luxury Car Tax: What You Really Pay Over $100K",
-      "published": "2026-09-12T21:00:34+00:00",
-      "isShort": false
     }
   ],
   "latestShorts": [
+    {
+      "id": "ii8E4OK7Acs",
+      "title": "What's the Best SUV for You: 2027 Honda CR-V or 2026 Toyota RAV4? #honda #toyota #suv",
+      "published": "2026-10-20T23:00:04+00:00",
+      "isShort": true,
+      "makes": [
+        "Honda",
+        "Toyota"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "yaI8D9qvjZ0",
       "title": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
@@ -326,20 +352,38 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "y1Aj8qGrCwY",
-      "title": "Stop Paying Over MSRP for Your Prius #toyota #toronto #shorts",
-      "published": "2026-10-11T18:30:13+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "qm4alJ0_rT0",
+      "title": "2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing",
+      "published": "2026-10-21T22:00:13+00:00",
+      "isShort": false,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
+    {
+      "id": "ii8E4OK7Acs",
+      "title": "What's the Best SUV for You: 2027 Honda CR-V or 2026 Toyota RAV4? #honda #toyota #suv",
+      "published": "2026-10-20T23:00:04+00:00",
+      "isShort": true,
+      "makes": [
+        "Honda",
+        "Toyota"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": [
+        "SUV"
+      ]
+    },
     {
       "id": "yaI8D9qvjZ0",
       "title": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
