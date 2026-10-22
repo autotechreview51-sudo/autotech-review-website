@@ -1,3 +1,4 @@
+import savedFeed from '../data/site-content.json' with {type:'json'};
 import assert from 'node:assert/strict';
 let mode = 'offline';
 globalThis.fetch = async (url) => {
@@ -11,7 +12,7 @@ let body = await response.json();
 assert.equal(response.status, 200);
 assert.equal(body.source, 'saved-catalogue');
 assert.equal(body.stale, true);
-assert(body.latestVideos.some(v => v.id === 'Jbl0aGFtihU'));
+assert.deepEqual(body.latestVideos, savedFeed.latestVideos);
 assert(body.latestLongVideos.every(v => !v.isShort));
 assert(body.latestShorts.every(v => v.isShort));
 mode = 'online';

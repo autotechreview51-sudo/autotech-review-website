@@ -190,7 +190,7 @@
             const url=videoUrl(newest),imageLink=lead.querySelector('.lead-image'),img=createCard(newest).querySelector('img');
             img.loading='eager';img.fetchPriority='high';imageLink.href=url;imageLink.querySelector('img').replaceWith(img);
             lead.querySelector('.lead-index').textContent='01 / LATEST LONG VIDEO';
-            lead.querySelector('.kicker').textContent='LATEST FULL VIDEO';lead.querySelector('h1').textContent=titleText(newest);
+            lead.querySelector('.kicker').textContent='LATEST FULL VIDEO';const heading=lead.querySelector('[data-feature-title]')||lead.querySelector('h1');const titleLink=heading.querySelector('a');if(titleLink){titleLink.textContent=titleText(newest);titleLink.href=url;}else heading.textContent=titleText(newest);
             lead.querySelector('.lead-copy p').textContent=newest.description||'The newest full video from AutoTech Review. Watch the complete discussion on YouTube.';
             lead.querySelector('.lead-actions .button').href=url+(url.startsWith('/')?'#watch':'');lead.querySelector('.lead-actions .button').textContent='Watch the full video';lead.querySelector('.lead-date').textContent=dateText(newest.published)+' · Long video';lead.dataset.leadVideo=newest.id;lead.dataset.published=newest.published;
           }

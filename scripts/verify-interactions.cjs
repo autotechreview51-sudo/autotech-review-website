@@ -59,7 +59,7 @@ assert.equal(t.cards.find(c=>!c.hidden).dataset.video,'ciwldF2hUn4');t.pick.disp
 t.controls.q.value='nonexistent';t.controls.q.dispatch('input');assert.equal(t.pick.disabled,true);
 t.clear.dispatch('click');assert.equal(t.controls.q.value,'');assert.equal(t.count.textContent,allCount+' videos');
 t.controls.sort.value='oldest';t.form.dispatch('change');assert.equal(t.grid.children[0].dataset.video,'GmdUmrDhZSg');assert.equal(t.sortLabel.textContent,'Oldest first');
-t=runtime('/','?q=glc&sort=oldest');assert.equal(t.count.textContent,'2 videos');assert.equal(t.controls.sort.value,'oldest');
+t=runtime('/','?q=glc&sort=oldest');assert.equal(t.count.textContent,fixtures['/'].cards.filter(c=>c.search.toLowerCase().includes('glc')).length+' videos');assert.equal(t.controls.sort.value,'oldest');
 t.menu.dispatch('click');assert.equal(t.menu.attributes['aria-expanded'],'true');assert(t.nav.classes.has('is-open'));
 t.document.dispatch('keydown',{key:'Escape'});assert.equal(t.menu.attributes['aria-expanded'],'false');assert.equal(t.menu.focused,true);
 // Run the production brief handler against entered values; nothing is sent.
@@ -72,8 +72,9 @@ assert.equal(result.hidden,false);assert.match(prepared.value,/50% before produc
 t=runtime();const playButton=new Node(),player=new Node();player.dataset.id='Zl3P77Mk39o';player.replaceChildren=element=>{player.child=element;};playButton.closest=()=>player;t.context.document.querySelectorAll=s=>s==='[data-load-video]'?[playButton]:[];t.context.document.createElement=()=>new Node();t.rerun();assert.equal(player.child,undefined);playButton.dispatch('click');assert.match(player.child.src,/^https:\/\/www.youtube-nocookie.com\/embed\/Zl3P77Mk39o/);
 console.log(JSON.stringify({checks:['combined filters','empty results','reset','fixed-format separation','query hydration','search','sorting','filtered suggestions','menu and Escape','campaign draft encoding and no-send behavior','click-to-load privacy-enhanced player'],result:'passed',scope:'DOM fixtures; live browser checks are separate'}));
 (async()=>{
-  const long={id:'newupload01',title:'2028 Mazda SUV review',published:'2026-10-03T15:00:00Z',isShort:false,makes:['Mazda'],years:['2028'],types:['SUV']};
-  const short={id:'newupload02',title:'2028 Honda cabin detail',published:'2026-10-03T16:00:00Z',isShort:true,makes:['Honda'],years:['2028'],types:[]};
+  const newestFixture=Math.max(...fixtures['/'].cards.map(c=>Date.parse(c.published)));
+  const long={id:'newupload01',title:'2028 Mazda SUV review',published:new Date(newestFixture+3600000).toISOString(),isShort:false,makes:['Mazda'],years:['2028'],types:['SUV']};
+  const short={id:'newupload02',title:'2028 Honda cabin detail',published:new Date(newestFixture+7200000).toISOString(),isShort:true,makes:['Honda'],years:['2028'],types:[]};
   const live={current:{source:'youtube-rss',updatedAt:'2026-10-03T16:05:00Z',latestVideos:[long,short],latestLongVideos:[long],latestShorts:[short]}};
   let test=runtime('/','?make=Mazda&year=2028',live);
   await new Promise(resolve=>setImmediate(resolve));
