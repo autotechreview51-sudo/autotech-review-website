@@ -669,14 +669,14 @@
     {
       "id": "lZE3VueaDbM",
       "slug": "channel-lze3vueadbm",
-      "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
-      "originalTitle": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "title": "2027 Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "originalTitle": "2027 Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
       "published": "2026-10-14T23:00:30+00:00",
       "format": "long",
       "kind": "Channel video",
       "vehicles": [],
       "automatic": true,
-      "description": "Watch the full video from AutoTech Review: Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON).",
+      "description": "Watch the full video from AutoTech Review: 2027 Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON).",
       "question": "Watch the complete discussion.",
       "topics": [
         "Published channel coverage",
@@ -690,7 +690,9 @@
       "makes": [
         "Honda"
       ],
-      "years": [],
+      "years": [
+        "2027"
+      ],
       "types": []
     },
     {
@@ -845,6 +847,25 @@
       "types": [
         "SUV"
       ]
+    },
+    {
+      "id": "FbGLc1TLY1I",
+      "slug": "channel-fbglc1tly1i",
+      "title": "POV: Getting the keys to the new 2026 BMW X3",
+      "originalTitle": "POV: Getting the keys to the new 2026 BMW X3 #bmw #newcar #shorts",
+      "published": "2026-10-22T20:29:29+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: POV: Getting the keys to the new 2026 BMW X3.",
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
     }
   ]
 }

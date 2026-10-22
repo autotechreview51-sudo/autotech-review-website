@@ -253,7 +253,7 @@
     "id": "lZE3VueaDbM",
     "kind": "YouTube video thumbnail",
     "source": "https://img.youtube.com/vi/lZE3VueaDbM/maxresdefault.jpg",
-    "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+    "title": "2027 Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
     "format": "long",
     "width": 1280,
     "height": 720,
@@ -338,5 +338,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "a8b893142b604df1a4c8262f410369c591dbb2adcf743941e3bb655cb78e9e5e"
+  },
+  {
+    "id": "FbGLc1TLY1I",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/FbGLc1TLY1I/maxresdefault.jpg",
+    "title": "POV: Getting the keys to the new 2026 BMW X3 #bmw #newcar #shorts",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "f994b52de21deb29c12df000d5628226b80a246dd2faf0d638db5e19f80dd26a"
   }
 ]

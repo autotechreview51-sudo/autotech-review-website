@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-22T07:38:58.924Z",
+  "updatedAt": "2026-10-22T22:22:53.174Z",
   "metrics": {
     "subscribers": "21.5K"
   },
   "latestVideos": [
+    {
+      "id": "FbGLc1TLY1I",
+      "title": "POV: Getting the keys to the new 2026 BMW X3 #bmw #newcar #shorts",
+      "published": "2026-10-22T20:29:29+00:00",
+      "isShort": true,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "qm4alJ0_rT0",
       "title": "2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing",
@@ -83,13 +96,15 @@
     },
     {
       "id": "lZE3VueaDbM",
-      "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "title": "2027 Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
       "published": "2026-10-14T23:00:30+00:00",
       "isShort": false,
       "makes": [
         "Honda"
       ],
-      "years": [],
+      "years": [
+        "2027"
+      ],
       "types": []
     },
     {
@@ -176,21 +191,6 @@
         "2026"
       ],
       "types": []
-    },
-    {
-      "id": "-_Kx4lUqJLs",
-      "title": "2027 Mercedes GLC 300: Is this storage space enough? #toronto #brampton",
-      "published": "2026-10-05T20:05:18+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "latestLongVideos": [
@@ -209,13 +209,15 @@
     },
     {
       "id": "lZE3VueaDbM",
-      "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "title": "2027 Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
       "published": "2026-10-14T23:00:30+00:00",
       "isShort": false,
       "makes": [
         "Honda"
       ],
-      "years": [],
+      "years": [
+        "2027"
+      ],
       "types": []
     },
     {
@@ -279,6 +281,19 @@
   ],
   "latestShorts": [
     {
+      "id": "FbGLc1TLY1I",
+      "title": "POV: Getting the keys to the new 2026 BMW X3 #bmw #newcar #shorts",
+      "published": "2026-10-22T20:29:29+00:00",
+      "isShort": true,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
+    {
       "id": "ii8E4OK7Acs",
       "title": "What's the Best SUV for You: 2027 Honda CR-V or 2026 Toyota RAV4? #honda #toyota #suv",
       "published": "2026-10-20T23:00:04+00:00",
@@ -341,20 +356,22 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "7vhQmTFDIp0",
-      "title": "Don't pick the wrong Prius wheels! #caradvice #toyota #hybrid",
-      "published": "2026-10-12T23:15:18+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "FbGLc1TLY1I",
+      "title": "POV: Getting the keys to the new 2026 BMW X3 #bmw #newcar #shorts",
+      "published": "2026-10-22T20:29:29+00:00",
+      "isShort": true,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "qm4alJ0_rT0",
       "title": "2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing",
@@ -434,13 +451,15 @@
     },
     {
       "id": "lZE3VueaDbM",
-      "title": "Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
+      "title": "2027 Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
       "published": "2026-10-14T23:00:30+00:00",
       "isShort": false,
       "makes": [
         "Honda"
       ],
-      "years": [],
+      "years": [
+        "2027"
+      ],
       "types": []
     },
     {
