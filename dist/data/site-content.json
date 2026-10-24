@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-23T18:24:30.445Z",
+  "updatedAt": "2026-10-24T20:54:09.136Z",
   "metrics": {
     "subscribers": "21.6K"
   },
   "latestVideos": [
+    {
+      "id": "AUvB1Qcv4e8",
+      "title": "Would you drive this 2026 BMW X3? 😍 #bmw #x3m #dreamcar",
+      "published": "2026-10-24T20:09:10+00:00",
+      "isShort": true,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "FbGLc1TLY1I",
       "title": "POV: Getting the keys to the new 2026 BMW X3 #bmw #newcar #shorts",
@@ -178,19 +191,6 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "rF2fHaESqiA",
-      "title": "2026 vs 2027 Mercedes GLC 300: Save your money #mercedes #glc #carreview #tips #shorts",
-      "published": "2026-10-06T18:48:06+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": []
     }
   ],
   "latestLongVideos": [
@@ -281,6 +281,19 @@
   ],
   "latestShorts": [
     {
+      "id": "AUvB1Qcv4e8",
+      "title": "Would you drive this 2026 BMW X3? 😍 #bmw #x3m #dreamcar",
+      "published": "2026-10-24T20:09:10+00:00",
+      "isShort": true,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
+    {
       "id": "FbGLc1TLY1I",
       "title": "POV: Getting the keys to the new 2026 BMW X3 #bmw #newcar #shorts",
       "published": "2026-10-22T20:29:29+00:00",
@@ -341,24 +354,22 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "aQAon2lnMYs",
-      "title": "Why I’d skip the 2027 Honda CR-V Touring #toronto #honda #suv",
-      "published": "2026-10-16T01:40:39+00:00",
-      "isShort": true,
-      "makes": [
-        "Honda"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "archive": [
+    {
+      "id": "AUvB1Qcv4e8",
+      "title": "Would you drive this 2026 BMW X3? 😍 #bmw #x3m #dreamcar",
+      "published": "2026-10-24T20:09:10+00:00",
+      "isShort": true,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "FbGLc1TLY1I",
       "title": "POV: Getting the keys to the new 2026 BMW X3 #bmw #newcar #shorts",

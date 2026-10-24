@@ -348,5 +348,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "f994b52de21deb29c12df000d5628226b80a246dd2faf0d638db5e19f80dd26a"
+  },
+  {
+    "id": "AUvB1Qcv4e8",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/AUvB1Qcv4e8/maxresdefault.jpg",
+    "title": "Would you drive this 2026 BMW X3? 😍 #bmw #x3m #dreamcar",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "255b34dcf10c1c7f7bcd1c8ea8ac9e84b50428ec758dae7c32ce631e0222f141"
   }
 ]

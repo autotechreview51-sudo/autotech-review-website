@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-23",
+  "contentChecked": "2026-10-24",
   "subscribers": "21.6K",
   "vehicles": [
     {
@@ -859,6 +859,25 @@
       "vehicles": [],
       "automatic": true,
       "description": "Watch this Short from AutoTech Review: POV: Getting the keys to the new 2026 BMW X3.",
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
+    {
+      "id": "AUvB1Qcv4e8",
+      "slug": "channel-auvb1qcv4e8",
+      "title": "Would you drive this 2026 BMW X3? 😍",
+      "originalTitle": "Would you drive this 2026 BMW X3? 😍 #bmw #x3m #dreamcar",
+      "published": "2026-10-24T20:09:10+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Would you drive this 2026 BMW X3? 😍.",
       "makes": [
         "BMW"
       ],
