@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-24",
+  "contentChecked": "2026-10-27",
   "subscribers": "21.6K",
   "vehicles": [
     {
@@ -878,6 +878,25 @@
       "vehicles": [],
       "automatic": true,
       "description": "Watch this Short from AutoTech Review: Would you drive this 2026 BMW X3? 😍.",
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
+    {
+      "id": "myxGvVX3hvM",
+      "slug": "channel-myxgvvx3hvm",
+      "title": "Would You Buy the 2026 BMW X3 for This Interior?",
+      "originalTitle": "Would You Buy the 2026 BMW X3 for This Interior? #BMW #X3 #toronto #brampton",
+      "published": "2026-10-27T21:57:11+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: Would You Buy the 2026 BMW X3 for This Interior?.",
       "makes": [
         "BMW"
       ],

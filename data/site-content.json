@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-24T20:54:09.136Z",
+  "updatedAt": "2026-10-27T22:59:08.495Z",
   "metrics": {
     "subscribers": "21.6K"
   },
   "latestVideos": [
+    {
+      "id": "myxGvVX3hvM",
+      "title": "Would You Buy the 2026 BMW X3 for This Interior? #BMW #X3 #toronto #brampton",
+      "published": "2026-10-27T21:57:11+00:00",
+      "isShort": true,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "AUvB1Qcv4e8",
       "title": "Would you drive this 2026 BMW X3? 😍 #bmw #x3m #dreamcar",
@@ -176,21 +189,6 @@
         "2027"
       ],
       "types": []
-    },
-    {
-      "id": "zQtK-QAd2sc",
-      "title": "How much legroom is really in the 2027 Mercedes GLC 300? #toronto  #mercedes #suv",
-      "published": "2026-10-07T15:09:48+00:00",
-      "isShort": true,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "latestLongVideos": [
@@ -281,6 +279,19 @@
   ],
   "latestShorts": [
     {
+      "id": "myxGvVX3hvM",
+      "title": "Would You Buy the 2026 BMW X3 for This Interior? #BMW #X3 #toronto #brampton",
+      "published": "2026-10-27T21:57:11+00:00",
+      "isShort": true,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
+    {
       "id": "AUvB1Qcv4e8",
       "title": "Would you drive this 2026 BMW X3? 😍 #bmw #x3m #dreamcar",
       "published": "2026-10-24T20:09:10+00:00",
@@ -343,20 +354,22 @@
       "makes": [],
       "years": [],
       "types": []
-    },
-    {
-      "id": "wY1QpDaMer0",
-      "title": "Is this real life? Tesla Roadster extreme loop #shorts #trending",
-      "published": "2026-10-16T20:29:20+00:00",
-      "isShort": true,
-      "makes": [
-        "Tesla"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "myxGvVX3hvM",
+      "title": "Would You Buy the 2026 BMW X3 for This Interior? #BMW #X3 #toronto #brampton",
+      "published": "2026-10-27T21:57:11+00:00",
+      "isShort": true,
+      "makes": [
+        "BMW"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "AUvB1Qcv4e8",
       "title": "Would you drive this 2026 BMW X3? 😍 #bmw #x3m #dreamcar",

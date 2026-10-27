@@ -358,5 +358,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "255b34dcf10c1c7f7bcd1c8ea8ac9e84b50428ec758dae7c32ce631e0222f141"
+  },
+  {
+    "id": "myxGvVX3hvM",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/myxGvVX3hvM/maxresdefault.jpg",
+    "title": "Would You Buy the 2026 BMW X3 for This Interior? #BMW #X3 #toronto #brampton",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "3968a5de3ad6201d7392b2ec8d169ea48a2e5c1119b96141213c5d946b623882"
   }
 ]
