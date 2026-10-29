@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-27",
+  "contentChecked": "2026-10-29",
   "subscribers": "21.6K",
   "vehicles": [
     {
@@ -902,6 +902,35 @@
       ],
       "years": [
         "2026"
+      ],
+      "types": []
+    },
+    {
+      "id": "TvjjvS8xRzI",
+      "slug": "channel-tvjjvs8xrzi",
+      "title": "2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?",
+      "originalTitle": "2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?",
+      "published": "2026-10-28T22:30:32+00:00",
+      "format": "long",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch the full video from AutoTech Review: 2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
       ],
       "types": []
     }

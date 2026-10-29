@@ -368,5 +368,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "3968a5de3ad6201d7392b2ec8d169ea48a2e5c1119b96141213c5d946b623882"
+  },
+  {
+    "id": "TvjjvS8xRzI",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/TvjjvS8xRzI/maxresdefault.jpg",
+    "title": "2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?",
+    "format": "long",
+    "width": 1280,
+    "height": 720,
+    "sha256": "890b2dcafefa225e35710c1edeff9559f51de9044dc1b17a257ec3a488e3254f"
   }
 ]

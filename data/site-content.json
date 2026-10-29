@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-27T22:59:08.495Z",
+  "updatedAt": "2026-10-29T08:35:11.113Z",
   "metrics": {
     "subscribers": "21.6K"
   },
   "latestVideos": [
+    {
+      "id": "TvjjvS8xRzI",
+      "title": "2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?",
+      "published": "2026-10-28T22:30:32+00:00",
+      "isShort": false,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "myxGvVX3hvM",
       "title": "Would You Buy the 2026 BMW X3 for This Interior? #BMW #X3 #toronto #brampton",
@@ -176,22 +189,22 @@
       ],
       "years": [],
       "types": []
-    },
+    }
+  ],
+  "latestLongVideos": [
     {
-      "id": "KHvh0nymAdo",
-      "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
-      "published": "2026-10-07T22:30:03+00:00",
+      "id": "TvjjvS8xRzI",
+      "title": "2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?",
+      "published": "2026-10-28T22:30:32+00:00",
       "isShort": false,
       "makes": [
-        "Toyota"
+        "Mercedes-Benz"
       ],
       "years": [
         "2027"
       ],
       "types": []
-    }
-  ],
-  "latestLongVideos": [
+    },
     {
       "id": "qm4alJ0_rT0",
       "title": "2026 BMW X3 30 xDrive Review: Interior, Tech & Canadian Pricing",
@@ -259,21 +272,6 @@
       ],
       "types": [
         "Sedan"
-      ]
-    },
-    {
-      "id": "QqwMlNI5iQQ",
-      "title": "2026 Corolla Cross vs RAV4: Which Toyota SUV Should You Actually Buy? (Canada)",
-      "published": "2026-09-16T23:00:14+00:00",
-      "isShort": false,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": [
-        "SUV"
       ]
     }
   ],
@@ -357,6 +355,19 @@
     }
   ],
   "archive": [
+    {
+      "id": "TvjjvS8xRzI",
+      "title": "2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?",
+      "published": "2026-10-28T22:30:32+00:00",
+      "isShort": false,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "myxGvVX3hvM",
       "title": "Would You Buy the 2026 BMW X3 for This Interior? #BMW #X3 #toronto #brampton",
