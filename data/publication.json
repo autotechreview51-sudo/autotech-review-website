@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-10-29",
+  "contentChecked": "2026-11-01",
   "subscribers": "21.7K",
   "vehicles": [
     {
@@ -926,6 +926,25 @@
         "Check current pricing and availability with the manufacturer or retailer.",
         "Watch the video for the complete context."
       ],
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
+      "id": "6LIYSKEOvvM",
+      "slug": "channel-6liyskeovvm",
+      "title": "2027 Mercedes GLE450 - What's new?",
+      "originalTitle": "2027 Mercedes GLE450 - What's new? #mercedes #gle450 #brampton #toronto",
+      "published": "2026-11-01T20:34:36+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: 2027 Mercedes GLE450 - What's new?.",
       "makes": [
         "Mercedes-Benz"
       ],

@@ -378,5 +378,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "890b2dcafefa225e35710c1edeff9559f51de9044dc1b17a257ec3a488e3254f"
+  },
+  {
+    "id": "6LIYSKEOvvM",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/6LIYSKEOvvM/maxresdefault.jpg",
+    "title": "2027 Mercedes GLE450 - What's new? #mercedes #gle450 #brampton #toronto",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "aa15737bb77012137b2a1251db18e0476d37677ead30ac2b62a8cb37d7a44078"
   }
 ]

@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-29T21:11:49.472Z",
+  "updatedAt": "2026-11-01T23:39:08.675Z",
   "metrics": {
     "subscribers": "21.7K"
   },
   "latestVideos": [
+    {
+      "id": "6LIYSKEOvvM",
+      "title": "2027 Mercedes GLE450 - What's new? #mercedes #gle450 #brampton #toronto",
+      "published": "2026-11-01T20:34:36+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "TvjjvS8xRzI",
       "title": "2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?",
@@ -178,17 +191,6 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "JRkN28Zrgmk",
-      "title": "Stop buying the wrong Prius: Plug-in vs Standard explained #prius #toyota #toronto #brampton",
-      "published": "2026-10-08T19:15:36+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "latestLongVideos": [
@@ -277,6 +279,19 @@
   ],
   "latestShorts": [
     {
+      "id": "6LIYSKEOvvM",
+      "title": "2027 Mercedes GLE450 - What's new? #mercedes #gle450 #brampton #toronto",
+      "published": "2026-11-01T20:34:36+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
       "id": "myxGvVX3hvM",
       "title": "Would You Buy the 2026 BMW X3 for This Interior? #BMW #X3 #toronto #brampton",
       "published": "2026-10-27T21:57:11+00:00",
@@ -343,18 +358,22 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "vEOF-zzGn2Q",
-      "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",
-      "published": "2026-10-17T23:15:33+00:00",
-      "isShort": true,
-      "makes": [],
-      "years": [],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "6LIYSKEOvvM",
+      "title": "2027 Mercedes GLE450 - What's new? #mercedes #gle450 #brampton #toronto",
+      "published": "2026-11-01T20:34:36+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "TvjjvS8xRzI",
       "title": "2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?",
