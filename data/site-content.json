@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-11-01T23:39:08.675Z",
+  "updatedAt": "2026-11-04T09:22:26.489Z",
   "metrics": {
-    "subscribers": "21.7K"
+    "subscribers": "21.8K"
   },
   "latestVideos": [
+    {
+      "id": "MGh_CCdr0Ss",
+      "title": "This 2027 GLE 450 interior is a whole new level #mercedes #toronto",
+      "published": "2026-11-03T22:28:38+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "6LIYSKEOvvM",
       "title": "2027 Mercedes GLE450 - What's new? #mercedes #gle450 #brampton #toronto",
@@ -180,17 +193,6 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "ZC22wVcyveY",
-      "title": "Why I plug in my Prius every single night #toyota #prius #evlife #toronto",
-      "published": "2026-10-09T21:30:03+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "latestLongVideos": [
@@ -279,6 +281,19 @@
   ],
   "latestShorts": [
     {
+      "id": "MGh_CCdr0Ss",
+      "title": "This 2027 GLE 450 interior is a whole new level #mercedes #toronto",
+      "published": "2026-11-03T22:28:38+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
       "id": "6LIYSKEOvvM",
       "title": "2027 Mercedes GLE450 - What's new? #mercedes #gle450 #brampton #toronto",
       "published": "2026-11-01T20:34:36+00:00",
@@ -345,22 +360,22 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "yaI8D9qvjZ0",
-      "title": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
-      "published": "2026-10-19T19:18:10+00:00",
-      "isShort": true,
-      "makes": [],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "archive": [
+    {
+      "id": "MGh_CCdr0Ss",
+      "title": "This 2027 GLE 450 interior is a whole new level #mercedes #toronto",
+      "published": "2026-11-03T22:28:38+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "6LIYSKEOvvM",
       "title": "2027 Mercedes GLE450 - What's new? #mercedes #gle450 #brampton #toronto",

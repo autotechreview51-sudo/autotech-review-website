@@ -2,8 +2,8 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-11-01",
-  "subscribers": "21.7K",
+  "contentChecked": "2026-11-04",
+  "subscribers": "21.8K",
   "vehicles": [
     {
       "slug": "2027-mercedes-benz-glc-300",
@@ -945,6 +945,25 @@
       "vehicles": [],
       "automatic": true,
       "description": "Watch this Short from AutoTech Review: 2027 Mercedes GLE450 - What's new?.",
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
+      "id": "MGh_CCdr0Ss",
+      "slug": "channel-mgh_ccdr0ss",
+      "title": "This 2027 GLE 450 interior is a whole new level",
+      "originalTitle": "This 2027 GLE 450 interior is a whole new level #mercedes #toronto",
+      "published": "2026-11-03T22:28:38+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: This 2027 GLE 450 interior is a whole new level.",
       "makes": [
         "Mercedes-Benz"
       ],

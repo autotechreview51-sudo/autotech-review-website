@@ -388,5 +388,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "aa15737bb77012137b2a1251db18e0476d37677ead30ac2b62a8cb37d7a44078"
+  },
+  {
+    "id": "MGh_CCdr0Ss",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/MGh_CCdr0Ss/maxresdefault.jpg",
+    "title": "This 2027 GLE 450 interior is a whole new level #mercedes #toronto",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "eb6ca2b634fc5debbb79385c0388f0cfccb05365c0e153ca290e79a80fe0c2bd"
   }
 ]
