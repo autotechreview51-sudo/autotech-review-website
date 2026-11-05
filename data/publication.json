@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-11-04",
+  "contentChecked": "2026-11-05",
   "subscribers": "21.8K",
   "vehicles": [
     {
@@ -966,6 +966,35 @@
       "description": "Watch this Short from AutoTech Review: This 2027 GLE 450 interior is a whole new level.",
       "makes": [
         "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
+      "id": "Ixo4YOdL4ko",
+      "slug": "channel-ixo4yodl4ko",
+      "title": "2027 Audi Q6 e-tron quattro: What to Know Before You Buy?",
+      "originalTitle": "2027 Audi Q6 e-tron quattro: What to Know Before You Buy?",
+      "published": "2026-11-04T23:30:30+00:00",
+      "format": "long",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch the full video from AutoTech Review: 2027 Audi Q6 e-tron quattro: What to Know Before You Buy?.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "Audi"
       ],
       "years": [
         "2027"

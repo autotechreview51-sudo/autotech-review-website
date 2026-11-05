@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-11-04T09:22:26.489Z",
+  "updatedAt": "2026-11-05T15:32:03.357Z",
   "metrics": {
     "subscribers": "21.8K"
   },
   "latestVideos": [
+    {
+      "id": "Ixo4YOdL4ko",
+      "title": "2027 Audi Q6 e-tron quattro: What to Know Before You Buy?",
+      "published": "2026-11-04T23:30:30+00:00",
+      "isShort": false,
+      "makes": [
+        "Audi"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "MGh_CCdr0Ss",
       "title": "This 2027 GLE 450 interior is a whole new level #mercedes #toronto",
@@ -182,20 +195,22 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "y1Aj8qGrCwY",
-      "title": "Stop Paying Over MSRP for Your Prius #toyota #toronto #shorts",
-      "published": "2026-10-11T18:30:13+00:00",
-      "isShort": true,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "latestLongVideos": [
+    {
+      "id": "Ixo4YOdL4ko",
+      "title": "2027 Audi Q6 e-tron quattro: What to Know Before You Buy?",
+      "published": "2026-11-04T23:30:30+00:00",
+      "isShort": false,
+      "makes": [
+        "Audi"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "TvjjvS8xRzI",
       "title": "2027 Mercedes-Benz GLE 450 4MATIC: What's New & Is It Worth It?",
@@ -261,21 +276,6 @@
       ],
       "types": [
         "SUV"
-      ]
-    },
-    {
-      "id": "1tx4EhDBoxY",
-      "title": "Don't Buy the 2026 Toyota Camry XSE AWD Until You Watch This (Canada Price)",
-      "published": "2026-09-23T22:00:30+00:00",
-      "isShort": false,
-      "makes": [
-        "Toyota"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": [
-        "Sedan"
       ]
     }
   ],
@@ -363,6 +363,19 @@
     }
   ],
   "archive": [
+    {
+      "id": "Ixo4YOdL4ko",
+      "title": "2027 Audi Q6 e-tron quattro: What to Know Before You Buy?",
+      "published": "2026-11-04T23:30:30+00:00",
+      "isShort": false,
+      "makes": [
+        "Audi"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "MGh_CCdr0Ss",
       "title": "This 2027 GLE 450 interior is a whole new level #mercedes #toronto",

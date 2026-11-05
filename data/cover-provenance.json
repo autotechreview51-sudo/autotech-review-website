@@ -398,5 +398,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "eb6ca2b634fc5debbb79385c0388f0cfccb05365c0e153ca290e79a80fe0c2bd"
+  },
+  {
+    "id": "Ixo4YOdL4ko",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/Ixo4YOdL4ko/maxresdefault.jpg",
+    "title": "2027 Audi Q6 e-tron quattro: What to Know Before You Buy?",
+    "format": "long",
+    "width": 1280,
+    "height": 720,
+    "sha256": "bc5e8ed15bd80d6793cd9acdcdb634c57f44b271d392d64d24b43e78348fbc3d"
   }
 ]
