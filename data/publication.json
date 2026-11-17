@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-11-12",
+  "contentChecked": "2026-11-16",
   "subscribers": "21.9K",
   "vehicles": [
     {
@@ -993,6 +993,25 @@
         "Check current pricing and availability with the manufacturer or retailer.",
         "Watch the video for the complete context."
       ],
+      "makes": [
+        "Audi"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
+      "id": "J-Odh-PujNs",
+      "slug": "channel-j-odh-pujns",
+      "title": "2027 Audi Q6 Etron do you like it?",
+      "originalTitle": "2027 Audi Q6 Etron do you like it? #Audi #EV #toronto",
+      "published": "2026-11-17T02:41:47+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: 2027 Audi Q6 Etron do you like it?.",
       "makes": [
         "Audi"
       ],
