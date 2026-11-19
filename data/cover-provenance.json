@@ -418,5 +418,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "9af03972f3d610052f40e0100dae8237e62aefa29f8ec5ff024f44e273f1c982"
+  },
+  {
+    "id": "NI7BWEpB5J4",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/NI7BWEpB5J4/maxresdefault.jpg",
+    "title": "2027 Mercedes C300: Buy This One or Wait for the New C-Class?",
+    "format": "long",
+    "width": 1280,
+    "height": 720,
+    "sha256": "bfff840615a72145fea1a223785f0a53b8f0c632e74a3463f8cd41a4fee0cff4"
   }
 ]

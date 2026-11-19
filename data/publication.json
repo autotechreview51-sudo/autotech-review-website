@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-11-16",
+  "contentChecked": "2026-11-18",
   "subscribers": "21.9K",
   "vehicles": [
     {
@@ -1014,6 +1014,35 @@
       "description": "Watch this Short from AutoTech Review: 2027 Audi Q6 Etron do you like it?.",
       "makes": [
         "Audi"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
+      "id": "NI7BWEpB5J4",
+      "slug": "channel-ni7bwepb5j4",
+      "title": "2027 Mercedes C300: Buy This One or Wait for the New C-Class?",
+      "originalTitle": "2027 Mercedes C300: Buy This One or Wait for the New C-Class?",
+      "published": "2026-11-18T23:30:10+00:00",
+      "format": "long",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch the full video from AutoTech Review: 2027 Mercedes C300: Buy This One or Wait for the New C-Class?.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "Mercedes-Benz"
       ],
       "years": [
         "2027"

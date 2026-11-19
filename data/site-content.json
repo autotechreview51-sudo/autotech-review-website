@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-11-17T04:33:15.524Z",
+  "updatedAt": "2026-11-19T03:34:28.434Z",
   "metrics": {
     "subscribers": "21.9K"
   },
   "latestVideos": [
+    {
+      "id": "NI7BWEpB5J4",
+      "title": "2027 Mercedes C300: Buy This One or Wait for the New C-Class?",
+      "published": "2026-11-18T23:30:10+00:00",
+      "isShort": false,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "J-Odh-PujNs",
       "title": "2027 Audi Q6 Etron do you like it? #Audi #EV #toronto",
@@ -184,22 +197,22 @@
       "types": [
         "SUV"
       ]
-    },
+    }
+  ],
+  "latestLongVideos": [
     {
-      "id": "lZE3VueaDbM",
-      "title": "2027 Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
-      "published": "2026-10-14T23:00:30+00:00",
+      "id": "NI7BWEpB5J4",
+      "title": "2027 Mercedes C300: Buy This One or Wait for the New C-Class?",
+      "published": "2026-11-18T23:30:10+00:00",
       "isShort": false,
       "makes": [
-        "Honda"
+        "Mercedes-Benz"
       ],
       "years": [
         "2027"
       ],
       "types": []
-    }
-  ],
-  "latestLongVideos": [
+    },
     {
       "id": "Ixo4YOdL4ko",
       "title": "2027 Audi Q6 e-tron quattro: What to Know Before You Buy?",
@@ -264,21 +277,6 @@
         "2027"
       ],
       "types": []
-    },
-    {
-      "id": "Zl3P77Mk39o",
-      "title": "2027 Mercedes GLC 300: Buy New, Shop 2026 or Wait? (ON)",
-      "published": "2026-09-30T22:30:35+00:00",
-      "isShort": false,
-      "makes": [
-        "Mercedes-Benz"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "latestShorts": [
@@ -362,6 +360,19 @@
     }
   ],
   "archive": [
+    {
+      "id": "NI7BWEpB5J4",
+      "title": "2027 Mercedes C300: Buy This One or Wait for the New C-Class?",
+      "published": "2026-11-18T23:30:10+00:00",
+      "isShort": false,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "J-Odh-PujNs",
       "title": "2027 Audi Q6 Etron do you like it? #Audi #EV #toronto",
