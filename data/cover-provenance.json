@@ -428,5 +428,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "bfff840615a72145fea1a223785f0a53b8f0c632e74a3463f8cd41a4fee0cff4"
+  },
+  {
+    "id": "_4XQZCb7LLg",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/_4XQZCb7LLg/maxresdefault.jpg",
+    "title": "2027 Mercedes C300 - Does it have a spare tire? #mercedes #c300 #toronto",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "b6f316c7d05b98a1c4c7ae78164e6a2f7c58444004db877f2135a47f8ae9c74e"
   }
 ]

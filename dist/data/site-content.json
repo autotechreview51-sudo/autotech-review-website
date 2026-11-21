@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-11-21T02:22:31.978Z",
+  "updatedAt": "2026-11-21T23:23:49.431Z",
   "metrics": {
     "subscribers": "22K"
   },
   "latestVideos": [
+    {
+      "id": "_4XQZCb7LLg",
+      "title": "2027 Mercedes C300 - Does it have a spare tire? #mercedes #c300 #toronto",
+      "published": "2026-11-21T19:21:12+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "NI7BWEpB5J4",
       "title": "2027 Mercedes C300: Buy This One or Wait for the New C-Class?",
@@ -182,21 +195,6 @@
       ],
       "years": [],
       "types": []
-    },
-    {
-      "id": "aQAon2lnMYs",
-      "title": "Why I’d skip the 2027 Honda CR-V Touring #toronto #honda #suv",
-      "published": "2026-10-16T01:40:39+00:00",
-      "isShort": true,
-      "makes": [
-        "Honda"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "latestLongVideos": [
@@ -281,6 +279,19 @@
   ],
   "latestShorts": [
     {
+      "id": "_4XQZCb7LLg",
+      "title": "2027 Mercedes C300 - Does it have a spare tire? #mercedes #c300 #toronto",
+      "published": "2026-11-21T19:21:12+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
       "id": "J-Odh-PujNs",
       "title": "2027 Audi Q6 Etron do you like it? #Audi #EV #toronto",
       "published": "2026-11-17T02:41:47+00:00",
@@ -344,22 +355,22 @@
         "2026"
       ],
       "types": []
-    },
-    {
-      "id": "FbGLc1TLY1I",
-      "title": "POV: Getting the keys to the new 2026 BMW X3 #bmw #newcar #shorts",
-      "published": "2026-10-22T20:29:29+00:00",
-      "isShort": true,
-      "makes": [
-        "BMW"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "_4XQZCb7LLg",
+      "title": "2027 Mercedes C300 - Does it have a spare tire? #mercedes #c300 #toronto",
+      "published": "2026-11-21T19:21:12+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "NI7BWEpB5J4",
       "title": "2027 Mercedes C300: Buy This One or Wait for the New C-Class?",

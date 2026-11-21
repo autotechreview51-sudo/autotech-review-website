@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-11-20",
+  "contentChecked": "2026-11-21",
   "subscribers": "22K",
   "vehicles": [
     {
@@ -1041,6 +1041,25 @@
         "Check current pricing and availability with the manufacturer or retailer.",
         "Watch the video for the complete context."
       ],
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
+      "id": "_4XQZCb7LLg",
+      "slug": "channel-_4xqzcb7llg",
+      "title": "2027 Mercedes C300 - Does it have a spare tire?",
+      "originalTitle": "2027 Mercedes C300 - Does it have a spare tire? #mercedes #c300 #toronto",
+      "published": "2026-11-21T19:21:12+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: 2027 Mercedes C300 - Does it have a spare tire?.",
       "makes": [
         "Mercedes-Benz"
       ],
