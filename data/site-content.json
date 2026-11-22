@@ -1,9 +1,18 @@
 {
-  "updatedAt": "2026-11-21T23:23:49.431Z",
+  "updatedAt": "2026-11-22T06:57:14.732Z",
   "metrics": {
     "subscribers": "22K"
   },
   "latestVideos": [
+    {
+      "id": "HOxUz6nbPq4",
+      "title": "This $50,000 EV Rule Could Cost You $5,000 (Canada)",
+      "published": "2026-11-21T23:30:28+00:00",
+      "isShort": false,
+      "makes": [],
+      "years": [],
+      "types": []
+    },
     {
       "id": "_4XQZCb7LLg",
       "title": "2027 Mercedes C300 - Does it have a spare tire? #mercedes #c300 #toronto",
@@ -184,20 +193,18 @@
       "makes": [],
       "years": [],
       "types": []
-    },
-    {
-      "id": "wY1QpDaMer0",
-      "title": "Is this real life? Tesla Roadster extreme loop #shorts #trending",
-      "published": "2026-10-16T20:29:20+00:00",
-      "isShort": true,
-      "makes": [
-        "Tesla"
-      ],
-      "years": [],
-      "types": []
     }
   ],
   "latestLongVideos": [
+    {
+      "id": "HOxUz6nbPq4",
+      "title": "This $50,000 EV Rule Could Cost You $5,000 (Canada)",
+      "published": "2026-11-21T23:30:28+00:00",
+      "isShort": false,
+      "makes": [],
+      "years": [],
+      "types": []
+    },
     {
       "id": "NI7BWEpB5J4",
       "title": "2027 Mercedes C300: Buy This One or Wait for the New C-Class?",
@@ -257,19 +264,6 @@
       "isShort": false,
       "makes": [
         "Honda"
-      ],
-      "years": [
-        "2027"
-      ],
-      "types": []
-    },
-    {
-      "id": "KHvh0nymAdo",
-      "title": "2027 Toyota Prius Plug-in: Better Than the Regular Hybrid?",
-      "published": "2026-10-07T22:30:03+00:00",
-      "isShort": false,
-      "makes": [
-        "Toyota"
       ],
       "years": [
         "2027"
@@ -358,6 +352,15 @@
     }
   ],
   "archive": [
+    {
+      "id": "HOxUz6nbPq4",
+      "title": "This $50,000 EV Rule Could Cost You $5,000 (Canada)",
+      "published": "2026-11-21T23:30:28+00:00",
+      "isShort": false,
+      "makes": [],
+      "years": [],
+      "types": []
+    },
     {
       "id": "_4XQZCb7LLg",
       "title": "2027 Mercedes C300 - Does it have a spare tire? #mercedes #c300 #toronto",

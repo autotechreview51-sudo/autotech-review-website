@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-11-21",
+  "contentChecked": "2026-11-22",
   "subscribers": "22K",
   "vehicles": [
     {
@@ -1066,6 +1066,31 @@
       "years": [
         "2027"
       ],
+      "types": []
+    },
+    {
+      "id": "HOxUz6nbPq4",
+      "slug": "channel-hoxuz6nbpq4",
+      "title": "This $50,000 EV Rule Could Cost You $5,000 (Canada)",
+      "originalTitle": "This $50,000 EV Rule Could Cost You $5,000 (Canada)",
+      "published": "2026-11-21T23:30:28+00:00",
+      "format": "long",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch the full video from AutoTech Review: This $50,000 EV Rule Could Cost You $5,000 (Canada).",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [],
+      "years": [],
       "types": []
     }
   ]

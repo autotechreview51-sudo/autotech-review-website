@@ -438,5 +438,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "b6f316c7d05b98a1c4c7ae78164e6a2f7c58444004db877f2135a47f8ae9c74e"
+  },
+  {
+    "id": "HOxUz6nbPq4",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/HOxUz6nbPq4/maxresdefault.jpg",
+    "title": "This $50,000 EV Rule Could Cost You $5,000 (Canada)",
+    "format": "long",
+    "width": 1280,
+    "height": 720,
+    "sha256": "5339ffb0155c00adf3d92712736c03985b63fa960d3d829edb41a8694da73f79"
   }
 ]
