@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-11-22",
+  "contentChecked": "2026-11-23",
   "subscribers": "22K",
   "vehicles": [
     {
@@ -1091,6 +1091,25 @@
       ],
       "makes": [],
       "years": [],
+      "types": []
+    },
+    {
+      "id": "r6rmjCFAxM4",
+      "slug": "channel-r6rmjcfaxm4",
+      "title": "2027 Mercedes Benz C300 quick 30 seconds look",
+      "originalTitle": "2027 Mercedes Benz C300 quick 30 seconds look #toronto #brampton",
+      "published": "2026-11-23T20:29:00+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: 2027 Mercedes Benz C300 quick 30 seconds look.",
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
       "types": []
     }
   ]

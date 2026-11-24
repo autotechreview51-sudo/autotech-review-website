@@ -448,5 +448,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "5339ffb0155c00adf3d92712736c03985b63fa960d3d829edb41a8694da73f79"
+  },
+  {
+    "id": "r6rmjCFAxM4",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/r6rmjCFAxM4/maxresdefault.jpg",
+    "title": "2027 Mercedes Benz C300 quick 30 seconds look #toronto #brampton",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "bbfbcc083dbc0e72efbb22c2cf49c7d94bd9a1f38a819499e3bac4fa1cff8c31"
   }
 ]

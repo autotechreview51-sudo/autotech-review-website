@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-11-22T06:57:14.732Z",
+  "updatedAt": "2026-11-24T00:57:01.304Z",
   "metrics": {
     "subscribers": "22K"
   },
   "latestVideos": [
+    {
+      "id": "r6rmjCFAxM4",
+      "title": "2027 Mercedes Benz C300 quick 30 seconds look #toronto #brampton",
+      "published": "2026-11-23T20:29:00+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "HOxUz6nbPq4",
       "title": "This $50,000 EV Rule Could Cost You $5,000 (Canada)",
@@ -184,15 +197,6 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "vEOF-zzGn2Q",
-      "title": "Don't Buy the CR-V Hybrid Touring Until You Watch This #CRVHybrid #Touring",
-      "published": "2026-10-17T23:15:33+00:00",
-      "isShort": true,
-      "makes": [],
-      "years": [],
-      "types": []
     }
   ],
   "latestLongVideos": [
@@ -273,6 +277,19 @@
   ],
   "latestShorts": [
     {
+      "id": "r6rmjCFAxM4",
+      "title": "2027 Mercedes Benz C300 quick 30 seconds look #toronto #brampton",
+      "published": "2026-11-23T20:29:00+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
+    {
       "id": "_4XQZCb7LLg",
       "title": "2027 Mercedes C300 - Does it have a spare tire? #mercedes #c300 #toronto",
       "published": "2026-11-21T19:21:12+00:00",
@@ -336,22 +353,22 @@
         "2026"
       ],
       "types": []
-    },
-    {
-      "id": "AUvB1Qcv4e8",
-      "title": "Would you drive this 2026 BMW X3? 😍 #bmw #x3m #dreamcar",
-      "published": "2026-10-24T20:09:10+00:00",
-      "isShort": true,
-      "makes": [
-        "BMW"
-      ],
-      "years": [
-        "2026"
-      ],
-      "types": []
     }
   ],
   "archive": [
+    {
+      "id": "r6rmjCFAxM4",
+      "title": "2027 Mercedes Benz C300 quick 30 seconds look #toronto #brampton",
+      "published": "2026-11-23T20:29:00+00:00",
+      "isShort": true,
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
+      ],
+      "types": []
+    },
     {
       "id": "HOxUz6nbPq4",
       "title": "This $50,000 EV Rule Could Cost You $5,000 (Canada)",
