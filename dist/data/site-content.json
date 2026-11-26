@@ -1,9 +1,23 @@
 {
-  "updatedAt": "2026-11-24T00:57:01.304Z",
+  "updatedAt": "2026-11-26T00:27:07.112Z",
   "metrics": {
     "subscribers": "22K"
   },
   "latestVideos": [
+    {
+      "id": "_KC5xcPCF7Q",
+      "title": "2026 BMW X3 vs 2027 Mercedes GLC 300: The Newer One Loses",
+      "published": "2026-11-25T23:30:21+00:00",
+      "isShort": false,
+      "makes": [
+        "BMW",
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "r6rmjCFAxM4",
       "title": "2027 Mercedes Benz C300 quick 30 seconds look #toronto #brampton",
@@ -184,22 +198,23 @@
       "types": [
         "SUV"
       ]
-    },
-    {
-      "id": "yaI8D9qvjZ0",
-      "title": "Is this the best family SUV for 2027? #newcar #hondacrv #toronto",
-      "published": "2026-10-19T19:18:10+00:00",
-      "isShort": true,
-      "makes": [],
-      "years": [
-        "2027"
-      ],
-      "types": [
-        "SUV"
-      ]
     }
   ],
   "latestLongVideos": [
+    {
+      "id": "_KC5xcPCF7Q",
+      "title": "2026 BMW X3 vs 2027 Mercedes GLC 300: The Newer One Loses",
+      "published": "2026-11-25T23:30:21+00:00",
+      "isShort": false,
+      "makes": [
+        "BMW",
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "HOxUz6nbPq4",
       "title": "This $50,000 EV Rule Could Cost You $5,000 (Canada)",
@@ -258,19 +273,6 @@
       ],
       "years": [
         "2026"
-      ],
-      "types": []
-    },
-    {
-      "id": "lZE3VueaDbM",
-      "title": "2027 Honda CR-V Hybrid Review: Is Touring Worth the Extra? (ON)",
-      "published": "2026-10-14T23:00:30+00:00",
-      "isShort": false,
-      "makes": [
-        "Honda"
-      ],
-      "years": [
-        "2027"
       ],
       "types": []
     }
@@ -356,6 +358,20 @@
     }
   ],
   "archive": [
+    {
+      "id": "_KC5xcPCF7Q",
+      "title": "2026 BMW X3 vs 2027 Mercedes GLC 300: The Newer One Loses",
+      "published": "2026-11-25T23:30:21+00:00",
+      "isShort": false,
+      "makes": [
+        "BMW",
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2026"
+      ],
+      "types": []
+    },
     {
       "id": "r6rmjCFAxM4",
       "title": "2027 Mercedes Benz C300 quick 30 seconds look #toronto #brampton",

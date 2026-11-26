@@ -458,5 +458,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "bbfbcc083dbc0e72efbb22c2cf49c7d94bd9a1f38a819499e3bac4fa1cff8c31"
+  },
+  {
+    "id": "_KC5xcPCF7Q",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/_KC5xcPCF7Q/maxresdefault.jpg",
+    "title": "2026 BMW X3 vs 2027 Mercedes GLC 300: The Newer One Loses",
+    "format": "long",
+    "width": 1280,
+    "height": 720,
+    "sha256": "0071f7cc3600ab5e2bc0e08240323c43f8b861e2266014347c22ca50fc721f41"
   }
 ]

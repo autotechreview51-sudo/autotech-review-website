@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-11-23",
+  "contentChecked": "2026-11-25",
   "subscribers": "22K",
   "vehicles": [
     {
@@ -1109,6 +1109,36 @@
       ],
       "years": [
         "2027"
+      ],
+      "types": []
+    },
+    {
+      "id": "_KC5xcPCF7Q",
+      "slug": "channel-_kc5xcpcf7q",
+      "title": "2026 BMW X3 vs 2027 Mercedes GLC 300: The Newer One Loses",
+      "originalTitle": "2026 BMW X3 vs 2027 Mercedes GLC 300: The Newer One Loses",
+      "published": "2026-11-25T23:30:21+00:00",
+      "format": "long",
+      "kind": "Channel video",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch the full video from AutoTech Review: 2026 BMW X3 vs 2027 Mercedes GLC 300: The Newer One Loses.",
+      "question": "Watch the complete discussion.",
+      "topics": [
+        "Published channel coverage",
+        "Related coverage"
+      ],
+      "checks": [
+        "Confirm the exact model year and local-market trim.",
+        "Check current pricing and availability with the manufacturer or retailer.",
+        "Watch the video for the complete context."
+      ],
+      "makes": [
+        "BMW",
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2026"
       ],
       "types": []
     }
