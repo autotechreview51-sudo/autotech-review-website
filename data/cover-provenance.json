@@ -468,5 +468,15 @@
     "width": 1280,
     "height": 720,
     "sha256": "0071f7cc3600ab5e2bc0e08240323c43f8b861e2266014347c22ca50fc721f41"
+  },
+  {
+    "id": "ZXUInNGeAkY",
+    "kind": "YouTube video thumbnail",
+    "source": "https://img.youtube.com/vi/ZXUInNGeAkY/maxresdefault.jpg",
+    "title": "First look at the 2027 GLC 400 Electric #mercedes #toronto  #trending",
+    "format": "short",
+    "width": 1280,
+    "height": 720,
+    "sha256": "a6d0f7bda56a0e6d8af683819c5cabb5168856bf5c84149ba7929f6398d2afe3"
   }
 ]

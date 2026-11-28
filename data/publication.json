@@ -2,7 +2,7 @@
   "origin": "https://www.autotechreview.ca",
   "private": false,
   "sourceCommit": "b39c3da46433d0d03a4e8a39a439420239e82f18",
-  "contentChecked": "2026-11-25",
+  "contentChecked": "2026-11-27",
   "subscribers": "22K",
   "vehicles": [
     {
@@ -1139,6 +1139,25 @@
       ],
       "years": [
         "2026"
+      ],
+      "types": []
+    },
+    {
+      "id": "ZXUInNGeAkY",
+      "slug": "channel-zxuinngeaky",
+      "title": "First look at the 2027 GLC 400 Electric",
+      "originalTitle": "First look at the 2027 GLC 400 Electric #mercedes #toronto  #trending",
+      "published": "2026-11-28T02:53:04+00:00",
+      "format": "short",
+      "kind": "Quick look",
+      "vehicles": [],
+      "automatic": true,
+      "description": "Watch this Short from AutoTech Review: First look at the 2027 GLC 400 Electric.",
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "years": [
+        "2027"
       ],
       "types": []
     }
